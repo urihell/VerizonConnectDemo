@@ -1,0 +1,30 @@
+{
+    "unevaluatedProperties": false,
+    "properties": {
+        "taskId": {
+            "title": "taskId",
+            "description": "The Salesforce ID of the created onboarding task.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "confirmationMessage": {
+            "title": "confirmationMessage",
+            "description": "A confirmation message describing the onboarding communication that was sent.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "success": {
+            "title": "success",
+            "description": "Indicates whether the onboarding message was sent successfully.",
+            "lightning:type": "lightning__booleanType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

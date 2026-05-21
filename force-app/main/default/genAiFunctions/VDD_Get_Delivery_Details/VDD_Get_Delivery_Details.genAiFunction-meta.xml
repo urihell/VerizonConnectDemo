@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Retrieves delivery details for a fleet asset including customer contact information, device serial number, ESN, vehicle name, and delivery address. Use this when the user asks about a pending delivery or needs to look up delivery information for an asset.</description>
+    <invocationTarget>VDD_GetDeliveryDetails</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Get Delivery Details</masterLabel>
+    <progressIndicatorMessage>Looking up delivery details for this asset...</progressIndicatorMessage>
+    <mappingAttributes>
+        <label>Asset ID</label>
+        <name>input_assetId</name>
+        <parameterName>assetId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Name</label>
+        <name>output_customerName</name>
+        <parameterName>customerName</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Phone</label>
+        <name>output_customerPhone</name>
+        <parameterName>customerPhone</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Email</label>
+        <name>output_customerEmail</name>
+        <parameterName>customerEmail</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Contact ID</label>
+        <name>output_contactId</name>
+        <parameterName>contactId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Account ID</label>
+        <name>output_accountId</name>
+        <parameterName>accountId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Serial Number</label>
+        <name>output_serialNumber</name>
+        <parameterName>serialNumber</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Device ESN</label>
+        <name>output_deviceESN</name>
+        <parameterName>deviceESN</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Asset Name</label>
+        <name>output_assetName</name>
+        <parameterName>assetName</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Account Name</label>
+        <name>output_accountName</name>
+        <parameterName>accountName</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Vehicle Name</label>
+        <name>output_vehicleName</name>
+        <parameterName>vehicleName</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Delivery Address</label>
+        <name>output_deliveryAddress</name>
+        <parameterName>deliveryAddress</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Success</label>
+        <name>output_success</name>
+        <parameterName>success</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Message</label>
+        <name>output_message</name>
+        <parameterName>message</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+</GenAiFunction>

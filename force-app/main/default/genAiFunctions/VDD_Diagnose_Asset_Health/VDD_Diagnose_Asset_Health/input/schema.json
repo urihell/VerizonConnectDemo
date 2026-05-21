@@ -1,0 +1,21 @@
+{
+    "required": ["assetId", "thresholdName"],
+    "unevaluatedProperties": false,
+    "properties": {
+        "assetId": {
+            "title": "assetId",
+            "description": "The Salesforce ID of the asset to diagnose.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isUserInput": true
+        },
+        "thresholdName": {
+            "title": "thresholdName",
+            "description": "The name of the breached threshold to use for diagnosis.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isUserInput": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

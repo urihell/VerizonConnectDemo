@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Product_Request</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Delivered</stringValue>
+            </value>
+        </filters>
+        <object>Shipment</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+
+    <recordLookups>
+        <name>Get_Product_Request</name>
+        <label>Get Product Request</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Product_Request__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProductRequest</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>176</locationX>
+        <locationY>268</locationY>
+        <connector>
+            <targetReference>Get_Messaging_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Product_Request.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MobilePhone</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+
+    <recordLookups>
+        <name>Get_Messaging_User</name>
+        <label>Get Messaging User</label>
+        <locationX>176</locationX>
+        <locationY>402</locationY>
+        <connector>
+            <targetReference>Check_Messaging_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Contact.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>MessagingEndUser</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+
+    <decisions>
+        <name>Check_Messaging_User</name>
+        <label>Messaging User Found?</label>
+        <locationX>176</locationX>
+        <locationY>536</locationY>
+        <defaultConnectorLabel>No Messaging User</defaultConnectorLabel>
+        <rules>
+            <name>Yes_User_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Messaging_User</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_User_To_Collection</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+
+    <variables>
+        <name>varMessagingUserIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+
+    <assignments>
+        <name>Add_User_To_Collection</name>
+        <label>Add User to Collection</label>
+        <locationX>176</locationX>
+        <locationY>670</locationY>
+        <connector>
+            <targetReference>Send_Delivery_SMS</targetReference>
+        </connector>
+        <assignmentItems>
+            <assignToReference>varMessagingUserIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Messaging_User.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+
+    <actionCalls>
+        <name>Send_Delivery_SMS</name>
+        <label>Send Delivery SMS</label>
+        <locationX>176</locationX>
+        <locationY>804</locationY>
+        <actionName>sendConversationMessages</actionName>
+        <actionType>sendConversationMessages</actionType>
+        <inputParameters>
+            <name>messageDefinitionName</name>
+            <value>
+                <stringValue>VDD_Delivery_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>requestType</name>
+            <value>
+                <stringValue>SendNotificationMessages</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>isEnforceMessagingChannelConsent</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>allowedSessionStatus</name>
+            <value>
+                <stringValue>Any</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messagingEndUserIds</name>
+            <value>
+                <elementReference>varMessagingUserIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>CustomerName</name>
+            <value>
+                <elementReference>Get_Contact.FirstName</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ShipToName</name>
+            <value>
+                <elementReference>$Record.ShipToName</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>CompanyName</name>
+            <value>
+                <stringValue>Verizon Connect</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>EquipmentSummary</name>
+            <value>
+                <stringValue>33x VDD-400 GPS Tracking Units, 33x DC-200 Dual Dashcams, 33x External GPS Antennas, 33x OBD-II Y-Harnesses, 33x IoT SIM Cards</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+
+    <label>VDD Delivery SMS Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <status>Active</status>
+</Flow>

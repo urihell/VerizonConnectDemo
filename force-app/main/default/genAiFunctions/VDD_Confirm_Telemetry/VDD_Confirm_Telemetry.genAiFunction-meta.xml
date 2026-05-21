@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Confirms telemetry data for a fleet asset by checking GPS accuracy, signal strength, battery voltage, ping rate, and last ping time. Use this after installation to verify the device is reporting correctly.</description>
+    <invocationTarget>VDD_ConfirmTelemetry</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Confirm Telemetry</masterLabel>
+    <progressIndicatorMessage>Verifying telemetry data and device health metrics...</progressIndicatorMessage>
+    <mappingAttributes>
+        <label>Asset ID</label>
+        <name>input_assetId</name>
+        <parameterName>assetId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>GPS Accuracy</label>
+        <name>output_gpsAccuracy</name>
+        <parameterName>gpsAccuracy</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Signal Strength</label>
+        <name>output_signalStrength</name>
+        <parameterName>signalStrength</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Battery Voltage</label>
+        <name>output_batteryVoltage</name>
+        <parameterName>batteryVoltage</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Last Ping</label>
+        <name>output_lastPing</name>
+        <parameterName>lastPing</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Ping Rate</label>
+        <name>output_pingRate</name>
+        <parameterName>pingRate</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Device ESN</label>
+        <name>output_deviceESN</name>
+        <parameterName>deviceESN</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Telemetry Status</label>
+        <name>output_telemetryStatus</name>
+        <parameterName>telemetryStatus</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>All Metrics</label>
+        <name>output_allMetrics</name>
+        <parameterName>allMetrics</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Success</label>
+        <name>output_success</name>
+        <parameterName>success</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Message</label>
+        <name>output_message</name>
+        <parameterName>message</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+</GenAiFunction>

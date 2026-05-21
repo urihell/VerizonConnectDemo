@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a replacement case for a fleet asset that requires device replacement based on a health diagnosis. Use this after diagnosing an asset health issue that requires hardware replacement.</description>
+    <invocationTarget>VDD_CreateReplacementCase</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>true</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Replacement Case</masterLabel>
+    <progressIndicatorMessage>Creating a replacement case for this device...</progressIndicatorMessage>
+    <mappingAttributes>
+        <label>Asset ID</label>
+        <name>input_assetId</name>
+        <parameterName>assetId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Account ID</label>
+        <name>input_accountId</name>
+        <parameterName>accountId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Contact ID</label>
+        <name>input_contactId</name>
+        <parameterName>contactId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Diagnosis</label>
+        <name>input_diagnosis</name>
+        <parameterName>diagnosis</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Severity</label>
+        <name>input_severity</name>
+        <parameterName>severity</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Recommended Action</label>
+        <name>input_recommendedAction</name>
+        <parameterName>recommendedAction</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Vehicle Name</label>
+        <name>input_vehicleName</name>
+        <parameterName>vehicleName</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Name</label>
+        <name>input_customerName</name>
+        <parameterName>customerName</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Case Number</label>
+        <name>output_caseNumber</name>
+        <parameterName>caseNumber</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Case ID</label>
+        <name>output_caseId</name>
+        <parameterName>caseId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Confirmation Message</label>
+        <name>output_confirmationMessage</name>
+        <parameterName>confirmationMessage</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Success</label>
+        <name>output_success</name>
+        <parameterName>success</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+</GenAiFunction>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Coordinates delivery notification and install scheduling for VDD tracking devices. Retrieves delivery details, sends SMS to customer for install date preferences, and creates work orders for the installer.</description>
+    <developerName>VDD_Delivery_Coordination</developerName>
+
+    <genAiFunctions>
+        <functionName>VDD_Get_Delivery_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Collect_Install_Dates</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Create_Installer_Work_Order</functionName>
+    </genAiFunctions>
+
+    <genAiPluginInstructions>
+        <description>Route to this topic when a customer responds with their preferred installation dates after receiving a VDD delivery notification SMS.
+
+Step 1: Use Get Delivery Details to retrieve the asset, customer contact, device serial/ESN, vehicle, account, and delivery address.
+
+Step 2: The customer will reply with 3 preferred installation dates and times of day. Extract exactly 3 dates in YYYY-MM-DD format and 3 time-of-day values (Morning, Afternoon, or Evening) from their message. Use Collect Install Dates to log these preferences. Pass the contactId, assetId, customerName, serialNumber, and all 6 date/time values (preferredDate1, preferredTime1, preferredDate2, preferredTime2, preferredDate3, preferredTime3). The function outputs pass through the preferences for the next step.
+
+Step 3: Use Create Installer Work Order with the device details from Step 1 and the 6 date/time preferences from Step 2 outputs. This creates a high-priority Work Order with custom date preference fields and a linked Service Appointment scheduled to the first preferred slot. Pass: assetId, accountId, serialNumber, deviceESN, vehicleName, customerName, customerPhone, deliveryAddress, and all 6 preference values from the Collect Install Dates outputs.
+
+Always execute all 3 steps in sequence. Confirm the work order number and service appointment to the customer when complete.</description>
+        <developerName>instruction_delivery_coordination</developerName>
+        <language>en_US</language>
+        <masterLabel>Delivery Coordination Instructions</masterLabel>
+    </genAiPluginInstructions>
+
+    <language>en_US</language>
+    <masterLabel>VDD Delivery Coordination</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Can retrieve delivery details, collect 3 preferred installation date/time preferences from the customer, create installer work orders with those preferences in custom fields, and create linked service appointments. Cannot modify device configuration or change asset status.</scope>
+</GenAiPlugin>

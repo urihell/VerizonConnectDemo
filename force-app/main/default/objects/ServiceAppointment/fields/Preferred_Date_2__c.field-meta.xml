@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Date_2__c</fullName>
+    <label>Preferred Date 2</label>
+    <description>Customer's second preferred installation date</description>
+    <type>Date</type>
+    <required>false</required>
+</CustomField>

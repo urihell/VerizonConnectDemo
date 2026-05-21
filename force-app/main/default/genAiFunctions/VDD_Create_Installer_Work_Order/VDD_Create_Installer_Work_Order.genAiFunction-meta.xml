@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a Work Order and linked Service Appointment for a 3rd-party installer. Requires device details, customer info, delivery address, and the 3 preferred date/time preferences collected in the previous step. Stores preferences in custom fields on both WorkOrder and ServiceAppointment. Returns the work order number and service appointment ID.</description>
+    <invocationTarget>VDD_CreateInstallerWorkOrder</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>true</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Installer Work Order</masterLabel>
+    <progressIndicatorMessage>Creating installer work order for this vehicle...</progressIndicatorMessage>
+    <mappingAttributes>
+        <label>Asset ID</label>
+        <name>input_assetId</name>
+        <parameterName>assetId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Account ID</label>
+        <name>input_accountId</name>
+        <parameterName>accountId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Serial Number</label>
+        <name>input_serialNumber</name>
+        <parameterName>serialNumber</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Device ESN</label>
+        <name>input_deviceESN</name>
+        <parameterName>deviceESN</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Vehicle Name</label>
+        <name>input_vehicleName</name>
+        <parameterName>vehicleName</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Name</label>
+        <name>input_customerName</name>
+        <parameterName>customerName</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Customer Phone</label>
+        <name>input_customerPhone</name>
+        <parameterName>customerPhone</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Delivery Address</label>
+        <name>input_deliveryAddress</name>
+        <parameterName>deliveryAddress</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>First Preferred Date</label>
+        <name>input_preferredDate1</name>
+        <parameterName>preferredDate1</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>First Preferred Time</label>
+        <name>input_preferredTime1</name>
+        <parameterName>preferredTime1</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Second Preferred Date</label>
+        <name>input_preferredDate2</name>
+        <parameterName>preferredDate2</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Second Preferred Time</label>
+        <name>input_preferredTime2</name>
+        <parameterName>preferredTime2</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Third Preferred Date</label>
+        <name>input_preferredDate3</name>
+        <parameterName>preferredDate3</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Third Preferred Time</label>
+        <name>input_preferredTime3</name>
+        <parameterName>preferredTime3</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Work Order Number</label>
+        <name>output_workOrderNumber</name>
+        <parameterName>workOrderNumber</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Work Order ID</label>
+        <name>output_workOrderId</name>
+        <parameterName>workOrderId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Service Appointment ID</label>
+        <name>output_serviceAppointmentId</name>
+        <parameterName>serviceAppointmentId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Confirmation Message</label>
+        <name>output_confirmationMessage</name>
+        <parameterName>confirmationMessage</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Success</label>
+        <name>output_success</name>
+        <parameterName>success</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+</GenAiFunction>

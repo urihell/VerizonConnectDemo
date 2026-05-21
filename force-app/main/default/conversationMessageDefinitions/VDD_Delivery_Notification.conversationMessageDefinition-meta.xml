@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <constants>
+        <constantType>Custom</constantType>
+        <label>CompanyName</label>
+        <name>CompanyName</name>
+        <primitiveValues>
+            <textValue>Verizon Connect</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Custom</constantType>
+        <label>CustomerName</label>
+        <name>CustomerName</name>
+        <primitiveValues>
+            <textValue>Jim</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Custom</constantType>
+        <label>ShipToName</label>
+        <name>ShipToName</name>
+        <primitiveValues>
+            <textValue>Black Rock Paving</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Custom</constantType>
+        <label>EquipmentSummary</label>
+        <name>EquipmentSummary</name>
+        <primitiveValues>
+            <textValue>33x VDD-400 GPS Tracking Units, 33x DC-200 Dual Dashcams, 33x External GPS Antennas, 33x OBD-II Y-Harnesses, 33x IoT SIM Cards</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Image</constantType>
+        <primitiveValues>
+            <contentAssetName>SDO_SFS_Dummy_Image</contentAssetName>
+            <type>ImageAsset</type>
+        </primitiveValues>
+    </constants>
+    <label>VDD Delivery Notification</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Hi {!$Constants.CustomerName}, your fleet equipment has been delivered to {!$Constants.ShipToName}. Here's what arrived: {!$Constants.EquipmentSummary}. To schedule your professional installation, please reply with 3 preferred dates and times (Morning, Afternoon, or Evening). For example: "June 2 Morning, June 4 Afternoon, June 5 Morning." Our installer will do their best to accommodate one of your preferred times. — {!$Constants.CompanyName}</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <layoutVariant xsi:nil="true"/>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <type>Notification</type>
+</ConversationMessageDefinition>

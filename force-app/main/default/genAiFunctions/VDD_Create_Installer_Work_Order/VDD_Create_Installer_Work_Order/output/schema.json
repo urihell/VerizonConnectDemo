@@ -1,0 +1,46 @@
+{
+    "unevaluatedProperties": false,
+    "properties": {
+        "workOrderNumber": {
+            "title": "workOrderNumber",
+            "description": "The auto-generated work order number.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "workOrderId": {
+            "title": "workOrderId",
+            "description": "The Salesforce ID of the created work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "serviceAppointmentId": {
+            "title": "serviceAppointmentId",
+            "description": "The Salesforce ID of the created service appointment linked to the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "confirmationMessage": {
+            "title": "confirmationMessage",
+            "description": "A confirmation message describing the work order and service appointment that were created.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "success": {
+            "title": "success",
+            "description": "Indicates whether the work order and service appointment were created successfully.",
+            "lightning:type": "lightning__booleanType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

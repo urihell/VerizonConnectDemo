@@ -1,0 +1,14 @@
+{
+    "required": ["assetId"],
+    "unevaluatedProperties": false,
+    "properties": {
+        "assetId": {
+            "title": "assetId",
+            "description": "The Salesforce ID of the asset with the threshold breach.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isUserInput": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

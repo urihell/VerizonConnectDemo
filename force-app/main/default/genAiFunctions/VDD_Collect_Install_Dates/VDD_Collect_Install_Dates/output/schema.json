@@ -1,0 +1,78 @@
+{
+    "unevaluatedProperties": false,
+    "properties": {
+        "taskId": {
+            "title": "taskId",
+            "description": "The Salesforce ID of the created activity log task.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "confirmationMessage": {
+            "title": "confirmationMessage",
+            "description": "A confirmation message describing the preferences that were collected.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "success": {
+            "title": "success",
+            "description": "Indicates whether the preferences were collected successfully.",
+            "lightning:type": "lightning__booleanType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredDate1": {
+            "title": "preferredDate1",
+            "description": "First preferred installation date passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredTime1": {
+            "title": "preferredTime1",
+            "description": "Time of day for first preference passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredDate2": {
+            "title": "preferredDate2",
+            "description": "Second preferred installation date passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredTime2": {
+            "title": "preferredTime2",
+            "description": "Time of day for second preference passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredDate3": {
+            "title": "preferredDate3",
+            "description": "Third preferred installation date passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        },
+        "preferredTime3": {
+            "title": "preferredTime3",
+            "description": "Time of day for third preference passed through for the work order.",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

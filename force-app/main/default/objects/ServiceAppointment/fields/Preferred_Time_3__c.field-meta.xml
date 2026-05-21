@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Time_3__c</fullName>
+    <label>Preferred Time 3</label>
+    <description>Time of day for third preference (Morning, Afternoon, or Evening)</description>
+    <type>Text</type>
+    <length>20</length>
+    <required>false</required>
+</CustomField>

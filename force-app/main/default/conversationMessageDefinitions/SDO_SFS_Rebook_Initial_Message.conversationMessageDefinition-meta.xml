@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <constants>
+        <constantType>Custom</constantType>
+        <label>CompanyName</label>
+        <name>CompanyName</name>
+        <primitiveValues>
+            <textValue>Cirrus</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Image</constantType>
+        <primitiveValues>
+            <contentAssetName>SDO_SFS_Dummy_Image</contentAssetName>
+            <type>ImageAsset</type>
+        </primitiveValues>
+    </constants>
+    <constants>
+        <constantType>Title</constantType>
+        <primitiveValues>
+            <textValue>Your Link Title Here</textValue>
+            <type>Text</type>
+        </primitiveValues>
+    </constants>
+    <constants>
+        <constantType>Url</constantType>
+        <primitiveValues>
+            <type>Url</type>
+            <urlValue>https://www.example.com</urlValue>
+        </primitiveValues>
+    </constants>
+    <label>Rebook Initial Message</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Hi {!$Parameters.CustomerName},
+
+We apologize for the inconvenience, but we need to reschedule your upcoming {!$Parameters.WorkType} appointment on {!$Parameters.DateTime}.
+
+When are you next available for the appointment?
+
+Thank you,
+
+{!$Constants.CompanyName}</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <layoutVariant xsi:nil="true"/>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <parameters>
+        <parameterType>CustomPrimitive</parameterType>
+        <primitiveTypeDetails>
+            <isList>false</isList>
+            <isRequired>true</isRequired>
+            <label>CustomerName</label>
+            <name>CustomerName</name>
+            <valueType>Text</valueType>
+        </primitiveTypeDetails>
+    </parameters>
+    <parameters>
+        <parameterType>CustomPrimitive</parameterType>
+        <primitiveTypeDetails>
+            <isList>false</isList>
+            <isRequired>true</isRequired>
+            <label>WorkType</label>
+            <name>WorkType</name>
+            <valueType>Text</valueType>
+        </primitiveTypeDetails>
+    </parameters>
+    <parameters>
+        <parameterType>CustomPrimitive</parameterType>
+        <primitiveTypeDetails>
+            <isList>false</isList>
+            <isRequired>true</isRequired>
+            <label>DateTime</label>
+            <name>DateTime</name>
+            <valueType>Text</valueType>
+        </primitiveTypeDetails>
+    </parameters>
+    <type>Notification</type>
+</ConversationMessageDefinition>
