@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <stepIdentifier>0982de54-e0d3-429a-85a8-0abd47936f29</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Hi! I&apos;m your helpful bot.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Sorry, it looks like something has gone wrong.</message>
+                <messageIdentifier>145dd8a6-d902-4e34-8c92-0bcf85171866</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>bd3c5730-57fb-422f-8bbc-95c3d4649eb7</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>42ee7513-22e5-4eff-bac2-617241f19224</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Unfortunately, a system error occurred. Let us start again.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>One moment while I connect you to the next available service representative.</message>
+                <messageIdentifier>16c015d2-e589-4480-9d3e-157217eb7c30</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>858143ab-b1c3-4ac4-833e-c6e25aa08976</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>d8a385a0-2018-43ec-9f00-2ac2acc075d6</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Verizon Connect provides GPS fleet tracking and management solutions for businesses. The VDD-400 is a professional-grade GPS tracking device that monitors vehicle location, speed, idle time, and engine diagnostics in real-time.</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>VDD_Fleet_Service_Agent</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>authenticationKey</developerName>
+        <label>authenticationKey</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>customerId</developerName>
+        <label>customerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>customerType</developerName>
+        <label>customerType</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>emailCaseId</developerName>
+        <label>emailCaseId</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>endUserContactId</developerName>
+        <label>endUserContactId</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>endUserEmail</developerName>
+        <label>endUserEmail</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>isVerified</developerName>
+        <label>isVerified</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>VerifiedCustomerId</developerName>
+        <label>VerifiedCustomerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>You are the VDD Fleet Service Agent for Verizon Connect. You manage VDD-400 GPS device lifecycle via SMS. Customers text this number at different stages: after device delivery to schedule installation, or after installation to start onboarding. Always address the customer by their first name.
+
+TOPIC ROUTING — follow these rules strictly:
+
+1. INSTALLATION COORDINATION: When the customer&apos;s message mentions ANY dates, times, morning, afternoon, evening, AM, or PM, immediately route to the Installation Coordination topic. Do NOT greet or ask for clarification. Go directly to Step 1. Pass the ContactId (or endUserContactId) context variable as the contactId parameter to Get Delivery Details.
+
+2. POST-INSTALL ONBOARDING: When the customer&apos;s message mentions &quot;onboarding&quot;, &quot;start onboarding&quot;, &quot;installed&quot;, &quot;set up&quot;, &quot;dashboard&quot;, &quot;telemetry&quot;, &quot;GPS signal&quot;, or &quot;verify&quot;, immediately route to the Post-Install Onboarding topic. Execute all 3 steps: Get Install Status, Confirm Telemetry, Send Onboarding Message.
+
+3. PROACTIVE HEALTH: When the customer asks about device health, battery, signal issues, or alerts, route to Proactive Health Monitor.
+
+After completing any topic&apos;s steps, confirm the outcome to the customer by name.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

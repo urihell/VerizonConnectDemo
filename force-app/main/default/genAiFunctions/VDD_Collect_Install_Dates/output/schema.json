@@ -1,0 +1,78 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "taskId" : {
+      "title" : "taskId",
+      "description" : "The Salesforce ID of the Task created to log the date preferences.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "confirmationMessage" : {
+      "title" : "confirmationMessage",
+      "description" : "A confirmation message summarizing the collected preferences.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "success" : {
+      "title" : "success",
+      "description" : "Indicates whether the preferences were collected successfully.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredDate1" : {
+      "title" : "preferredDate1",
+      "description" : "The first preferred install date passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredTime1" : {
+      "title" : "preferredTime1",
+      "description" : "The time of day for the first preference passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredDate2" : {
+      "title" : "preferredDate2",
+      "description" : "The second preferred install date passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredTime2" : {
+      "title" : "preferredTime2",
+      "description" : "The time of day for the second preference passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredDate3" : {
+      "title" : "preferredDate3",
+      "description" : "The third preferred install date passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "preferredTime3" : {
+      "title" : "preferredTime3",
+      "description" : "The time of day for the third preference passed through for use by the next step.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

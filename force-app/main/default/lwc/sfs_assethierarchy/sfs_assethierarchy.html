@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <template if:true={assetHierarchy}>
+            <lightning-accordion allow-multiple-sections-open  active-section-name={assetHierarchy.Id}>
+                
+                    <c-sfs_assetdetails asset-hierarchy={assetHierarchy}></c-sfs_assetdetails>
+                    <template for:each={assetHierarchy.ChildAssets} for:item="child">
+                        <div key={child.Id}>
+                                <c-sfs_assetdetails asset-hierarchy={child}></c-sfs_assetdetails>
+                        </div>
+                    </template>
+            </lightning-accordion>
+        </template>
+        <template if:true={error}>
+            <div class="slds-text-align_center slds-m-top_large">
+                <lightning-icon icon-name="utility:search" size="large" alternative-text="No assets found" class="slds-m-bottom_small"></lightning-icon>
+                <p>{error}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Handles post-installation onboarding for VDD devices. Confirms installation status, verifies telemetry from AssetAttribute records, and sends welcome message with dashboard access.</description>
+    <developerName>VDD_Post_Install_Onboarding</developerName>
+    <genAiFunctions>
+        <functionName>VDD_Get_Install_Status</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Confirm_Telemetry</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Send_Onboarding_Message</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>CRITICAL: This is an SMS-based conversation. The customer is replying to an onboarding notification after their VDD-400 device was installed. When the customer mentions onboarding, start onboarding, installed, set up, dashboard, telemetry, GPS signal, or verify, immediately activate this topic and execute all 3 steps.
+
+Step 1: Use Get Install Status to confirm the asset is installed and retrieve customer/vehicle details. IMPORTANT: You do not have an asset ID in SMS context. Instead, pass the endUserContactId conversation variable as the contactId parameter. The function will automatically find the most recent installed asset for this customer.
+
+Step 2: Use Confirm Telemetry to read AssetAttribute records and verify GPS accuracy, signal strength, and battery voltage are healthy. Pass the assetId from Step 1 output.
+
+Step 3: Use Send Onboarding Message to send the customer a welcome message with telemetry status summary and fleet dashboard access link. Pass the contactId, assetId, customerName, serialNumber, vehicleName, allMetrics, and telemetryStatus from previous steps.
+
+Always execute all 3 steps in sequence. Address the customer by their first name. If telemetry shows issues, still send the onboarding message but note the issues.</description>
+        <developerName>instruction_post_install</developerName>
+        <language>en_US</language>
+        <masterLabel>Post-Install Onboarding Instructions</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>VDD Post-Install Onboarding</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Can read install status, verify telemetry from asset attributes, and send onboarding welcome messages. Cannot modify device settings, create work orders, or change asset status.</scope>
+</GenAiPlugin>

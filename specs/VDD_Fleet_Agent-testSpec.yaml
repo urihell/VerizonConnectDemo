@@ -1,0 +1,11 @@
+agentApiName: VDD_Fleet_Agent
+subjectType: AGENT
+description: Test VDD Fleet Agent routes date/time messages to Delivery Coordination
+testCases:
+  - utterance: "Hi, I'd like to schedule my installation for June 15 morning, June 18 afternoon, and June 20 evening."
+    expectedTopic: VDD_Delivery_Coordination
+    expectedActions:
+      - VDD_Get_Delivery_Details
+      - VDD_Collect_Install_Dates
+      - VDD_Create_Installer_Work_Order
+    expectedOutcome: "The agent retrieves the customer delivery details using their ContactId, collects the 3 preferred installation dates and times, creates an installer work order, and confirms to the customer that their preferences have been received and a work order has been created for the installer."

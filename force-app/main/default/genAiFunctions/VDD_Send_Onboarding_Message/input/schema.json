@@ -1,0 +1,56 @@
+{
+  "required" : [ "contactId", "assetId", "customerName", "serialNumber", "vehicleName", "allMetrics", "telemetryStatus" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "The Salesforce ID of the contact to send the onboarding message to.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "assetId" : {
+      "title" : "assetId",
+      "description" : "The Salesforce ID of the installed asset.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "customerName" : {
+      "title" : "customerName",
+      "description" : "The name of the customer receiving the onboarding message.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "description" : "The serial number of the installed device.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "vehicleName" : {
+      "title" : "vehicleName",
+      "description" : "The name of the vehicle the device was installed on.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "allMetrics" : {
+      "title" : "allMetrics",
+      "description" : "A consolidated summary of all telemetry metrics to include in the message.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "telemetryStatus" : {
+      "title" : "telemetryStatus",
+      "description" : "The overall telemetry status to include in the message.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

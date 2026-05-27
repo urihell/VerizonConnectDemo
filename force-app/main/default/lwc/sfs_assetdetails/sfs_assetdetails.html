@@ -1,0 +1,29 @@
+<template>
+    <lightning-accordion-section name={assetHierarchy.Id} label={assetLabel}>
+        <div class="slds-grid slds-wrap slds-gutters">
+                                <div class='slds-col slds-size_1-of-2 slds-m-top_small'> 
+                                    <h3 class="header">Serial Number</h3>
+                                    <p>{assetHierarchy.SerialNumber}</p>
+                                </div>
+                                <div class='slds-col slds-size_1-of-2 slds-m-top_small'> 
+                                    <h3 class="header">Status</h3>
+                                    <p>
+                                        <template if:true={assetStatus}>
+                                                <lightning-icon icon-name="utility:success" size="x-small" variant="success" alternative-text="Account"></lightning-icon>
+                                        </template>
+                                        <template if:false={assetStatus}>
+                                                <lightning-icon icon-name="utility:error" size="x-small" variant="warning" alternative-text="Account"></lightning-icon>
+                                        </template>
+                                    </p>
+                                </div>
+                                <div class='slds-col slds-size_1-of-2 slds-m-top_medium'> 
+                                    <h3 class="header">Install Date</h3>
+                                    <p>{assetHierarchy.InstallDate}</p>
+                                </div>
+                                <div class='slds-col slds-size_1-of-2 slds-m-top_medium'> 
+                                    <h3 class="header">Warranty Status</h3>
+                                    <p>{assetHierarchy.Entitlement_Status__c}</p>
+                                </div>
+                            </div>
+    </lightning-accordion-section>
+</template>

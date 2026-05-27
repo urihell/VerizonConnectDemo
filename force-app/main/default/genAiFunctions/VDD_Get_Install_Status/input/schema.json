@@ -1,0 +1,21 @@
+{
+  "required" : [ ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "assetId" : {
+      "title" : "assetId",
+      "description" : "The Salesforce ID of the asset to check installation status for. Optional if contactId is provided.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "The Salesforce Contact ID to look up the most recent installed asset. Use this when the customer contacts via SMS and no asset ID is available. The agent should pass the endUserContactId context variable here.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

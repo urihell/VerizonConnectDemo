@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <constants>
+        <constantType>Custom</constantType>
+        <label>CompanyName</label>
+        <name>CompanyName</name>
+        <primitiveValues>
+            <textValue>Verizon Connect</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Custom</constantType>
+        <label>CustomerName</label>
+        <name>CustomerName</name>
+        <primitiveValues>
+            <textValue>Customer</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Custom</constantType>
+        <label>DeviceName</label>
+        <name>DeviceName</name>
+        <primitiveValues>
+            <textValue>VDD-400</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Image</constantType>
+        <primitiveValues>
+            <contentAssetName>SDO_SFS_Dummy_Image</contentAssetName>
+            <type>ImageAsset</type>
+        </primitiveValues>
+    </constants>
+    <label>VDD Health Alert Notification</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Hi {!$Constants.CustomerName}, this is {!$Constants.CompanyName}. We detected a potential issue with your {!$Constants.DeviceName} device. Our team is already on it — reply here to connect with a specialist and we&apos;ll get this resolved quickly.</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <layoutVariant xsi:nil="true"/>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <type>Notification</type>
+</ConversationMessageDefinition>

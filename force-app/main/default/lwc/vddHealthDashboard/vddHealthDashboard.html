@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="Device Health" icon-name="standard:metrics">
+        <div slot="actions">
+            <span class="overall-badge">
+                {overallStatus.icon} {overallStatus.label}
+            </span>
+        </div>
+
+        <template if:true={isLoading}>
+            <div class="slds-p-around_medium">
+                <lightning-spinner alternative-text="Loading health data..." size="small"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-text-color_error">
+                <lightning-icon icon-name="utility:error" size="x-small" variant="error"></lightning-icon>
+                &nbsp;{error}
+            </div>
+        </template>
+
+        <template if:false={isLoading}>
+            <!-- Gauges Grid -->
+            <div class="gauges-grid slds-p-around_medium">
+                <template for:each={gauges} for:item="gauge">
+                    <div key={gauge.key} class="gauge-card">
+                        <div class="gauge-header">
+                            <span class="gauge-label">{gauge.label}</span>
+                        </div>
+                        <div class="gauge-value-row">
+                            <span class="gauge-value" style={gauge.barColorStyle}>
+                                {gauge.displayValue}
+                            </span>
+                        </div>
+                        <div class="gauge-bar-track">
+                            <div class="gauge-bar-fill" style={gauge.barStyle}></div>
+                        </div>
+                        <div class="gauge-status-label" style={gauge.statusStyle}>
+                            {gauge.status}
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Threshold Monitors -->
+            <template if:true={hasMonitors}>
+                <div class="monitors-section slds-p-horizontal_medium slds-p-bottom_small">
+                    <div class="section-divider"></div>
+                    <div class="monitors-header slds-text-title_caps slds-m-bottom_x-small">
+                        Threshold Monitoring
+                    </div>
+                    <div class="monitors-row">
+                        <template for:each={monitors} for:item="monitor">
+                            <span key={monitor.key} class={monitor.badgeClass}>
+                                {monitor.statusIcon} {monitor.name} — {monitor.statusLabel}
+                            </span>
+                        </template>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Footer: Device Info -->
+            <div class="info-footer slds-p-around_medium">
+                <div class="section-divider"></div>
+                <div class="info-grid slds-m-top_small">
+                    <div class="info-item">
+                        <span class="info-label">ESN</span>
+                        <span class="info-value">{deviceESN}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Last Ping</span>
+                        <span class="info-value">{lastPingFormatted}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Ping Rate</span>
+                        <span class="info-value">{pingRate}</span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

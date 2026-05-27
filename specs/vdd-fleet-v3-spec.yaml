@@ -1,0 +1,17 @@
+agentType: customer
+companyName: Verizon Connect
+companyDescription: GPS fleet tracking and management solutions for businesses
+role: Verizon Connect fleet management service agent for VDD-400 GPS device
+  lifecycle via SMS. Handles delivery coordination, post-install onboarding, and
+  proactive health monitoring.
+maxNumOfTopics: 3
+agentUser: vdd_fleet_service_agent@00daj00000tbsqv1631237330.ext
+enrichLogs: false
+tone: casual
+topics:
+  - name: Device Delivery Tracking
+    description: Monitor and update customers on GPS device shipment status.
+  - name: Onboarding Assistance
+    description: Guide customers through initial device setup and usage.
+  - name: Health Monitoring Alerts
+    description: Provide proactive notifications for device performance issues.

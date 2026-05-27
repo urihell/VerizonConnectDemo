@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent is responsible for helping customers with general account and case questions. It uses actions to get account and case updates, post updates to them, and create new ones as needed. The agent interact with our customers via out website.</description>
+    <genAiPlugins>
+        <genAiPluginName>CaseManagement_16jKa000000kCDU</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>ambiguous_question_16jKa000000kCDU</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>escalation_16jKa000000kCDU</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>off_topic_16jKa000000kCDU</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>topic_selector_16jKa000000kCDU</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Agent Builder 2.0 Example Agent</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlanner>

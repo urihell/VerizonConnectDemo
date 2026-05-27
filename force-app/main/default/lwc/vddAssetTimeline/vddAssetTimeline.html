@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Device Lifecycle" icon-name="standard:asset_object">
+        <template if:true={isLoading}>
+            <div class="slds-p-around_medium">
+                <lightning-spinner alternative-text="Loading timeline..." size="small"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-text-color_error">
+                <lightning-icon icon-name="utility:error" size="x-small" variant="error"></lightning-icon>
+                &nbsp;{error}
+            </div>
+        </template>
+
+        <template if:true={hasStages}>
+            <div class="timeline-container slds-p-around_medium">
+                <div class="timeline-track">
+                    <template for:each={stages} for:item="stage">
+                        <div key={stage.key} class={stage.stepClass}>
+                            <div class={stage.iconClass}>
+                                <span class="emoji-icon">{stage.stageIcon}</span>
+                                <template if:true={stage.isCompleted}>
+                                    <span class="check-overlay">✓</span>
+                                </template>
+                                <template if:true={stage.showPulse}>
+                                    <span class="pulse-ring"></span>
+                                </template>
+                            </div>
+                            <div class="step-label">{stage.stage}</div>
+                            <template if:true={stage.formattedTimestamp}>
+                                <div class="step-date">{stage.formattedTimestamp}</div>
+                            </template>
+                            <div class={stage.connectorClass}></div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

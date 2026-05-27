@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Autonomously coordinates equipment replacement when asset health thresholds are breached. Reads breach details, diagnoses from AssetAttribute values, creates replacement case, and notifies customer.</description>
+    <developerName>VDD_Proactive_Health_Monitor</developerName>
+    <genAiFunctions>
+        <functionName>VDD_Get_Threshold_Breach</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Diagnose_Asset_Health</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Create_Replacement_Case</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Route to this topic when an asset threshold monitoring alert fires (RecordsetFltrCritMonitor.IsWithinThreshold changes to false).
+Step 1: Use Get Threshold Breach Details to identify which threshold was breached, the affected asset, customer, and vehicle.
+Step 2: Use Diagnose Asset Health to read all AssetAttribute values and produce a diagnostic summary with severity level and recommended action.
+Step 3: Use Create Replacement Case to create a proactive service case and send the customer an SMS notification that the team is already working on the issue.
+Always execute all 3 steps in sequence. This is proactive service — act before the customer even knows there is a problem. The goal is zero downtime for the fleet.</description>
+        <developerName>instruction_health_monitor</developerName>
+        <language>en_US</language>
+        <masterLabel>Proactive Health Monitor Instructions</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>VDD Proactive Health Monitor</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Can read threshold breaches, diagnose asset health from attributes, and create proactive replacement cases. Cannot modify asset attribute values, reset threshold monitors, or change device configurations.</scope>
+</GenAiPlugin>

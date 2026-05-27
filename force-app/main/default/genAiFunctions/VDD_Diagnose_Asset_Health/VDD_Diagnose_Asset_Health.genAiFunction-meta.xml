@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Diagnoses the health of a fleet asset based on the breached threshold, returning a diagnosis, severity level, recommended action, and consolidated telemetry metrics. Use this after a threshold breach is detected to determine the appropriate response.</description>
+    <invocationTarget>VDD_DiagnoseAssetHealth</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <mappingAttributes>
+        <label>Asset ID</label>
+        <name>input_assetId</name>
+        <parameterName>assetId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Threshold Name</label>
+        <name>input_thresholdName</name>
+        <parameterName>thresholdName</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Diagnosis</label>
+        <name>output_diagnosis</name>
+        <parameterName>diagnosis</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Severity</label>
+        <name>output_severity</name>
+        <parameterName>severity</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Recommended Action</label>
+        <name>output_recommendedAction</name>
+        <parameterName>recommendedAction</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>All Metrics</label>
+        <name>output_allMetrics</name>
+        <parameterName>allMetrics</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Success</label>
+        <name>output_success</name>
+        <parameterName>success</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>Message</label>
+        <name>output_message</name>
+        <parameterName>message</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <masterLabel>Diagnose Asset Health</masterLabel>
+</GenAiFunction>

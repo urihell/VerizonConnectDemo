@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <constants>
+        <constantType>Custom</constantType>
+        <label>MessageBody</label>
+        <name>MessageBody</name>
+        <primitiveValues>
+            <textValue>Your VDD-400 equipment has been delivered. Reply with 3 preferred install dates and times (Morning, Afternoon, Evening).</textValue>
+            <type>Text</type>
+        </primitiveValues>
+        <valueType>Text</valueType>
+    </constants>
+    <constants>
+        <constantType>Image</constantType>
+        <primitiveValues>
+            <contentAssetName>SDO_SFS_Dummy_Image</contentAssetName>
+            <type>ImageAsset</type>
+        </primitiveValues>
+    </constants>
+    <label>VDD Delivery Notification</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>{!$Constants.MessageBody}</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <layoutVariant xsi:nil="true"/>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <type>Notification</type>
+</ConversationMessageDefinition>

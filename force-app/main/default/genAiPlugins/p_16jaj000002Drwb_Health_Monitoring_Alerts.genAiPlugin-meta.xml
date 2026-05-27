@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is used when customers need assistance with addressing performance issues or threshold breaches in their VDD-400 GPS devices.</description>
+    <developerName>p_16jaj000002Drwb_Health_Monitoring_Alerts</developerName>
+    <genAiFunctions>
+        <functionName>VDD_Get_Threshold_Breach</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Diagnose_Asset_Health</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Create_Replacement_Case</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a threshold breach is detected, retrieve the details using VDD_Get_Threshold_Breach.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the issue requires further diagnosis, use VDD_Diagnose_Asset_Health.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If a replacement is needed, create a replacement case using VDD_Create_Replacement_Case.</description>
+        <developerName>instruction_2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jaj000002Drwb_Health_Monitoring_Alerts</localDeveloperName>
+    <masterLabel>Health Monitoring Alerts</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist with diagnosing and resolving performance issues for VDD-400 GPS devices. This includes diagnosing asset health, retrieving threshold breach details, and creating replacement cases when necessary. You are not responsible for delivery tracking or onboarding tasks.</scope>
+</GenAiPlugin>

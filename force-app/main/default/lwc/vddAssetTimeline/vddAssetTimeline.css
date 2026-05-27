@@ -1,0 +1,138 @@
+:host {
+    display: block;
+}
+
+.timeline-container {
+    overflow-x: auto;
+}
+
+.timeline-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 500px;
+    padding: 0.5rem 1rem;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    min-width: 80px;
+}
+
+/* Step icon circle */
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.25rem;
+    z-index: 2;
+    border: 3px solid #d8dde6;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.icon-completed {
+    border-color: #04844b;
+    background: #04844b;
+}
+
+.icon-completed .emoji-icon {
+    opacity: 0.3;
+}
+
+.icon-completed .check-overlay {
+    position: absolute;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.icon-current {
+    border-color: #ff9a3c;
+    background: #fff8f0;
+    box-shadow: 0 0 0 4px rgba(255, 154, 60, 0.2);
+}
+
+.icon-operational {
+    border-color: #04844b;
+    background: #f0fff4;
+    box-shadow: 0 0 0 4px rgba(4, 132, 75, 0.2);
+}
+
+.icon-upcoming {
+    border-color: #d8dde6;
+    background: #f3f2f2;
+    opacity: 0.6;
+}
+
+/* Pulse animation for Operational */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #04844b;
+    animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Connector line between steps */
+.connector {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    z-index: 1;
+}
+
+.connector-completed {
+    background: #04844b;
+}
+
+.connector-upcoming {
+    background: #d8dde6;
+}
+
+.connector-hidden {
+    display: none;
+}
+
+/* Labels */
+.step-label {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #181818;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.step-upcoming .step-label {
+    color: #706e6b;
+}
+
+.step-date {
+    font-size: 0.625rem;
+    color: #706e6b;
+    margin-top: 0.125rem;
+    text-align: center;
+}

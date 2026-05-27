@@ -1,0 +1,217 @@
+/* ── Verizon Connect Brand Colors ── */
+:host {
+    --vz-red: #CD040B;
+    --vz-red-light: #FF6B6B;
+    --vz-dark: #1A1A1A;
+    --vz-gray: #6B7280;
+    --vz-light-gray: #E5E7EB;
+    --vz-success: #10B981;
+    --vz-bg: #F9FAFB;
+}
+
+/* ── Status Header ── */
+.status-header {
+    border-bottom: 1px solid var(--vz-light-gray);
+    padding-bottom: 0.75rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-badge.in-transit {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.status-badge.delivered {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.status-badge.default {
+    background-color: #E5E7EB;
+    color: #374151;
+}
+
+/* ── Tracker Container ── */
+.tracker-container {
+    position: relative;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+/* ── Progress Rail ── */
+.progress-rail {
+    position: relative;
+    height: 4px;
+    background: var(--vz-light-gray);
+    border-radius: 2px;
+    margin: 0 2rem;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--vz-red), var(--vz-red-light));
+    border-radius: 2px;
+    transition: width 0.8s ease-in-out;
+}
+
+/* ── Truck Icon ── */
+.truck-icon {
+    position: absolute;
+    top: -14px;
+    transform: translateX(-50%);
+    transition: left 0.8s ease-in-out;
+    z-index: 3;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { top: -14px; }
+    50% { top: -18px; }
+}
+
+/* ── Steps Container ── */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+.tracker-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+/* ── Step Dots ── */
+.step-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--vz-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-dot.completed {
+    background: var(--vz-red);
+    border-color: var(--vz-red);
+}
+
+.step-dot.current {
+    background: var(--vz-red);
+    border-color: var(--vz-red);
+    box-shadow: 0 0 0 4px rgba(205, 4, 11, 0.2);
+}
+
+/* ── Pulse Animation ── */
+.pulse-ring {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── Step Labels ── */
+.step-label {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--vz-gray);
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.step-label.current {
+    color: var(--vz-red);
+    font-weight: 700;
+}
+
+.step-label.completed {
+    color: var(--vz-dark);
+    font-weight: 500;
+}
+
+/* ── Detail Cards ── */
+.details-section {
+    background: var(--vz-bg);
+    border-top: 1px solid var(--vz-light-gray);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid var(--vz-light-gray);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    height: 100%;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.card-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--vz-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--vz-dark);
+    margin: 0;
+}
+
+.card-sub {
+    font-size: 0.75rem;
+    color: var(--vz-gray);
+    margin-top: 0.125rem;
+}
+
+.card-sub a {
+    color: var(--vz-red);
+    text-decoration: none;
+}
+
+.card-sub a:hover {
+    text-decoration: underline;
+}
+
+.delivered-text {
+    color: var(--vz-success);
+}

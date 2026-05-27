@@ -1,0 +1,71 @@
+<template>
+    <lightning-card icon-name="standard:record">
+        <template lwc:if={isLoading}>
+            <div class="slds-p-around_large slds-align_absolute-center">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <template lwc:if={error}>
+            <div class="slds-p-around_medium">
+                <p class="slds-text-color_error">Unable to load shipment history.</p>
+            </div>
+        </template>
+
+        <template lwc:if={shipment}>
+            <!-- Toggle Link -->
+            <div class="toggle-link slds-p-bottom_small">
+                <a href="#" onclick={handleToggle} class="toggle-btn">
+                    {toggleLabel}
+                    <template lwc:if={isExpanded}>
+                        <lightning-icon icon-name="utility:chevronup" size="xx-small" class="slds-m-left_xx-small toggle-icon"></lightning-icon>
+                    </template>
+                    <template lwc:else>
+                        <lightning-icon icon-name="utility:chevrondown" size="xx-small" class="slds-m-left_xx-small toggle-icon"></lightning-icon>
+                    </template>
+                </a>
+            </div>
+
+            <template lwc:if={isExpanded}>
+                <!-- Header -->
+                <div class="history-header slds-p-horizontal_medium slds-p-bottom_small">
+                    <h2 class="slds-text-heading_small history-title">Package History</h2>
+                </div>
+
+                <!-- Timeline Events -->
+                <div class="timeline-container slds-p-horizontal_medium slds-p-bottom_medium">
+                    <template for:each={events} for:item="event">
+                        <div key={event.id} class="timeline-row">
+                            <!-- Date/Time Column -->
+                            <div class="datetime-col">
+                                <span class="event-date">{event.date}</span>
+                                <span class="event-time">{event.time}</span>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="separator-col">
+                                <div class="timeline-line"></div>
+                            </div>
+
+                            <!-- Event Details Column -->
+                            <div class="details-col">
+                                <template lwc:if={event.isBold}>
+                                    <p class="event-title bold">{event.title}</p>
+                                </template>
+                                <template lwc:else>
+                                    <p class="event-title">{event.title}</p>
+                                </template>
+                                <template lwc:if={event.subtitle}>
+                                    <p class="event-subtitle">{event.subtitle}</p>
+                                </template>
+                                <template lwc:if={event.location}>
+                                    <p class="event-location">{event.location}</p>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

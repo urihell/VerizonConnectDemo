@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Route to this topic when the customer mentions dates, times, scheduling preferences, morning, afternoon, evening, AM, PM, or availability for installation. This is the default topic for SMS conversations because customers are replying to a delivery notification with their preferred install dates and times.</description>
+    <developerName>p_16jaj000002Drwb_Device_Delivery_Tracking</developerName>
+    <genAiFunctions>
+        <functionName>VDD_Get_Delivery_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Collect_Install_Dates</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>VDD_Create_Installer_Work_Order</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>CRITICAL: This is an SMS-based conversation. The customer is replying to a delivery notification that asked them to provide 3 preferred installation dates and times for their VDD-400 GPS equipment. When the customer&apos;s message contains ANY dates, times, or scheduling-related words (morning, afternoon, evening, AM, PM, June, July, etc.), immediately activate this topic. Do NOT ask what they want help with or ask for clarification — go straight to Step 1. The customer&apos;s intent is to schedule their installation.
+
+Step 1: Use Get Delivery Details to retrieve the asset, customer contact, device serial/ESN, vehicle, account, and delivery address. IMPORTANT: You do not have an asset ID in SMS context. Instead, pass the ContactId context variable as the contactId parameter. The function will automatically find the most recent delivered asset for this customer. Use the customer&apos;s first name when addressing them.
+
+Step 2: Extract exactly 3 dates in YYYY-MM-DD format and 3 time-of-day values (Morning, Afternoon, or Evening) from the customer&apos;s message. Use Collect Install Dates to log these preferences. Pass the contactId, assetId (from Step 1 output), customerName, serialNumber, and all 6 date/time values.
+
+Step 3: Use Create Installer Work Order with the device details from Step 1 and the 6 date/time preferences from Step 2 outputs. This updates the Work Order and linked Service Appointment scheduled to the first preferred slot. Pass all required fields including the 6 preference values.
+
+Always execute all 3 steps in sequence. After completing all steps, confirm to the customer by first name that their installation preferences have been received and a work order has been updated. Repeat the 3 preferred dates and times back to the customer so they can verify them. Mention the work order number and that an installer will be in touch to confirm one of their preferred time slots.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Delivery Coordination Instructions</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Device Delivery Tracking</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Activates when customers provide installation scheduling preferences — any message containing dates, times, morning, afternoon, evening, AM, or PM. Can retrieve delivery details using the customer&apos;s ContactId, collect 3 preferred installation date/time preferences, create installer work orders with those preferences, and create linked service appointments. Also handles general shipment status inquiries. Cannot modify device configuration or change asset status.</scope>
+</GenAiPlugin>
