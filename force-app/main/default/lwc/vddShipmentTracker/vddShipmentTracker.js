@@ -1,6 +1,5 @@
 import { LightningElement, api, wire } from 'lwc';
 import { getRecord, getFieldValue, getRecordNotifyChange } from 'lightning/uiRecordApi';
-import { subscribe, unsubscribe, onError, isEmpEnabled } from 'lightning/empApi';
 
 import STATUS_FIELD from '@salesforce/schema/Shipment.Status';
 import SHIP_TO_NAME from '@salesforce/schema/Shipment.ShipToName';
@@ -31,15 +30,13 @@ const MILESTONES = [
     { key: 'delivered',     label: 'Delivered',          icon: 'standard:task2',             statusMatch: ['Delivered'] }
 ];
 
-const CDC_CHANNEL = '/data/ShipmentChangeEvent';
-const POLL_INTERVAL_MS = 5000;
+const POLL_INTERVAL_MS = 3000;
 
 export default class VddShipmentTracker extends LightningElement {
     @api recordId;
     shipment;
     error;
     _wiredResult;
-    _cdcSubscription;
     _pollingTimer;
 
     @wire(getRecord, { recordId: '$recordId', fields: FIELDS })
@@ -56,81 +53,22 @@ export default class VddShipmentTracker extends LightningElement {
     }
 
     connectedCallback() {
-        this._subscribeToCDC();
         this._startPolling();
     }
 
     disconnectedCallback() {
-        this._unsubscribeFromCDC();
         this._stopPolling();
     }
 
     /**
-     * Subscribe to Shipment Change Data Capture events.
-     * When any Shipment record is updated (including status changes),
-     * CDC fires immediately and we refresh the wire adapter.
-     */
-    async _subscribeToCDC() {
-        try {
-            const enabled = await isEmpEnabled();
-            if (!enabled) {
-                return;
-            }
-
-            // Register error listener
-            onError((error) => {
-                // Silently handle — polling fallback is active
-                console.warn('empApi error:', JSON.stringify(error));
-            });
-
-            this._cdcSubscription = await subscribe(
-                CDC_CHANNEL,
-                -1,
-                (message) => {
-                    this._handleCDCEvent(message);
-                }
-            );
-        } catch (err) {
-            // CDC not available — polling fallback handles it
-            console.warn('CDC subscription failed, using polling fallback');
-        }
-    }
-
-    _unsubscribeFromCDC() {
-        if (this._cdcSubscription) {
-            unsubscribe(this._cdcSubscription, () => {
-                this._cdcSubscription = null;
-            });
-        }
-    }
-
-    /**
-     * Handle incoming CDC event. Check if the changed record
-     * matches our recordId, then force-refresh the wire.
-     */
-    _handleCDCEvent(event) {
-        const payload = event?.data?.payload;
-        if (!payload) return;
-
-        const changeHeader = payload.ChangeEventHeader;
-        if (!changeHeader) return;
-
-        // Check if this change is for our specific Shipment record
-        const changedIds = changeHeader.recordIds || [];
-        if (changedIds.includes(this.recordId)) {
-            // Notify the Lightning Data Service that this record changed
-            getRecordNotifyChange([{ recordId: this.recordId }]);
-        }
-    }
-
-    /**
-     * Polling fallback — in case CDC is not enabled or subscription fails.
-     * Polls every 5 seconds to catch any missed updates.
+     * Poll every 3 seconds to detect record changes.
+     * getRecordNotifyChange tells Lightning Data Service
+     * to re-fetch the record, which triggers the wire adapter.
      */
     _startPolling() {
         if (this._pollingTimer) return;
         this._pollingTimer = setInterval(() => {
-            if (this._wiredResult) {
+            if (this.recordId) {
                 getRecordNotifyChange([{ recordId: this.recordId }]);
             }
         }, POLL_INTERVAL_MS);
