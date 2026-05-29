@@ -1,0 +1,64 @@
+{
+  "required" : [ "assetId", "accountId", "contactId", "diagnosis", "severity", "recommendedAction", "vehicleName", "customerName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "assetId" : {
+      "title" : "assetId",
+      "description" : "The Salesforce ID of the asset requiring replacement.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "accountId" : {
+      "title" : "accountId",
+      "description" : "The Salesforce ID of the customer account.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "The Salesforce ID of the customer contact.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "diagnosis" : {
+      "title" : "diagnosis",
+      "description" : "The diagnostic assessment from the asset health check.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "severity" : {
+      "title" : "severity",
+      "description" : "The severity level of the issue requiring replacement.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "recommendedAction" : {
+      "title" : "recommendedAction",
+      "description" : "The recommended action from the health diagnosis.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "vehicleName" : {
+      "title" : "vehicleName",
+      "description" : "The name of the vehicle associated with the asset.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "customerName" : {
+      "title" : "customerName",
+      "description" : "The name of the customer for the replacement case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

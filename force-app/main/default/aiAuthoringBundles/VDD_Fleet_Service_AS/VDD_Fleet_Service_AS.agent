@@ -1,0 +1,420 @@
+config:
+  developer_name: "VDD_Fleet_Service_AS"
+  agent_description: "Verizon Connect fleet management service agent that assists customers with GPS device delivery coordination, installation scheduling, post-install onboarding, and proactive device health monitoring for VDD-400 tracking units."
+  agent_type: "AgentforceServiceAgent"
+  default_agent_user: "serviceagentagentforce052026185746288059@example.com"
+
+variables:
+  is_verified: mutable boolean = False
+  verified_customer_id: mutable string = ""
+  authentication_key: mutable string = ""
+  customer_id: mutable string = ""
+  customer_type: mutable string = ""
+
+  end_user_contact_id: linked string
+    source: MessagingEndUser.ContactId
+
+  delivery_asset_id: mutable string = ""
+  delivery_account_id: mutable string = ""
+  delivery_contact_id: mutable string = ""
+  delivery_customer_name: mutable string = ""
+  delivery_customer_phone: mutable string = ""
+  delivery_serial_number: mutable string = ""
+  delivery_device_esn: mutable string = ""
+  delivery_vehicle_name: mutable string = ""
+  delivery_address_text: mutable string = ""
+
+  install_asset_id: mutable string = ""
+  install_contact_id: mutable string = ""
+  install_customer_name: mutable string = ""
+  install_serial_number: mutable string = ""
+  install_vehicle_name: mutable string = ""
+  telemetry_status: mutable string = ""
+  telemetry_all_metrics: mutable string = ""
+
+  breach_account_id: mutable string = ""
+  breach_contact_id: mutable string = ""
+  breach_customer_name: mutable string = ""
+  breach_vehicle_name: mutable string = ""
+  breach_threshold_name: mutable string = ""
+  breach_diagnosis: mutable string = ""
+  breach_severity: mutable string = ""
+  breach_recommended_action: mutable string = ""
+
+system:
+  messages:
+    welcome: "Thanks for your reply! Let me pull up your delivery details and get your installation scheduled."
+    error: "Sorry, it looks like something has gone wrong."
+  instructions: |
+    You are the Verizon Connect Fleet Service Agent. You help fleet customers
+    coordinate VDD-400 GPS device delivery, installation, and post-install
+    onboarding, and you handle proactive replacement when a device threshold
+    is breached. You are casual but professional, empathetic, and concise.
+    Convert dates to YYYY-MM-DD when calling actions, but display dates to
+    customers in a friendly format. Never reveal internal record IDs (Case
+    IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+    and validate user concerns with empathy and professionalism. When the
+    customer is not yet verified and a sensitive action is needed, route to
+    Service Customer Verification first. For SMS conversations, use the
+    end_user_contact_id linked variable to look up the customer when no
+    contactId is provided.
+
+connection messaging:
+   adaptive_response_allowed: True
+
+start_agent entry:
+  description: "Entry point for all conversations. SMS replies default to delivery coordination; otherwise route by intent."
+  reasoning:
+    instructions: |
+      Greet the customer briefly, then route to the topic that best matches
+      their intent. If the customer mentions dates, times, AM, PM, morning,
+      afternoon, evening, or any installation scheduling preference, route
+      to VDD Delivery Coordination. If they say onboarding, set up,
+      dashboard, verify, GPS signal, or telemetry, route to VDD Post-Install
+      Onboarding. Otherwise route by stated intent.
+    actions:
+      go_delivery: @utils.transition to @topic.VDD_Delivery_Coordination
+        description: "Customer is replying with installation date/time preferences"
+      go_onboarding: @utils.transition to @topic.VDD_Post_Install_Onboarding
+        description: "Customer wants to start onboarding or verify telemetry"
+      go_health: @utils.transition to @topic.VDD_Proactive_Health_Monitor
+        description: "An asset threshold breach has been detected"
+      go_verify: @utils.transition to @topic.Service_Customer_Verification
+        description: "Customer needs to verify identity before sensitive actions"
+      go_faq: @utils.transition to @topic.General_FAQ
+        description: "Customer is asking a general knowledge question"
+      go_escalate: @utils.transition to @topic.Escalation
+        description: "Customer explicitly requests a live agent"
+
+topic VDD_Delivery_Coordination:
+  description: "Route to this topic when the customer mentions dates, times, scheduling preferences, morning, afternoon, evening, AM, PM, or availability for installation. Default topic for SMS replies to delivery notifications."
+  scope: "Can retrieve delivery details, send date collection SMS, and create installer work orders."
+  instructions: |
+    Step 1: Call Get Delivery Details with assetId = the customer's delivered
+    asset (use the most recently delivered VDD-400 device for this contact).
+    Step 2: Extract 3 dates (YYYY-MM-DD) and 3 time-of-day values from the
+    customer message and call Collect Install Dates.
+    Step 3: Call Create Installer Work Order with the device details and the
+    6 date/time preferences.
+    Confirm the work order number to the customer using their first name.
+  actions:
+    get_delivery_details:
+      target: "apex://VDD_GetDeliveryDetails"
+      description: "Retrieves delivery details for the customer's most recently delivered VDD-400 asset."
+      inputs:
+        assetId: string
+      outputs:
+        customerName: string
+        customerPhone: string
+        customerEmail: string
+        contactId: string
+        accountId: string
+        serialNumber: string
+        deviceESN: string
+        assetName: string
+        accountName: string
+        vehicleName: string
+        deliveryAddress: string
+        success: boolean
+        message: string
+    collect_install_dates:
+      target: "apex://VDD_CollectInstallDates"
+      description: "Creates a follow-up task with the customer's 3 preferred installation date/time pairs."
+      inputs:
+        contactId: string
+        assetId: string
+        customerName: string
+        serialNumber: string
+      outputs:
+        taskId: string
+        confirmationMessage: string
+        success: boolean
+    create_installer_work_order:
+      target: "apex://VDD_CreateInstallerWorkOrder"
+      description: "Creates a field installer work order to install the VDD-400 device on the customer's vehicle."
+      inputs:
+        assetId: string
+        accountId: string
+        serialNumber: string
+        deviceESN: string
+        vehicleName: string
+        customerName: string
+        customerPhone: string
+        deliveryAddress: string
+      outputs:
+        workOrderNumber: string
+        workOrderId: string
+        confirmationMessage: string
+        success: boolean
+  reasoning:
+    actions:
+      details: @actions.get_delivery_details
+        description: "Look up delivery details for the customer's VDD-400"
+        with assetId = ...
+      collect: @actions.collect_install_dates
+        description: "Save the 3 preferred date/time pairs from the customer message"
+        with contactId = ...
+        with assetId = ...
+        with customerName = ...
+        with serialNumber = ...
+      create_wo: @actions.create_installer_work_order
+        description: "Dispatch the installer for the confirmed VDD-400 device"
+        with assetId = ...
+        with accountId = ...
+        with serialNumber = ...
+        with deviceESN = ...
+        with vehicleName = ...
+        with customerName = ...
+        with customerPhone = ...
+        with deliveryAddress = ...
+
+topic VDD_Post_Install_Onboarding:
+  description: "Handles post-installation onboarding for VDD-400 devices via SMS. Confirms install status, verifies telemetry, and sends welcome message with dashboard access."
+  scope: "Can read install status, verify telemetry from asset attributes, and send onboarding welcome messages."
+  instructions: |
+    Step 1: Call Get Install Status to find the customer's most recently
+    installed VDD-400 device.
+    Step 2: Call Confirm Telemetry with the assetId returned.
+    Step 3: Call Send Onboarding Message with all the captured device,
+    customer, vehicle, and telemetry details.
+    Summarize telemetry to the customer by first name and let them know the
+    dashboard is at connect.verizon.com/fleet.
+  actions:
+    get_install_status:
+      target: "apex://VDD_GetInstallStatus"
+      description: "Returns the most recently installed VDD-400 asset for the customer along with telemetry-friendly metadata."
+      inputs:
+        assetId: string
+      outputs:
+        assetName: string
+        serialNumber: string
+        vehicleName: string
+        installDate: string
+        customerName: string
+        customerEmail: string
+        customerPhone: string
+        contactId: string
+        assetStatus: string
+        isInstalled: boolean
+        success: boolean
+        message: string
+    confirm_telemetry:
+      target: "apex://VDD_ConfirmTelemetry"
+      description: "Reads telemetry data for an asset and returns GPS accuracy, signal strength, battery voltage, ping rate, last ping, and an overall telemetry status."
+      inputs:
+        assetId: string
+      outputs:
+        gpsAccuracy: string
+        signalStrength: string
+        batteryVoltage: string
+        lastPing: string
+        pingRate: string
+        deviceESN: string
+        telemetryStatus: string
+        allMetrics: string
+        success: boolean
+        message: string
+    send_onboarding_message:
+      target: "apex://VDD_SendOnboardingMessage"
+      description: "Creates an onboarding welcome message for the customer summarizing device installation and telemetry verification."
+      inputs:
+        contactId: string
+        assetId: string
+        customerName: string
+        serialNumber: string
+        vehicleName: string
+        allMetrics: string
+        telemetryStatus: string
+      outputs:
+        taskId: string
+        confirmationMessage: string
+        success: boolean
+  reasoning:
+    actions:
+      status: @actions.get_install_status
+        description: "Look up the most recently installed VDD-400 for the customer"
+        with assetId = ...
+      telemetry: @actions.confirm_telemetry
+        description: "Verify the device is reporting telemetry correctly"
+        with assetId = ...
+      welcome: @actions.send_onboarding_message
+        description: "Send the welcome message and dashboard link to the customer"
+        with contactId = ...
+        with assetId = ...
+        with customerName = ...
+        with serialNumber = ...
+        with vehicleName = ...
+        with allMetrics = ...
+        with telemetryStatus = ...
+
+topic VDD_Proactive_Health_Monitor:
+  description: "Autonomously coordinates equipment replacement when an asset health threshold is breached. Reads breach details, diagnoses from AssetAttribute values, creates a replacement case, and notifies the customer."
+  scope: "Can read threshold breaches, diagnose asset health from attributes, and create proactive replacement cases."
+  instructions: |
+    Step 1: Get Threshold Breach Details to identify the breached threshold,
+    asset, customer, and vehicle.
+    Step 2: Diagnose Asset Health to read AssetAttribute values and produce
+    a diagnosis with severity and recommended action.
+    Step 3: Create Replacement Case to file a proactive service case and
+    notify the customer.
+    Always run all three in sequence — act before the customer notices.
+  actions:
+    get_threshold_breach:
+      target: "apex://VDD_GetThresholdBreach"
+      description: "Returns details about a fleet asset's breached threshold including customer, vehicle, and account."
+      inputs:
+        assetId: string
+      outputs:
+        assetName: string
+        thresholdName: string
+        accountName: string
+        accountId: string
+        customerName: string
+        customerPhone: string
+        contactId: string
+        vehicleName: string
+        serialNumber: string
+        success: boolean
+        message: string
+    diagnose_asset_health:
+      target: "apex://VDD_DiagnoseAssetHealth"
+      description: "Diagnoses the health of a fleet asset based on the breached threshold, returning diagnosis, severity, recommended action, and consolidated metrics."
+      inputs:
+        assetId: string
+        thresholdName: string
+      outputs:
+        diagnosis: string
+        severity: string
+        recommendedAction: string
+        allMetrics: string
+        success: boolean
+        message: string
+    create_replacement_case:
+      target: "apex://VDD_CreateReplacementCase"
+      description: "Creates a proactive replacement case for a fleet asset that requires device replacement."
+      inputs:
+        assetId: string
+        accountId: string
+        contactId: string
+        diagnosis: string
+        severity: string
+        recommendedAction: string
+        vehicleName: string
+        customerName: string
+      outputs:
+        caseNumber: string
+        caseId: string
+        confirmationMessage: string
+        success: boolean
+  reasoning:
+    actions:
+      breach: @actions.get_threshold_breach
+        description: "Identify the breached threshold and impacted asset"
+        with assetId = ...
+      diagnose: @actions.diagnose_asset_health
+        description: "Run the health diagnosis on the impacted asset"
+        with assetId = ...
+        with thresholdName = ...
+      case: @actions.create_replacement_case
+        description: "Open a replacement case and notify the customer"
+        with assetId = ...
+        with accountId = ...
+        with contactId = ...
+        with diagnosis = ...
+        with severity = ...
+        with recommendedAction = ...
+        with vehicleName = ...
+        with customerName = ...
+
+topic Service_Customer_Verification:
+  description: "Verifies the customer's identity before granting access to sensitive data."
+  scope: "Authenticate the customer using their email or username before sensitive actions. Don't repeat the process within the same session."
+  instructions: |
+    Ask the customer for their username or email if not provided. Use Send
+    Email Verification Code to start verification — never disclose whether
+    a user exists; reply with the verification message returned by the
+    action. If the customer enters the wrong code three times, ask for
+    their email/username again and re-send. Never reveal the code, email,
+    or username during authentication. After successful verification, do
+    not allow switching users in the same session.
+  actions:
+    send_email_verification_code:
+      target: "flow://SvcCopilotTmpl__SendVerificationCode"
+      description: "Sends a verification code to the user's email address."
+      inputs:
+        customerToVerify: string
+      outputs:
+        verificationMessage: string
+        verificationCode: string
+        authenticationKey: string
+        customerId: string
+        customerType: string
+    verify_customer:
+      target: "flow://SvcCopilotTmpl__VerifyCode"
+      description: "Verifies the code entered by the user against the code that was sent."
+      inputs:
+        authenticationKey: string
+        customerCode: string
+        customerId: string
+        customerType: string
+      outputs:
+        isVerified: boolean
+        customerId: string
+        customerType: string
+        messageAfterVerification: string
+  reasoning:
+    actions:
+      send_code: @actions.send_email_verification_code
+        description: "Send the verification code to the customer's email"
+        with customerToVerify = ...
+        set @variables.authentication_key = @outputs.authenticationKey
+        set @variables.customer_id = @outputs.customerId
+        set @variables.customer_type = @outputs.customerType
+      verify: @actions.verify_customer
+        description: "Confirm the code the customer entered"
+        with authenticationKey = ...
+        with customerCode = ...
+        with customerId = ...
+        with customerType = ...
+        set @variables.is_verified = @outputs.isVerified
+        set @variables.verified_customer_id = @outputs.customerId
+
+topic General_FAQ:
+  description: "Answers customer questions by searching knowledge articles."
+  scope: "Answer questions about company products, policies, or procedures using knowledge articles only."
+  instructions: |
+    If a question is too vague, ask for clarification. If you can't answer
+    even after clarifying, offer to escalate. Never provide generic
+    information unless it comes from a knowledge article. Include sources
+    when available.
+  actions:
+    answer_with_knowledge_faq:
+      target: "standardInvocableAction://streamKnowledgeSearch"
+      description: "Answers questions using knowledge articles."
+      inputs:
+        query: string
+        citationsUrl: string
+        ragFeatureConfigId: string
+        citationsEnabled: boolean
+      outputs:
+        knowledgeSummary: string
+        citationSources: string
+  reasoning:
+    actions:
+      knowledge: @actions.answer_with_knowledge_faq
+        description: "Search knowledge for an answer"
+        with query = ...
+        with citationsUrl = ...
+        with ragFeatureConfigId = ...
+        with citationsEnabled = ...
+
+topic Escalation:
+  description: "Handles requests to escalate to a live agent."
+  scope: "Transfer the conversation to a live agent if explicitly requested. If escalation fails, ask whether to log a support case instead."
+  instructions: |
+    Escalate when the customer explicitly asks for human help. If
+    escalation fails, acknowledge the issue and offer to log a case.
+  reasoning:
+    actions:
+      escalate_now: @utils.escalate
+        description: "Hand the conversation to a live agent"

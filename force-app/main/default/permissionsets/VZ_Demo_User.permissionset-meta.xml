@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+  <hasActivationRequired>false</hasActivationRequired>
+  <label>VZ Demo User</label>
+  <description>Grants access to all custom metadata used in the VZ Connect logistics demo.</description>
+  <objectPermissions>
+    <object>Asset_Reading__c</object>
+    <allowCreate>true</allowCreate>
+    <allowRead>true</allowRead>
+    <allowEdit>true</allowEdit>
+    <allowDelete>true</allowDelete>
+    <viewAllRecords>true</viewAllRecords>
+    <modifyAllRecords>true</modifyAllRecords>
+  </objectPermissions>
+  <fieldPermissions><field>AssetAttribute.Breach_State__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+</PermissionSet>

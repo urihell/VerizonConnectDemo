@@ -1,0 +1,26 @@
+{
+  "required" : [ "cancelReason", "recordIds" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordIds" : {
+      "title" : "Service Appointment IDs",
+      "description" : "The IDs of the service appointments that are being canceled.",
+      "maxItems" : 10,
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "cancelReason" : {
+      "title" : "Cancellation Reason",
+      "description" : "The reason for canceling the service appointment. Added if the user shares the reason.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

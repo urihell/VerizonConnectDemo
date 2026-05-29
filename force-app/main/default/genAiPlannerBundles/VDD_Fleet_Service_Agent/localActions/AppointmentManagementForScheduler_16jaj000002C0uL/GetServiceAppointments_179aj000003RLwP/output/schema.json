@@ -1,0 +1,27 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "serviceAppointments" : {
+      "title" : "Service Appointments",
+      "description" : "The list of Scheduler service appointments for the specified date.",
+      "maxItems" : 10,
+      "items" : {
+        "lightning:type" : "lightning__recordIdType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "errorMessage" : {
+      "title" : "errorMessage",
+      "description" : "The error message that guides the user if there's an issue or if further information is needed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

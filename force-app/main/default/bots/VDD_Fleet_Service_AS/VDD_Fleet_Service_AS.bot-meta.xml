@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentDSLEnabled>true</agentDSLEnabled>
+    <agentType>EinsteinServiceAgent</agentType>
+    <botMlDomain>
+        <label>VDD Fleet Service AS</label>
+        <name>VDD_Fleet_Service_AS</name>
+    </botMlDomain>
+    <botSource>None</botSource>
+    <botUser>serviceagentagentforce052026185746288059@example.com</botUser>
+    <contextVariables>
+        <dataType>Text</dataType>
+        <description>End_User_Contact_Id</description>
+        <developerName>end_user_contact_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>End User Contact Id</label>
+    </contextVariables>
+    <description>Verizon Connect fleet management service agent that assists customers with GPS device delivery coordination, installation scheduling, post-install onboarding, and proactive device health monitoring for VDD-400 tracking units.</description>
+    <label>VDD Fleet Service AS</label>
+    <logPrivateConversationData>false</logPrivateConversationData>
+    <richContentEnabled>true</richContentEnabled>
+    <sessionTimeout>0</sessionTimeout>
+    <type>ExternalCopilot</type>
+</Bot>

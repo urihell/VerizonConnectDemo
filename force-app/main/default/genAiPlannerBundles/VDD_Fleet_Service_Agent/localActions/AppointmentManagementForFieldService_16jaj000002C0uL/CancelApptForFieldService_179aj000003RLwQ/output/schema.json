@@ -1,0 +1,34 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "isSuccess" : {
+      "title" : "Completion Status",
+      "description" : "The completion status received from the flow.",
+      "lightning:type" : "lightning__booleanType",
+      "einstein:description" : "The completion status received from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "serviceAppointmentNumber" : {
+      "title" : "Service Appointment Number",
+      "description" : "The number of the canceled service appointment.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The number of the canceled service appointment.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "failReason" : {
+      "title" : "Failure Reason",
+      "description" : "The reason why the referenced flow failed.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The reason why the referenced flow failed.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

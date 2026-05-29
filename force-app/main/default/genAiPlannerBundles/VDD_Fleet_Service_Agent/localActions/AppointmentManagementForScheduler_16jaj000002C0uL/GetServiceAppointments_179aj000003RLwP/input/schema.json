@@ -1,0 +1,22 @@
+{
+  "required" : [ "appointmentDate" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentDate" : {
+      "title" : "Appointment Date",
+      "description" : "The date for which to get appointments.",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "appointmentTopic" : {
+      "title" : "Appointment Topic",
+      "description" : "The topic of the appointment",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

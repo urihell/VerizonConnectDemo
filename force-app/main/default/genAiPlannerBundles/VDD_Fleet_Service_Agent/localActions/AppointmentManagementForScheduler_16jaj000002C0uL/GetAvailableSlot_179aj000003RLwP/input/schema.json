@@ -1,0 +1,15 @@
+{
+  "required" : [ "appointmentDetails" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentDetails" : {
+      "title" : "Appointment Details",
+      "description" : "The details required for booking an appointment.",
+      "lightning:type" : "@apexClassType/ApptBooking__AppointmentDetailsOutput",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

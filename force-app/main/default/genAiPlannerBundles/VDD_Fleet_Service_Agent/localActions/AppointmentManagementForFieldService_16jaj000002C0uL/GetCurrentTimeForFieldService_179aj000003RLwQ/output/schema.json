@@ -1,0 +1,25 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "completionStatus" : {
+      "title" : "Completion Status",
+      "description" : "The completion status received from the flow.",
+      "lightning:type" : "lightning__booleanType",
+      "einstein:description" : "The completion status received from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "currentDateTime" : {
+      "title" : "Current Date Time",
+      "description" : "The current date and time received from the flow.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The current date and time received from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

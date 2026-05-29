@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "topicIdsAndObjectNames" : {
+      "title" : "List of Topic IDs and Object Names",
+      "description" : "A list of pairs from the engagement topics of the object ID (from the TopicId field) and its object name for the current messaging session. For example, [{TopicId: \"08pRZ0000008iPeYAI\", ObjectName: \"ServiceAppointment\"}, {TopicId: \"02iRZ0000006AeDYAU\", ObjectName: \"Asset\"}].",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

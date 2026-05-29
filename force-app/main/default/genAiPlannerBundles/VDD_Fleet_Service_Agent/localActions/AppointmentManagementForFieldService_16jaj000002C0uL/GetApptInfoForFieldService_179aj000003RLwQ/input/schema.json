@@ -1,0 +1,39 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "Contact ID",
+      "description" : "The ID of the Contact record.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the Contact record.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "endTime" : {
+      "title" : "End Time",
+      "description" : "The end of the time range for retrieving the service appointments. If there's no given end time, only the start time is used. The time must be in this format: YYYY-MM-DD HH:mm:SS.\n            For example: 2025-11-16 17:00:00.\n        ",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The end of the time range for retrieving the service appointments. If there's no given end time, only the start time is used. The time must be in this format: YYYY-MM-DD HH:mm:SS.\nFor example: 2025-11-16 17:00:00.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "startTime" : {
+      "title" : "Start Time",
+      "description" : "The start of the time range for retrieving the service appointments. The default value is today. The time must be in this format: YYYY-MM-DD HH:mm:SS.\n            For example: 2025-11-15 17:00:00.\n        ",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The start of the time range for retrieving the service appointments. The default value is today. The time must be in this format: YYYY-MM-DD HH:mm:SS\n.For example: 2025-11-15 17:00:00.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

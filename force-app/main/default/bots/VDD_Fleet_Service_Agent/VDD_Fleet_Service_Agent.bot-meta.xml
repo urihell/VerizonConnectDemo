@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentDSLEnabled>false</agentDSLEnabled>
     <agentType>EinsteinServiceAgent</agentType>
     <botMlDomain>
         <label>VDD Fleet Service Agent</label>
         <name>VDD_Fleet_Service_Agent</name>
     </botMlDomain>
+    <botSource>None</botSource>
     <botUser>vdd_fleet_service_agent@00daj00000tbsqv1631237330.ext</botUser>
     <contextVariables>
         <contextVariableMappings>
@@ -42,8 +44,10 @@
             <fieldName>MessagingEndUser.ContactId</fieldName>
             <messageType>Text</messageType>
         </contextVariableMappings>
-        <dataType>Id</dataType>
+        <dataType>Text</dataType>
+        <description>MessagingEndUser ContactId</description>
         <developerName>ContactId</developerName>
+        <includeInPrompt>false</includeInPrompt>
         <label>Contact Id</label>
     </contextVariables>
     <contextVariables>
@@ -82,8 +86,10 @@
             <fieldName>MessagingSession.MessagingEndUserId</fieldName>
             <messageType>Text</messageType>
         </contextVariableMappings>
-        <dataType>Id</dataType>
+        <dataType>Text</dataType>
+        <description>MessagingEndUser Id</description>
         <developerName>EndUserId</developerName>
+        <includeInPrompt>false</includeInPrompt>
         <label>End User Id</label>
     </contextVariables>
     <contextVariables>
@@ -123,7 +129,9 @@
             <messageType>WhatsApp</messageType>
         </contextVariableMappings>
         <dataType>Text</dataType>
+        <description>MessagingSession EndUserLanguage</description>
         <developerName>EndUserLanguage</developerName>
+        <includeInPrompt>false</includeInPrompt>
         <label>End User Language</label>
     </contextVariables>
     <contextVariables>
@@ -162,8 +170,10 @@
             <fieldName>MessagingSession.Id</fieldName>
             <messageType>Text</messageType>
         </contextVariableMappings>
-        <dataType>Id</dataType>
+        <dataType>Text</dataType>
+        <description>MessagingSession Id</description>
         <developerName>RoutableId</developerName>
+        <includeInPrompt>false</includeInPrompt>
         <label>Routable Id</label>
     </contextVariables>
     <contextVariables>
@@ -202,8 +212,10 @@
             <fieldName>VoiceCall.Id</fieldName>
             <messageType>AppleBusinessChat</messageType>
         </contextVariableMappings>
-        <dataType>Id</dataType>
+        <dataType>Text</dataType>
+        <description>VoiceCall Id</description>
         <developerName>VoiceCallId</developerName>
+        <includeInPrompt>false</includeInPrompt>
         <label>Voice Call Id</label>
     </contextVariables>
     <description>Verizon Connect fleet management service agent that assists customers with GPS device delivery coordination, installation scheduling, post-install onboarding, and proactive device health monitoring for VDD-400 tracking units.</description>

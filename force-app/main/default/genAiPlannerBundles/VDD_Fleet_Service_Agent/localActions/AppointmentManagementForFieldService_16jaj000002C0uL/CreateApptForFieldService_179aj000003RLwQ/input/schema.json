@@ -1,0 +1,32 @@
+{
+  "required" : [ "workTypeId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "Location Provider Record Id",
+      "description" : "The ID of the Contact, Order, or Account record from which the new service appointment location is derived.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the Contact, Order, or Account record from which the new service appointment location is derived.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "workTypeId" : {
+      "title" : "Work Type ID",
+      "description" : "The ID of the work type.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the work type.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

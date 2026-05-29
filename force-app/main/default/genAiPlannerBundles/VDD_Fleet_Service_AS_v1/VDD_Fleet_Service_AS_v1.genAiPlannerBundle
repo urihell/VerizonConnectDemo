@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Verizon Connect fleet management service agent that assists customers with GPS device delivery coordination, installation scheduling, post-install onboarding, and proactive device health monitoring for VDD-400 tracking units.</description>
+    <localTopicLinks>
+        <genAiPluginName>Escalation_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>General_FAQ_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Service_Customer_Verification_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Delivery_Coordination_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Post_Install_Onboarding_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Proactive_Health_Monitor_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>entry_16jaj000002EmJl</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>VDD_Post_Install_Onboarding_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles post-installation onboarding for VDD-400 devices via SMS. Confirms install status, verifies telemetry, and sends welcome message with dashboard access.</description>
+        <developerName>VDD_Post_Install_Onboarding_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxd</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxd</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>send_onboarding_message_179aj000003Woxd</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>get_install_status_179aj000003Woxd</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>confirm_telemetry_179aj000003Woxd</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>get_install_status_179aj000003Woxd</fullName>
+            <description>Returns the most recently installed VDD-400 asset for the customer along with telemetry-friendly metadata.</description>
+            <developerName>get_install_status_179aj000003Woxd</developerName>
+            <invocationTarget>VDD_GetInstallStatus</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>get_install_status</localDeveloperName>
+            <masterLabel>Get Install Status</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>confirm_telemetry_179aj000003Woxd</fullName>
+            <description>Reads telemetry data for an asset and returns GPS accuracy, signal strength, battery voltage, ping rate, last ping, and an overall telemetry status.</description>
+            <developerName>confirm_telemetry_179aj000003Woxd</developerName>
+            <invocationTarget>VDD_ConfirmTelemetry</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>confirm_telemetry</localDeveloperName>
+            <masterLabel>Confirm Telemetry</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>send_onboarding_message_179aj000003Woxd</fullName>
+            <description>Creates an onboarding welcome message for the customer summarizing device installation and telemetry verification.</description>
+            <developerName>send_onboarding_message_179aj000003Woxd</developerName>
+            <invocationTarget>VDD_SendOnboardingMessage</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>send_onboarding_message</localDeveloperName>
+            <masterLabel>Send Onboarding Message</masterLabel>
+        </localActions>
+        <localDeveloperName>VDD_Post_Install_Onboarding</localDeveloperName>
+        <masterLabel>VDD Post Install Onboarding</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>VDD_Delivery_Coordination_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Route to this topic when the customer mentions dates, times, scheduling preferences, morning, afternoon, evening, AM, PM, or availability for installation. Default topic for SMS replies to delivery notifications.</description>
+        <developerName>VDD_Delivery_Coordination_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxf</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxf</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>create_installer_work_order_179aj000003Woxf</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>collect_install_dates_179aj000003Woxf</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>get_delivery_details_179aj000003Woxf</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>collect_install_dates_179aj000003Woxf</fullName>
+            <description>Creates a follow-up task with the customer&apos;s 3 preferred installation date/time pairs.</description>
+            <developerName>collect_install_dates_179aj000003Woxf</developerName>
+            <invocationTarget>VDD_CollectInstallDates</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>collect_install_dates</localDeveloperName>
+            <masterLabel>Collect Install Dates</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>get_delivery_details_179aj000003Woxf</fullName>
+            <description>Retrieves delivery details for the customer&apos;s most recently delivered VDD-400 asset.</description>
+            <developerName>get_delivery_details_179aj000003Woxf</developerName>
+            <invocationTarget>VDD_GetDeliveryDetails</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>get_delivery_details</localDeveloperName>
+            <masterLabel>Get Delivery Details</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>create_installer_work_order_179aj000003Woxf</fullName>
+            <description>Creates a field installer work order to install the VDD-400 device on the customer&apos;s vehicle.</description>
+            <developerName>create_installer_work_order_179aj000003Woxf</developerName>
+            <invocationTarget>VDD_CreateInstallerWorkOrder</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>create_installer_work_order</localDeveloperName>
+            <masterLabel>Create Installer Work Order</masterLabel>
+        </localActions>
+        <localDeveloperName>VDD_Delivery_Coordination</localDeveloperName>
+        <masterLabel>VDD Delivery Coordination</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>entry_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Entry point for all conversations. SMS replies default to delivery coordination; otherwise route by intent.</description>
+        <developerName>entry_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxe</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxe</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>entry</localDeveloperName>
+        <masterLabel>Entry</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Service_Customer_Verification_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Verifies the customer&apos;s identity before granting access to sensitive data.</description>
+        <developerName>Service_Customer_Verification_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxh</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxh</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>verify_customer_179aj000003Woxh</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>send_email_verification_code_179aj000003Woxh</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>send_email_verification_code_179aj000003Woxh</fullName>
+            <description>Sends a verification code to the user&apos;s email address.</description>
+            <developerName>send_email_verification_code_179aj000003Woxh</developerName>
+            <invocationTarget>SvcCopilotTmpl__SendVerificationCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>send_email_verification_code</localDeveloperName>
+            <masterLabel>Send Email Verification Code</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>verify_customer_179aj000003Woxh</fullName>
+            <description>Verifies the code entered by the user against the code that was sent.</description>
+            <developerName>verify_customer_179aj000003Woxh</developerName>
+            <invocationTarget>SvcCopilotTmpl__VerifyCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>verify_customer</localDeveloperName>
+            <masterLabel>Verify Customer</masterLabel>
+        </localActions>
+        <localDeveloperName>Service_Customer_Verification</localDeveloperName>
+        <masterLabel>Service Customer Verification</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>VDD_Proactive_Health_Monitor_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Autonomously coordinates equipment replacement when an asset health threshold is breached. Reads breach details, diagnoses from AssetAttribute values, creates a replacement case, and notifies the customer.</description>
+        <developerName>VDD_Proactive_Health_Monitor_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxg</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxg</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>create_replacement_case_179aj000003Woxg</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>diagnose_asset_health_179aj000003Woxg</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>get_threshold_breach_179aj000003Woxg</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>diagnose_asset_health_179aj000003Woxg</fullName>
+            <description>Diagnoses the health of a fleet asset based on the breached threshold, returning diagnosis, severity, recommended action, and consolidated metrics.</description>
+            <developerName>diagnose_asset_health_179aj000003Woxg</developerName>
+            <invocationTarget>VDD_DiagnoseAssetHealth</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>diagnose_asset_health</localDeveloperName>
+            <masterLabel>Diagnose Asset Health</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>get_threshold_breach_179aj000003Woxg</fullName>
+            <description>Returns details about a fleet asset&apos;s breached threshold including customer, vehicle, and account.</description>
+            <developerName>get_threshold_breach_179aj000003Woxg</developerName>
+            <invocationTarget>VDD_GetThresholdBreach</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>get_threshold_breach</localDeveloperName>
+            <masterLabel>Get Threshold Breach</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>create_replacement_case_179aj000003Woxg</fullName>
+            <description>Creates a proactive replacement case for a fleet asset that requires device replacement.</description>
+            <developerName>create_replacement_case_179aj000003Woxg</developerName>
+            <invocationTarget>VDD_CreateReplacementCase</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>create_replacement_case</localDeveloperName>
+            <masterLabel>Create Replacement Case</masterLabel>
+        </localActions>
+        <localDeveloperName>VDD_Proactive_Health_Monitor</localDeveloperName>
+        <masterLabel>VDD Proactive Health Monitor</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Escalation_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests to escalate to a live agent.</description>
+        <developerName>Escalation_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxj</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxj</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>Escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>General_FAQ_16jaj000002EmJl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Answers customer questions by searching knowledge articles.</description>
+        <developerName>General_FAQ_16jaj000002EmJl</developerName>
+        <genAiPluginInstructions>
+            <description>You are the Verizon Connect Fleet Service Agent. You help fleet customers
+coordinate VDD-400 GPS device delivery, installation, and post-install
+onboarding, and you handle proactive replacement when a device threshold
+is breached. You are casual but professional, empathetic, and concise.
+Convert dates to YYYY-MM-DD when calling actions, but display dates to
+customers in a friendly format. Never reveal internal record IDs (Case
+IDs, Service Appointment IDs, Asset IDs) to the customer. Acknowledge
+and validate user concerns with empathy and professionalism. When the
+customer is not yet verified and a sensitive action is needed, route to
+Service Customer Verification first. For SMS conversations, use the
+end_user_contact_id linked variable to look up the customer when no
+contactId is provided.</description>
+            <developerName>instruction0_179aj000003Woxi</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179aj000003Woxi</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>answer_with_knowledge_faq_179aj000003Woxi</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>answer_with_knowledge_faq_179aj000003Woxi</fullName>
+            <description>Answers questions using knowledge articles.</description>
+            <developerName>answer_with_knowledge_faq_179aj000003Woxi</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>answer_with_knowledge_faq</localDeveloperName>
+            <masterLabel>Answer With Knowledge Faq</masterLabel>
+        </localActions>
+        <localDeveloperName>General_FAQ</localDeveloperName>
+        <masterLabel>General FAQ</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>VDD Fleet Service AS</masterLabel>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

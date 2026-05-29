@@ -1,0 +1,40 @@
+{
+  "required" : [ "serviceAppointmentId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "operatingHoursName" : {
+      "title" : "Operating Hours Name",
+      "description" : "The operating hours name of the appointment to get time slots for.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The operating hours name of the appointment to get time slots for.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "schedulingPolicyName" : {
+      "title" : "Scheduling Policy Name",
+      "description" : "The scheduling policy name of the appointment to get time slots for.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The scheduling policy name of the appointment to get time slots for.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "serviceAppointmentId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The ID of the service appointment to get available time slots for.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the service appointment to get available time slots for.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

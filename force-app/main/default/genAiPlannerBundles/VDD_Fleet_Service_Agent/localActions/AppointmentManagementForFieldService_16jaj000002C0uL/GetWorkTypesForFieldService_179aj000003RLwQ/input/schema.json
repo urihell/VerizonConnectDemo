@@ -1,0 +1,23 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordId" : {
+      "title" : "Record ID",
+      "description" : "The ID of the Contact record.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the Contact record.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

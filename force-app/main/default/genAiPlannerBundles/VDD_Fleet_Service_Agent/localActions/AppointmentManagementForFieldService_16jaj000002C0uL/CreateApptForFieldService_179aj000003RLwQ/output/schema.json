@@ -1,0 +1,47 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "address" : {
+      "title" : "Address",
+      "description" : "The address received from the flow.",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "einstein:description" : "The address received from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "isSuccess" : {
+      "title" : "Completion Status",
+      "description" : "The completion status received from the flow.",
+      "lightning:type" : "lightning__booleanType",
+      "einstein:description" : "The completion status received from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "svcApptId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The ID of the created service appointment.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the created service appointment.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "errorMessage" : {
+      "title" : "Error Message for Invalid Address",
+      "description" : "The error message that’s sent to the customer if their address isn’t valid.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The error message that’s sent to the customer if their address isn’t valid.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

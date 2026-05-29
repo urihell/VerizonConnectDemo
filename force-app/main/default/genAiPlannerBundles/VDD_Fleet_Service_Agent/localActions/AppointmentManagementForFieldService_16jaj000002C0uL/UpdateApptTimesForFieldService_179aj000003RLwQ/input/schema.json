@@ -1,0 +1,40 @@
+{
+  "required" : [ "serviceAppointmentId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "arrivalWindowStart" : {
+      "title" : "Arrival Window Start",
+      "description" : "The start time of the service appointment’s arrival window.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The start time of the service appointment’s arrival window.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "arrivalWindowEnd" : {
+      "title" : "Arrival Window End",
+      "description" : "The end time of the service appointment’s arrival window.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The end time of the service appointment’s arrival window.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "serviceAppointmentId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The ID of the service appointment to update.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the service appointment to update.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,36 @@
+{
+  "required" : [ "contactId", "assetId", "customerName", "serialNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "The Salesforce ID of the contact to assign the follow-up task to.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "assetId" : {
+      "title" : "assetId",
+      "description" : "The Salesforce ID of the asset for the installation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "customerName" : {
+      "title" : "customerName",
+      "description" : "The name of the customer to contact about installation dates.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "description" : "The serial number of the device to be installed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

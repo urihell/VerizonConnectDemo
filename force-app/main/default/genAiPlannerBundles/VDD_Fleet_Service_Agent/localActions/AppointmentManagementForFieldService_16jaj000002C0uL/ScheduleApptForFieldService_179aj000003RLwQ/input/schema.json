@@ -1,0 +1,32 @@
+{
+  "required" : [ "schedulingPolicyId", "serviceAppointmentId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "serviceAppointmentId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The ID of the service appointment to schedule.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The ID of the work type.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "schedulingPolicyName" : {
+      "title" : "Scheduling Policy Name",
+      "description" : "The name of the scheduling policy to use to schedule the service appointment.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The name of the scheduling policy to use to schedule the service appointment.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "operationType" : {
+      "title" : "Operation Type",
+      "description" : "Defines the type of operation. For future use only.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "Defines the type of operation. For future use only.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

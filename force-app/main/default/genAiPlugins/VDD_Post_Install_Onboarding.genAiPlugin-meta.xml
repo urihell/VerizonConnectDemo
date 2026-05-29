@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
     <description>Handles post-installation onboarding for VDD devices. Confirms installation status, verifies telemetry from AssetAttribute records, and sends welcome message with dashboard access.</description>
     <developerName>VDD_Post_Install_Onboarding</developerName>
     <genAiFunctions>
@@ -24,8 +25,10 @@ Always execute all 3 steps in sequence. Address the customer by their first name
         <developerName>instruction_post_install</developerName>
         <language>en_US</language>
         <masterLabel>Post-Install Onboarding Instructions</masterLabel>
+        <sortOrder>0</sortOrder>
     </genAiPluginInstructions>
     <language>en_US</language>
+    <localDeveloperName>VDD_Post_Install_Onboarding</localDeveloperName>
     <masterLabel>VDD Post-Install Onboarding</masterLabel>
     <pluginType>Topic</pluginType>
     <scope>Can read install status, verify telemetry from asset attributes, and send onboarding welcome messages. Cannot modify device settings, create work orders, or change asset status.</scope>

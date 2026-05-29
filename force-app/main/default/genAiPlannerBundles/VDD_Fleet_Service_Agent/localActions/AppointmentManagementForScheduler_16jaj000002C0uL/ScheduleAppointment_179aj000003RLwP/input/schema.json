@@ -1,0 +1,57 @@
+{
+  "required" : [ "appointmentDetails", "slot" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentDetails" : {
+      "title" : "Appointment Details",
+      "description" : "The details required to book an appointment.",
+      "lightning:type" : "@apexClassType/ApptBooking__AppointmentDetailsOutput",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "timeslot" : {
+      "title" : "Selected Time Slot",
+      "description" : "The time slot for the appointment.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "companyInfo" : {
+      "title" : "Company Information",
+      "description" : "The company information of the customer that's booking the appointment. If the customer is new, they're later asked for their company info.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "firstName" : {
+      "title" : "First Name",
+      "description" : "The first name of the customer that's booking the appointment. If the customer is new, they're later asked for their first name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : false
+    },
+    "lastName" : {
+      "title" : "Last Name",
+      "description" : "The last name of the customer that's booking the appointment. If the customer is new, they're later asked for their last name.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : false
+    },
+    "email" : {
+      "title" : "Email Address",
+      "description" : "The email address provided by the customer.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : false
+    },
+    "serviceAppointmentId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The service appointment ID that must be provided when rescheduling or modifying an appointment.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

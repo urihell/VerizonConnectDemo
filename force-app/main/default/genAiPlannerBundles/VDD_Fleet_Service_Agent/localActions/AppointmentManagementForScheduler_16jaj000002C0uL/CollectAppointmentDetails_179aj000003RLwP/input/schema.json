@@ -1,0 +1,67 @@
+{
+  "required" : [ "appointmentDate", "appointmentTopic", "serviceTerritory", "serviceResources" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentDate" : {
+      "title" : "Appointment Date",
+      "description" : "The date of the requested service appointment.",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "appointmentTopic" : {
+      "title" : "Appointment Topic",
+      "description" : "The subject of the service appointment.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "serviceTerritory" : {
+      "title" : "Service Territory",
+      "description" : "The branch name or the appointment's zip/postal code",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "serviceResources" : {
+      "title" : "Service Resources",
+      "description" : "The staff members at the branch where the appointment is scheduled. If the customer doesn’t specify staff member names, the appointment is scheduled with any available staff members.",
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "earliestStartTime" : {
+      "title" : "Preferred Earliest Start Time",
+      "description" : "Don't prompt the user for this attribute. Specifies the earliest time after which the system begins to look for available appointment slots on a given date. The time must be provided in the HH:MM format (24-hour clock), without any time zone or additional timestamp information. If no time of day is provided, the default value is null.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "appointmentChannel" : {
+      "title" : "Appointment Channel",
+      "description" : "Channel of the appointment getting booked.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "isGroupAppointment" : {
+      "title" : "Group Appointment",
+      "description" : "Indicates whether the user wants to schedule a group service appointment. The default value is 'false'. If the user wants to schedule a group appointment, set this to 'true'. This field should not be prompted by the system; the value will be set based on the user's intent and should not require further user input.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "caseNumber" : {
+      "title" : "Case Number",
+      "description" : "The case number to associate with the appointment.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

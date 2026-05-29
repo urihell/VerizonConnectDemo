@@ -1,0 +1,64 @@
+{
+  "required" : [ "assetId", "accountId", "serialNumber", "deviceESN", "vehicleName", "customerName", "customerPhone", "deliveryAddress" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "assetId" : {
+      "title" : "assetId",
+      "description" : "The Salesforce ID of the asset to install.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "accountId" : {
+      "title" : "accountId",
+      "description" : "The Salesforce ID of the customer account.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "description" : "The serial number of the device to be installed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "deviceESN" : {
+      "title" : "deviceESN",
+      "description" : "The Electronic Serial Number of the device.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "vehicleName" : {
+      "title" : "vehicleName",
+      "description" : "The name of the vehicle where the device will be installed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "customerName" : {
+      "title" : "customerName",
+      "description" : "The name of the customer for the work order.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "customerPhone" : {
+      "title" : "customerPhone",
+      "description" : "The customer phone number for installer contact.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "deliveryAddress" : {
+      "title" : "deliveryAddress",
+      "description" : "The address where the installation will take place.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,15 @@
+{
+  "required" : [ "salesforceInternal" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "salesforceInternal" : {
+      "title" : "Salesforce Internal",
+      "description" : "For internal use only.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

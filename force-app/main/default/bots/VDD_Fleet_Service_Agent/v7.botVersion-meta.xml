@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v7</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Thanks for your reply! Let me pull up your delivery details and get your installation scheduled.</message>
+                <messageIdentifier>4a4f31f4-2053-4064-a4eb-3cde357f248d</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>b87cb733-bd11-4bb3-9e41-f494c3422f2f</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>187634c7-1179-4cdf-98dd-a322e271d8a1</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Sorry, it looks like something has gone wrong.</message>
+                <messageIdentifier>fba2faa1-be71-4cd2-84d3-713f1530ae0e</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>2071e4c4-ec32-4717-8b47-b236dbac83b3</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>8cbdaed9-0d8a-4480-8197-65ee6f2b3231</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Rich_Content_Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Error Handler</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>ba2b933b-50db-484c-a643-9d9b017dfe9f</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>VDD_Fleet_Service_Agent_v7</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationSystemDialogs>
+        <dialog>Rich_Content_Error_Handling</dialog>
+        <type>ErrorHandling</type>
+    </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Account ID resolved during delivery coordination</description>
+        <developerName>delivery_account_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Account Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Asset ID resolved during onboarding</description>
+        <developerName>install_asset_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Install Asset Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>End user email address</description>
+        <developerName>endUserEmail</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>End User Email</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer phone from delivery details</description>
+        <developerName>delivery_customer_phone</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Customer Phone</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Vehicle name from breach</description>
+        <developerName>breach_vehicle_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Vehicle Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Contact ID resolved during delivery coordination</description>
+        <developerName>delivery_contact_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Contact Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Telemetry status: All Systems Go or Issues Detected</description>
+        <developerName>telemetry_status</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Telemetry Status</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Device ESN from delivery details</description>
+        <developerName>delivery_device_esn</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Device Esn</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The next topic to be visited</description>
+        <developerName>AgentScriptInternal_next_topic</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Next Topic</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The agent instructions</description>
+        <developerName>AgentScriptInternal_agent_instructions</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Agent Instructions</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Severity level from diagnosis</description>
+        <developerName>breach_severity</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Severity</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Name of breached threshold</description>
+        <developerName>breach_threshold_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Threshold Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer name from delivery details</description>
+        <developerName>delivery_customer_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Customer Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer ID for tracking</description>
+        <developerName>customerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Customer Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>End user contact ID</description>
+        <developerName>endUserContactId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>End User Contact Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Email case ID reference</description>
+        <developerName>emailCaseId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Email Case Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Serial number from delivery details</description>
+        <developerName>delivery_serial_number</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Serial Number</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer type classification</description>
+        <developerName>customerType</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Customer Type</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Recommended action from diagnosis</description>
+        <developerName>breach_recommended_action</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Recommended Action</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>All telemetry metrics summary</description>
+        <developerName>telemetry_all_metrics</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Telemetry All Metrics</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Asset ID resolved during delivery coordination</description>
+        <developerName>delivery_asset_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Asset Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>Whether the customer has been verified</description>
+        <developerName>isVerified</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Is Verified</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Vehicle name from install status</description>
+        <developerName>install_vehicle_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Install Vehicle Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Authentication key for customer verification</description>
+        <developerName>authenticationKey</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Authentication Key</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Vehicle name from delivery details</description>
+        <developerName>delivery_vehicle_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Vehicle Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>Runtime condition evaluation for if statements</description>
+        <developerName>AgentScriptInternal_condition</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Runtime Condition</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Verified customer ID</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Verified Customer Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Contact ID resolved during onboarding</description>
+        <developerName>install_contact_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Install Contact Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Serial number from install status</description>
+        <developerName>install_serial_number</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Install Serial Number</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Delivery address</description>
+        <developerName>delivery_address</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Delivery Address</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Diagnostic summary from health check</description>
+        <developerName>breach_diagnosis</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Diagnosis</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer name from install status</description>
+        <developerName>install_customer_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Install Customer Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Customer name from breach</description>
+        <developerName>breach_customer_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Customer Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Account ID from threshold breach</description>
+        <developerName>breach_account_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Account Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Contact ID from threshold breach</description>
+        <developerName>breach_contact_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Breach Contact Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <copilotPrimaryLanguage>en_US</copilotPrimaryLanguage>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>true</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

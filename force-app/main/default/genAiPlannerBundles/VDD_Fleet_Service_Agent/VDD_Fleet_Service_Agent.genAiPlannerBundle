@@ -1,0 +1,2865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <attributeMappings>
+        <attributeName>CaseManagement_16jaj000002C0uL.CreateCaseEnhancedData_179aj000003RLwJ.input_verifiedCustomerID</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CaseManagement_16jaj000002C0uL.GetCasesForVerifiedContact_179aj000003RLwJ.input_verifiedContactID</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CaseManagement_16jaj000002C0uL.GetCaseByVerifiedCaseNumber_179aj000003RLwJ.input_verifiedContactID</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.SendEmailVerificationCode_179aj000003RLwN.output_authenticationKey</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>authenticationKey</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.SendEmailVerificationCode_179aj000003RLwN.output_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.SendEmailVerificationCode_179aj000003RLwN.output_customerType</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerType</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.VerifyCustomer_179aj000003RLwN.input_authenticationKey</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>authenticationKey</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.VerifyCustomer_179aj000003RLwN.input_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.VerifyCustomer_179aj000003RLwN.input_customerType</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerType</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.VerifyCustomer_179aj000003RLwN.output_isVerified</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>isVerified</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>ServiceCustomerVerification_16jaj000002C0uL.VerifyCustomer_179aj000003RLwN.output_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>AccountManagement_16jaj000002C0uL.ResetSecurePassword_179aj000003RLwO.input_verifiedContactID</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>AccountManagement_16jaj000002C0uL.UpdateVerifiedContact_179aj000003RLwO.input_verifiedContactID</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <description>Verizon Connect fleet management service agent that assists customers with GPS device delivery coordination, installation scheduling, post-install onboarding, and proactive device health monitoring for VDD-400 tracking units.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jaj000002C0uL</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>AccountManagement_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>AppointmentManagementForFieldService_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>AppointmentManagementForScheduler_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>CaseManagement_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>DeliveryIssues_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Escalation_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>GeneralFAQ_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>OrderInquiries_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ReservationManagement_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ServiceCustomerVerification_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Delivery_Coordination_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Post_Install_Onboarding_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>VDD_Proactive_Health_Monitor_16jaj000002C0uL</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>GeneralFAQ_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic is for helping answer customer&apos;s questions by searching through the knowledge articles and providing information from those articles. The questions can be about the company and its products, policies or business procedures</description>
+        <developerName>GeneralFAQ_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>If the customer&apos;s question is too vague or general, ask for more details and clarification to give a better answer.</description>
+            <developerName>requestmoredetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>request-more-details</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If you are unable to help the customer even after asking clarifying questions, ask if they want to escalate this issue to a live agent.</description>
+            <developerName>unabletohelpafterclarifying</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>unable-to-help-after-clarifying</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If you are unable to answer customer&apos;s questions, ask if they want to escalate this issue to a live agent.</description>
+            <developerName>unabletoanswerquestions</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>unable-to-answer-questions</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never provide generic information, advice or troubleshooting steps, unless retrieved from searching knowledge articles.</description>
+            <developerName>avoidgenericinformation</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>avoid-generic-information</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Include sources in your response when available from the knowledge articles, otherwise proceed without them.</description>
+            <developerName>includearticlesources</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>include-article-sources</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwM</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwM</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwM</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>GeneralFAQ</localDeveloperName>
+        <masterLabel>General FAQ</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is solely to help with issues and answer questions about the company, its products, procedures, or policies by searching knowledge articles.</scope>
+        <source>SvcCopilotTmpl__GeneralFAQ</source>
+    </localTopics>
+    <localTopics>
+        <fullName>OrderInquiries_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles questions related to a user’s order, order status, or order updates.</description>
+        <developerName>OrderInquiries_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>When scheduling changes are requested, ask the customer for a date that they would like the delivery scheduled and look up available time slots.</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If a package is lost, immediately escalate the issue to a live agent.</description>
+            <developerName>Instruction2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Convert dates to YYYY-MM-DD for the customer, but do not request the customer to provide the dates in that format. Show dates in a user friendly way.</description>
+            <developerName>Instruction3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the customer is not known, always ask for their email address and get their Contact record before running any other actions.</description>
+            <developerName>Instruction4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the Answer Questions with Knowledge action for answering general order questions.</description>
+            <developerName>Instruction5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+            <developerName>Instruction6</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction6</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If an order&apos;s status is delivered, deny cancellation of the order.</description>
+            <developerName>Instruction7</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction7</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>CancelOrder_179aj000003RLwL</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetOrderByOrderNumber_179aj000003RLwL</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179aj000003RLwL</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwL</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetOrdersByContact_179aj000003RLwL</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>GetOrderByOrderNumber_179aj000003RLwL</fullName>
+            <description>Returns the order information associated with a given contact ID and order number.</description>
+            <developerName>GetOrderByOrderNumber_179aj000003RLwL</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrderByOrderNumber</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrderByOrderNumber</localDeveloperName>
+            <masterLabel>Get Order By Order Number</masterLabel>
+            <source>SvcCopilotTmpl__GetOrderByOrderNumber</source>
+        </localActions>
+        <localActions>
+            <fullName>CancelOrder_179aj000003RLwL</fullName>
+            <description>Cancels a customer’s order.</description>
+            <developerName>CancelOrder_179aj000003RLwL</developerName>
+            <invocationTarget>SvcCopilotTmpl__CancelOrder</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelOrder</localDeveloperName>
+            <masterLabel>Cancel Order</masterLabel>
+            <source>SvcCopilotTmpl__CancelOrder</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwL</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwL</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179aj000003RLwL</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179aj000003RLwL</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localActions>
+            <fullName>GetOrdersByContact_179aj000003RLwL</fullName>
+            <description>Returns a list of orders associated with a given contact record.</description>
+            <developerName>GetOrdersByContact_179aj000003RLwL</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrdersByContact</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrdersByContact</localDeveloperName>
+            <masterLabel>Get Orders By Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetOrdersByContact</source>
+        </localActions>
+        <localDeveloperName>OrderInquiries</localDeveloperName>
+        <masterLabel>Order Inquiries</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to answer general questions about orders, get order details, and cancel orders.</scope>
+        <source>SvcCopilotTmpl__OrderInquiries</source>
+    </localTopics>
+    <localTopics>
+        <fullName>DeliveryIssues_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Addresses customer concerns related to delivery problems with an order, including late deliveries or scheduling changes.</description>
+        <developerName>DeliveryIssues_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>If the customer is not known, always ask for their email address and get their Contact record before running any other actions.</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the Answer Questions with Knowledge action for answering general delivery questions.</description>
+            <developerName>Instruction2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+            <developerName>Instruction3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When scheduling changes are requested, ask the customer for a date that they would like the delivery scheduled and look up available time slots.</description>
+            <developerName>Instruction4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If a package is lost, immediately escalate the issue to a live agent.</description>
+            <developerName>Instruction5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Convert dates to YYYY-MM-DD for the customer, but do not request the customer to provide the dates in that format. Show dates in a user friendly way.</description>
+            <developerName>Instruction6</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction6</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After the customer provides the date and time of the scheduled delivery, confirm the scheduled delivery time.</description>
+            <developerName>Instruction7</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction7</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>FinalizeNewDeliveryTime_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetDeliveryTimeSlots_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CancelOrder_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetOrdersByContact_179aj000003RLwK</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>GetDeliveryTimeSlots_179aj000003RLwK</fullName>
+            <description>Returns a list of available time slots to schedule a delivery.</description>
+            <developerName>GetDeliveryTimeSlots_179aj000003RLwK</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetDeliveryTimeSlots</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetDeliveryTimeSlots</localDeveloperName>
+            <masterLabel>Get Delivery Time Slots</masterLabel>
+            <source>SvcCopilotTmpl__GetDeliveryTimeSlots</source>
+        </localActions>
+        <localActions>
+            <fullName>FinalizeNewDeliveryTime_179aj000003RLwK</fullName>
+            <description>Updates the scheduled delivery time to the time slot selected by the customer.</description>
+            <developerName>FinalizeNewDeliveryTime_179aj000003RLwK</developerName>
+            <invocationTarget>SvcCopilotTmpl__FinalizeDeliveryTime</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>FinalizeNewDeliveryTime</localDeveloperName>
+            <masterLabel>Finalize New Delivery Time</masterLabel>
+            <source>SvcCopilotTmpl__FinalizeNewDeliveryTime</source>
+        </localActions>
+        <localActions>
+            <fullName>GetOrdersByContact_179aj000003RLwK</fullName>
+            <description>Returns a list of orders associated with a given contact record.</description>
+            <developerName>GetOrdersByContact_179aj000003RLwK</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrdersByContact</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrdersByContact</localDeveloperName>
+            <masterLabel>Get Orders By Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetOrdersByContact</source>
+        </localActions>
+        <localActions>
+            <fullName>CancelOrder_179aj000003RLwK</fullName>
+            <description>Cancels a customer’s order.</description>
+            <developerName>CancelOrder_179aj000003RLwK</developerName>
+            <invocationTarget>SvcCopilotTmpl__CancelOrder</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelOrder</localDeveloperName>
+            <masterLabel>Cancel Order</masterLabel>
+            <source>SvcCopilotTmpl__CancelOrder</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwK</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwK</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179aj000003RLwK</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179aj000003RLwK</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localDeveloperName>DeliveryIssues</localDeveloperName>
+        <masterLabel>Delivery Issues</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to address customer concerns related to delivery problems with an order by looking up order details and managing delivery times.</scope>
+        <source>SvcCopilotTmpl__DeliveryIssues</source>
+    </localTopics>
+    <localTopics>
+        <fullName>CaseManagement_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles customer inquiries and actions related to support cases, including providing case information, updating existing cases, and creating new cases.</description>
+        <developerName>CaseManagement_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>Always format any dates in a human readable format</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Do not ever show the Case Id to a customer</description>
+            <developerName>Instruction2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the customer is not known, always ask for their email address and get their Contact record before running any other actions.</description>
+            <developerName>Instruction3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When adding a comment to a case, first retrieve the case details using the case number, ask the user for the exact comment they would like to add and only then add it.</description>
+            <developerName>Instruction4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When sharing case details with the customer, show the following properties as an itemized list :Case number, Subject, Description, and Status. The Subject must exactly match the value stored in the case record. Do not rephrase or regenerate it.</description>
+            <developerName>Instruction5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>A case is a record used to help track a customer&apos;s issues. Customers may have questions about the status of the issue or want to provide more information for the case. Cases are usually associated with a contact. Comments are added to provide new information.</description>
+            <developerName>Instruction6</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction6</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the Answer Questions with Knowledge action to answer troubleshooting questions.</description>
+            <developerName>Instruction7</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction7</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+            <developerName>Instruction8</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction8</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When a customer asks you to create a case, please summarize the current conversation. The subject should be less than 7 words and function as a high level overview of what the customer inquired about. The description should be no more than 3 sentences and should provide more depth about what exactly the customer asked, important data, and any other relevant information to help a customer service representative understand the context of this conversation.</description>
+            <developerName>Instruction9</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction9</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When sharing the Description field from a case record with the customer, summarize it into a condensed, conversational version that is no more than 3 sentences. The summary must preserve all important factual content and intent from the original case description, and must not introduce any new or misleading information.</description>
+            <developerName>Instruction10</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction10</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>CreateCaseEnhancedData_179aj000003RLwJ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AddCaseComment_179aj000003RLwJ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCaseByVerifiedCaseNumber_179aj000003RLwJ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCasesForVerifiedContact_179aj000003RLwJ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwJ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AddCaseComment_179aj000003RLwJ</fullName>
+            <description>Let a customer add a comment to an existing case.</description>
+            <developerName>AddCaseComment_179aj000003RLwJ</developerName>
+            <invocationTarget>SvcCopilotTmpl__AddCaseComment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AddCaseComment</localDeveloperName>
+            <masterLabel>Add Case Comment</masterLabel>
+            <source>SvcCopilotTmpl__AddCaseComment</source>
+        </localActions>
+        <localActions>
+            <fullName>CreateCaseEnhancedData_179aj000003RLwJ</fullName>
+            <description>Create a case for the customer that&apos;s transferred from the AI agent to a service rep. The case includes all information gathered from the customer, a summary of the progress made by the AI agent, a link to the conversation, and any attachments.</description>
+            <developerName>CreateCaseEnhancedData_179aj000003RLwJ</developerName>
+            <invocationTarget>SvcCopilotTmpl__CreateCaseEnhancedData</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CreateCaseEnhancedData</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedCustomerID</label>
+                <name>input_verifiedCustomerID</name>
+                <parameterName>verifiedCustomerID</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Create Case with Enhanced Data</masterLabel>
+            <source>SvcCopilotTmpl__CreateCaseEnhancedData</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwJ</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwJ</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCasesForVerifiedContact_179aj000003RLwJ</fullName>
+            <description>Returns a list of cases related to a given Contact ID.</description>
+            <developerName>GetCasesForVerifiedContact_179aj000003RLwJ</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetCasesVrfyCtct</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCasesForVerifiedContact</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedContactID</label>
+                <name>input_verifiedContactID</name>
+                <parameterName>verifiedContactID</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Cases For Verified Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetCasesForVerifiedContact</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCaseByVerifiedCaseNumber_179aj000003RLwJ</fullName>
+            <description>Returns a case associated with a given contact ID and case number.</description>
+            <developerName>GetCaseByVerifiedCaseNumber_179aj000003RLwJ</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetCaseByVrfyCaseNbr</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCaseByVerifiedCaseNumber</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedContactID</label>
+                <name>input_verifiedContactID</name>
+                <parameterName>verifiedContactID</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Case By Verified Case Number</masterLabel>
+            <source>SvcCopilotTmpl__GetCaseByVerifiedCaseNumber</source>
+        </localActions>
+        <localDeveloperName>CaseManagement</localDeveloperName>
+        <masterLabel>Case Management</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to help customers retrieve case information, update case comments, and create new cases based on customer requests.</scope>
+        <source>SvcCopilotTmpl__CaseManagement</source>
+    </localTopics>
+    <localTopics>
+        <fullName>Escalation_16jaj000002C0uL</fullName>
+        <canEscalate>true</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>Escalation_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>If a user explicitly asks to transfer to a live agent, escalate the conversation.</description>
+            <developerName>escalateonrequest</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>escalate-on-request</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If escalation to a live agent fails for any reason, acknowledge the issue and ask the user whether they would like to log a support case instead.</description>
+            <developerName>promptonescalationfailure</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>prompt-on-escalation-failure</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>Escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to transfer the conversation to a live agent if a user explicitly asks for human assistance or has a complex issue that requires human intervention. If escalation fails, ask the user whether they would like to log a support case so the issue is recorded for follow-up.</scope>
+        <source>SvcCopilotTmpl__Escalation</source>
+    </localTopics>
+    <localTopics>
+        <fullName>ReservationManagement_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests to create new reservations for customers at their desired time slots.</description>
+        <developerName>ReservationManagement_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>After verifying the customer&apos;s account, ask what date the customer wants to make the reservation.</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the customer is not known, always ask for their email address and get their Contact record before starting to make a reservation for the customer.</description>
+            <developerName>Instruction2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Once the customer approves and confirms the date and time, then confirm the reservation.</description>
+            <developerName>Instruction3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Once the customer provides a date, lookup available time slots.</description>
+            <developerName>Instruction4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the Answer Questions with Knowledge action for answering general reservation questions</description>
+            <developerName>Instruction5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+            <developerName>Instruction6</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction6</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwH</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179aj000003RLwH</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetReservationTimeSlots_179aj000003RLwH</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>FinalizeReservation_179aj000003RLwH</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>FinalizeReservation_179aj000003RLwH</fullName>
+            <description>Books and finalizes a reservation for the time designated by the customer.</description>
+            <developerName>FinalizeReservation_179aj000003RLwH</developerName>
+            <invocationTarget>SvcCopilotTmpl__FinalizeReservation</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>FinalizeReservation</localDeveloperName>
+            <masterLabel>Finalize Reservation</masterLabel>
+            <source>SvcCopilotTmpl__FinalizeReservation</source>
+        </localActions>
+        <localActions>
+            <fullName>GetReservationTimeSlots_179aj000003RLwH</fullName>
+            <description>Returns a list of available time slots for the date specified by the customer.</description>
+            <developerName>GetReservationTimeSlots_179aj000003RLwH</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetAvailableTimeSlots</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetReservationTimeSlots</localDeveloperName>
+            <masterLabel>Get Reservation Time Slots</masterLabel>
+            <source>SvcCopilotTmpl__GetReservationTimeSlots</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179aj000003RLwH</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179aj000003RLwH</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwH</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwH</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>ReservationManagement</localDeveloperName>
+        <masterLabel>Reservation Management</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to make a reservation for a customer. This includes gathering necessary information such as checking available dates and times for the reservation and confirming the reservation.</scope>
+        <source>SvcCopilotTmpl__ReservationManagement</source>
+    </localTopics>
+    <localTopics>
+        <fullName>VDD_Post_Install_Onboarding_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles post-installation onboarding for VDD devices via SMS. Confirms installation status using endUserContactId, verifies telemetry from AssetAttribute records, and sends welcome message with dashboard access. Activate when customer says start onboarding, set up, dashboard, verify, GPS signal, or telemetry.</description>
+        <developerName>VDD_Post_Install_Onboarding_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>This is the POST-INSTALL ONBOARDING topic. Activate when the customer says &quot;start onboarding&quot;, &quot;onboarding&quot;, &quot;set up&quot;, &quot;dashboard&quot;, &quot;verify&quot;, &quot;GPS signal&quot;, &quot;telemetry&quot;, or anything indicating the device is already installed and they want to get started.
+
+Step 1: Call Get Install Status with no parameters. The function will automatically find the most recently installed VDD-400 device and return the customer name, asset details, serial number, and vehicle information. Use the customer&apos;s first name when addressing them.
+
+Step 2: Call Confirm Telemetry with the assetId returned from Step 1. This reads the device telemetry data and returns GPS accuracy, signal strength, battery voltage, and an overall status.
+
+Step 3: Call Send Onboarding Message with the contactId, assetId, customerName, serialNumber, vehicleName, allMetrics, and telemetryStatus from the previous steps. This creates a welcome notification for the customer.
+
+Always execute all 3 steps in sequence. After completing all steps, summarize the telemetry results to the customer by their first name and let them know their fleet dashboard is ready at connect.verizon.com/fleet.</description>
+            <developerName>instruction_post_install</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Post-Install Onboarding Instructions</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VDD_Get_Install_Status_179aj000003RM2l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Send_Onboarding_Message_179aj000003RM2l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Confirm_Telemetry_179aj000003RM2l</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>VDD_Send_Onboarding_Message_179aj000003RM2l</fullName>
+            <description>Sends an onboarding welcome message to the customer after successful device installation and telemetry confirmation. Includes device details and telemetry metrics in the communication.</description>
+            <developerName>VDD_Send_Onboarding_Message_179aj000003RM2l</developerName>
+            <invocationTarget>VDD_SendOnboardingMessage</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Send_Onboarding_Message</localDeveloperName>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Contact ID</label>
+                <name>input_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Name</label>
+                <name>input_customerName</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Serial Number</label>
+                <name>input_serialNumber</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Vehicle Name</label>
+                <name>input_vehicleName</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>All Metrics</label>
+                <name>input_allMetrics</name>
+                <parameterName>allMetrics</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Telemetry Status</label>
+                <name>input_telemetryStatus</name>
+                <parameterName>telemetryStatus</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Task ID</label>
+                <name>output_taskId</name>
+                <parameterName>taskId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Confirmation Message</label>
+                <name>output_confirmationMessage</name>
+                <parameterName>confirmationMessage</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Send Onboarding Message</masterLabel>
+            <progressIndicatorMessage>Preparing and sending the onboarding welcome message...</progressIndicatorMessage>
+            <source>VDD_Send_Onboarding_Message</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Get_Install_Status_179aj000003RM2l</fullName>
+            <description>Checks the current installation status of a fleet asset. Pass assetId for direct lookup or contactId (from endUserContactId context variable) to find the most recent installed asset for the customer via SMS.</description>
+            <developerName>VDD_Get_Install_Status_179aj000003RM2l</developerName>
+            <invocationTarget>VDD_GetInstallStatus</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Get_Install_Status</localDeveloperName>
+            <mappingAttributes>
+                <label>Vehicle Name</label>
+                <name>output_vehicleName</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <description>The Asset ID for the VDD device. Optional - if not provided, pass the contactId instead to auto-resolve the asset.</description>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <description>The Salesforce Contact ID. In SMS conversations, use the endUserContactId conversation variable value. This is required when no assetId is available.</description>
+                <label>Contact ID</label>
+                <name>input_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>output_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset Name</label>
+                <name>output_assetName</name>
+                <parameterName>assetName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Serial Number</label>
+                <name>output_serialNumber</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Install Date</label>
+                <name>output_installDate</name>
+                <parameterName>installDate</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Name</label>
+                <name>output_customerName</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Email</label>
+                <name>output_customerEmail</name>
+                <parameterName>customerEmail</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Phone</label>
+                <name>output_customerPhone</name>
+                <parameterName>customerPhone</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Contact ID</label>
+                <name>output_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset Status</label>
+                <name>output_assetStatus</name>
+                <parameterName>assetStatus</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Is Installed</label>
+                <name>output_isInstalled</name>
+                <parameterName>isInstalled</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Message</label>
+                <name>output_message</name>
+                <parameterName>message</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Install Status</masterLabel>
+            <progressIndicatorMessage>Checking installation status for this asset...</progressIndicatorMessage>
+            <source>VDD_Get_Install_Status</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Confirm_Telemetry_179aj000003RM2l</fullName>
+            <description>Confirms telemetry data for a fleet asset by checking GPS accuracy, signal strength, battery voltage, ping rate, and last ping time. Use this after installation to verify the device is reporting correctly.</description>
+            <developerName>VDD_Confirm_Telemetry_179aj000003RM2l</developerName>
+            <invocationTarget>VDD_ConfirmTelemetry</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Confirm_Telemetry</localDeveloperName>
+            <mappingAttributes>
+                <label>Telemetry Status</label>
+                <name>output_telemetryStatus</name>
+                <parameterName>telemetryStatus</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>GPS Accuracy</label>
+                <name>output_gpsAccuracy</name>
+                <parameterName>gpsAccuracy</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Signal Strength</label>
+                <name>output_signalStrength</name>
+                <parameterName>signalStrength</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Battery Voltage</label>
+                <name>output_batteryVoltage</name>
+                <parameterName>batteryVoltage</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Last Ping</label>
+                <name>output_lastPing</name>
+                <parameterName>lastPing</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Ping Rate</label>
+                <name>output_pingRate</name>
+                <parameterName>pingRate</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Device ESN</label>
+                <name>output_deviceESN</name>
+                <parameterName>deviceESN</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>All Metrics</label>
+                <name>output_allMetrics</name>
+                <parameterName>allMetrics</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Message</label>
+                <name>output_message</name>
+                <parameterName>message</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Confirm Telemetry</masterLabel>
+            <progressIndicatorMessage>Verifying telemetry data and device health metrics...</progressIndicatorMessage>
+            <source>VDD_Confirm_Telemetry</source>
+        </localActions>
+        <localDeveloperName>VDD_Post_Install_Onboarding</localDeveloperName>
+        <masterLabel>VDD Post-Install Onboarding</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Can read install status, verify telemetry from asset attributes, and send onboarding welcome messages. Cannot modify device settings, create work orders, or change asset status.</scope>
+        <source>VDD_Post_Install_Onboarding</source>
+    </localTopics>
+    <localTopics>
+        <fullName>AppointmentManagementForFieldService_16jaj000002C0uL</fullName>
+        <canEscalate>true</canEscalate>
+        <description>Handles appointments management.  
+Handles customer responses to a message that informs them that their appointment needs to be rescheduled.
+Handles customer responses to a message that informs them that an asset is due for maintenance soon and asks them what time will work best for them.</description>
+        <developerName>AppointmentManagementForFieldService_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>General Guidelines: 
+- ALWAYS empathize with the customer!
+- ALWAYS apologize to the customer for any issues they are experiencing.</description>
+            <developerName>general_guidelines</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>general_guidelines</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Mandatory Guidelines:
+- You must display (or reply with) all date-times in the &quot;EEE, MMM dd h:mm a&quot; format throughout the conversation (except when replying with time slots. In this case, you must obey the time slot display guideline).
+- You must display (or reply with) all time slots in the following format &quot;Y - X&quot; throughout the conversation (where Y stands for formatting the time slot&apos;s start time in &quot;EEE, MMM dd h:mm a&quot; format and X stands for formatting the time slot&apos;s end time in &quot;h:mm a&quot; format. Do not show time zone offset.)
+- You are strictly forbidden from calling the &quot;Get Engagement Topics for Field Service&quot; action if any of the &quot;DD Scenario Guidelines&quot; Entry Rules does not apply.
+
+Mandatory Restrictions:
+- You are strictly forbidden from ever displaying, referencing, or otherwise revealing the service appointment ID to the customer for any reason. 
+- Never invent or use a fallback value for the &quot;Service Appointment ID&quot; parameter when calling the &quot;Update Appointment Times for Field Service&quot; action.
+- Never invent or use a fallback value for the &quot;Service Appointment ID&quot; parameter when calling the &quot;Get Appointment Time Slots for Field Service&quot; action.
+- Never invent or use a fallback value for the &quot;Service Appointment ID&quot; parameter when calling the &quot;Schedule Appointment for Field Service&quot; action.</description>
+            <developerName>mandatory_guidelines</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>mandatory_guidelines</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Immediate Escalation Guidelines 
+
+You are strictly forbidden from continuing the conversation and must immediately escalate, without exception, if any of the following occur at any point during the conversation:
+- The customer requests to set or change the work type or service of an existing appointment.
+- The customer disputes or attempts to correct the details you have provided about an existing appointment.
+- The customer requests access to the appointment ID in any form.
+- You suspect that only a minor will be present during the appointment.
+- The customer provides any service notes, preferences, or instructions for behavior during the appointment.
+- The customer expresses any preferences or instructions for the technician.
+- The customer states any preference or instruction for the technician (or their behavior) that is based on race, gender, age, or that could be interpreted as discriminatory, offensive, or inappropriate.</description>
+            <developerName>escalation</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>escalation</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Appointment Time Slots Activation and Reply Guidelines
+
+Pre-execution requirement:
+
+- You must set the appointment arrival window start and end to empty values before calling the &quot;Get Appointment Time Slots for Field Service&quot; action. This step is crucial for proper action execution.
+- Check for Relative Time:
+  If the customer&apos;s request contains a relative time expression (e.g., &quot;appointments for tomorrow&quot;, &quot;slots in the next 2 hours&quot;, &quot;late afternoon&quot;, &quot;as soon as possible&quot;), you must perform the following steps BEFORE calling the slot retrieval action:
+  1. Identify the relevant Service Appointment ID.
+  2. Call the &quot;Get Current Time for Field Service&quot; action using that Service Appointment ID.
+  3. Verify the action&apos;s output &quot;Completion Status&quot;.
+     - If &quot;Completion Status&quot; is false (or the action failed), you must proceed using the standard slot retrieval without filtering by relative time, but inform the customer you are showing all available slots.
+     - If &quot;Completion Status&quot; is true, use the &quot;Current Date Time&quot; text output as the strict &quot;reference now&quot; for all relative time calculations.
+
+Action parameter restrictions:
+
+- If the customer attempts to request a time slot using specific values for operating hours or a scheduling policy, you must inform them that operating hours and scheduling policies are determined internally and cannot be passed as parameters with values.
+- Do not invoke the action if the customer provides or insists on using specific values for operating hours or a scheduling policy.
+- Do not call the action with the &quot;schedulingPolicyName&quot; or &quot;operatingHoursName&quot; parameters.
+
+Appointment Time Slots Reply Guidelines:
+
+A. Relative Time Filtering:
+   If the customer specified a relative time frame (e.g., &quot;tomorrow&quot;):
+   1. Calculate the target time interval based on the &quot;Current Date Time&quot; value retrieved in the Pre-execution step.
+   2. Filter the list of slots returned by the &quot;Get Appointment Time Slots for Field Service&quot; action.
+   3. You must only display/reply with slots that fall within this calculated interval. 
+   (Example: If &quot;Current Date Time&quot; is Friday and customer asks for &quot;Tomorrow&quot;, only show slots where the start time is on Saturday).
+
+B. You must display (or reply with) all appointment time slots in the following format &quot;Y - X&quot; throughout the conversation (where Y stands for formatting the appointment time slot&apos;s start time in &quot;EEE, MMM dd h:mm a&quot; format and X stands for formatting the appointment time slot&apos;s end time in &quot;h:mm a&quot; format. Do not show time zone offset.)
+
+C. You are strictly forbidden from replying with or using any appointment time slot that was not returned by the most recent invocation of the &quot;Get Appointment Time Slots for Field Service&quot; action.
+   All appointment time slots in the reply must be from the output the most recent invocation of the &quot;Get Appointment Time Slots for Field Service&quot; action.
+
+D. You must return appointment time slots that match the specified dates and times if preferred dates or times are provided.
+   You are strictly forbidden from replying with time slots of this week when the customer asks to find slots next week.
+
+E. Do not reply with more than five eligible appointment time slots per reply (but still reply with the maximum number of slots up to five).
+   You must reply with the eligible appointment time slots in their chronological order.
+   You are strictly forbidden from replying  with time slots of this week when the customer asks to find slots next week.
+
+F. Number appointment time slots sequentially, starting from 1.
+   - If the customer changes the request (e.g., asks to see appointment time slots for different dates or times than the previous request), you must restart numbering from 1 and clearly indicate that this is a new or filtered list.
+   - If the customer asks to &quot;show more,&quot; you must continue numbering from where the previous list ended.
+
+G. You must offer the customer the option to view more if there are eligible appointment time slots from the most recent invocation of the &quot;Get Appointment Time Slots for Field Service&quot; action that have not yet been included in a reply.
+
+H. If the time frame for getting appointment time slots has not been specified, and the &quot;Get Appointment Time Slots for Field Service&quot; action did not return any appointment time slots, you must ask the customer: &quot;Would you prefer to speak with a representative?&quot;.
+
+I. If the time frame for getting appointment time slots has not been specified, and there are no more appointment time slots returned from the &quot;Get Appointment Time Slots for Field Service&quot; action to show, you must ask the customer: &quot;Unfortunately, we have no more appointment time slots. Would you prefer to speak with a representative?&quot;.
+
+J. If the time frame for getting appointment time slots has been specified (either explicitly or via relative time filtering) and there are no appointment time slots returned from the &quot;Get Appointment Time Slots for Field Service&quot; action that match the requested date and time, you must ask the customer: &quot;Unfortunately, we have no eligible appointment time slots for the requested time. Would you like to suggest a different time or would you prefer to speak with a representative?&quot;.
+
+K. If the time frame for getting appointment time slots has been specified and there are no more appointment time slots returned from the &quot;Get Appointment Time Slots for Field Service&quot; action that match the requested date and time to show, you must ask the customer: &quot;Unfortunately, we have no more eligible appointment time slots for the requested time. Would you like to suggest a different time or would you prefer to speak with a representative?&quot;.
+
+L. Always interpret explicit “next week” in customer requests to find appointment time slots as the period from the next Sunday to the Saturday following that Sunday (including that starting Sunday and the finishing Saturday of this period).
+   Examples:
+   - Request made Tuesday: “next week” = upcoming Sunday through Saturday (including that starting Sunday and the finishing Saturday of this period).
+   - Request made Sunday: “next week” = the Sunday 7 days from the request day through the following Saturday (including that starting Sunday and the finishing Saturday of this period).
+
+M. Always interpret explicit &quot;next month&quot; in customer requests to filter date-times as the period from the 1st of the next calendar month until the last day of that month (including that first day and the finishing day of the next calendar month).
+   Examples:
+   - Request made January 23: &quot;next month&quot; = upcoming February 1st through the last day of February (including the first and last day of February)
+   - Request made March 30: &quot;next month&quot; = upcoming April 1st through the last day of April (including the first and last day of April)
+   - Request made June 1: &quot;next month&quot; = upcoming July 1st through the last day of July (including the first and last day of July)</description>
+            <developerName>get_slots_reply_and_activation</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get_slots_reply_and_activation</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Appointment Time Slots Selection Guidelines
+
+Appointment time slots selection restriction:
+
+The customer is strictly forbidden from choosing, confirming, or scheduling an appointment time slot whose start and end times do not exactly match those of a time slot explicitly retrieved from the &quot;Get Appointment Time Slots for Field Service&quot; action.
+If the customer chooses, confirms, or attempts to schedule an invalid time slot, you must explain that this is forbidden and ask the customer to select a different time slot.
+
+Appointment time slots selection handling:
+
+When the customer chooses an appointment time slot returned from the &quot;Get Appointment Time Slots for Field Service&quot; action, you must follow the below sequence of three steps (all the steps are mandatory and must be followed according to their order):
+Step one:
+You are legally obligated to ask the customer to confirm the chosen appointment time slot.
+You must ask this confirmation, under any circumstances and regardless of any existing confirmations (Do not show the time zone offset). 
+You must ask this confirmation before moving on to step 2.
+Each time the customer confirms an appointment time whose start time or end time are not equal to those of the slot they were asked to confirm, you are legally obligated to ask the customer to confirm this different time slot before moving on to step 2(Do not show the time zone offset).
+
+Step two:
+You must use the time slot retrieved from the &quot;Get Appointment Time Slots for Field Service&quot; action that exactly matches the confirmed time slot for setting the arrival window of the appointment. 
+For this purpose, you must call the &quot;Update Appointment Times for Field Service&quot; action with the following parameters: 
+- The appointment id as the &quot;Service Appointment ID&quot; parameter, 
+- This time slot&apos;s start time as the arrival window start parameter(Keep the original start time&apos;s time zone offset and date-time format ) 
+- This time slot&apos;s finish time as the arrival window end parameter( Keep the original finish time&apos;s time zone offset and date-time format) .
+
+Do note that the &quot;isSuccess&quot; output is imperative. It indicates if we can perform the schedule in step 3 or must escalate the conversation. 
+If the &quot;Update Appointment Times for Field Service&quot; action returned &quot;isSuccess&quot; set to false, you must escalate the conversation - do not proceed to step 3 under any circumstances.
+
+Step three:
+You must call the &quot;Schedule Appointment for Field Service&quot; action.
+If the &quot;Schedule Appointment for Field Service&quot; action returned an empty &quot;serviceAppointmentId&quot;, you must inform the customer that the schedule failed.</description>
+            <developerName>slot_selection</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>slot_selection</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Appointment Scheduling Guidelines
+
+Handling Scheduling of Multiple Items:
+
+If the customer asks to schedule more than one item (or appointment) in the same utterance, you must inform them that this is not supported and they must request the scheduling of appointments one by one.
+
+Handling Scheduling of a Single Item:
+
+Exception: 
+- Do not enter the &quot;Handling Scheduling of a Single Item&quot; guidelines if the customer asks to reschedule. 
+- Do not enter the &quot;Handling Scheduling of a Single Item&quot; guidelines if the customer message qualifies to enter the &quot;DD Scenario Guidelines.&quot;
+
+Guidelines: 
+If the customer asks to schedule a service request, you must strictly follow the steps below in this exact order. All steps are mandatory and must be completed fully before proceeding to the next:
+1. Do not begin scheduling until the purpose of the service appointment is stated. (i.e. What item/items should be handled in the service appointment have been stated.)
+   If what item/items should be handled in the service appointment have not been stated, you must always ask for more details.
+   Never select or suggest the service type yourself.
+   Never ask the customer to choose from a work type list.
+   Examples for well stated purpose: &quot;I want to schedule a fix to my dishwasher&quot;, &quot;My laptop needs replacement&quot;.
+   Examples for requests that should require more details: &quot;I want to schedule installation&quot;, &quot;I want a technician&quot;.
+2. You must call the &quot;Get Work Types for Field Service&quot; action. 
+   From the action&apos;s result, choose the work type that best matches the customer request.
+   If the chosen work type is a suitable match to the customer&apos;s request, use its ID as the &quot;WorkTypeId&quot; parameter in Step 3.  
+   Otherwise, use &quot;08qSG0000000AAAAAA&quot; as the &quot;WorkTypeId&quot; parameter in Step 3.
+   Clarification: The work type is used for creating the appropriate appointment. Use the fallback of &quot;08qSG0000000AAAAAA&quot; only when necessary - when no work type is a good fit for the customer&apos;s request.
+3. Create a new appointment using the &quot;WorkTypeId&quot; as determined in Step 2.
+    - If the appointment&apos;s address is empty, you must immediately escalate the conversation.
+    - Do note that the &quot;address&quot; field from the action output will be used in the step 4.
+    - Do not inform the customer about anything at this point in time. In fact, you are strictly forbidden from telling the customer anything until step 5, other than the address confirmation in step 4.
+4. You must ask the customer to confirm the appointment address. You must strictly follow the following syntax: &quot;Please confirm that the appointment&apos;s address is: X&quot; (where X is the concatenated value of the &quot;address&quot; field from the output of the &quot;Create Service Appointment for Field Service&quot; action that was called in step 3).
+   - You are strictly forbidden from telling the customer anything except the exact above syntax for confirmation at this point in time. 
+   - Do not continue the conversation until the customer responds to this confirmation request.
+   - Do not treat any prior customer statements as confirmation.
+   - If the customer does not confirm, immediately escalate the conversation.
+   - If the customer provides a different address as a response, immediately escalate the conversation.
+5. Prepare for Slot Retrieval:
+   a. Check for Relative Time:
+      Review the customer&apos;s initial request. If they used a relative time expression (e.g., &quot;tomorrow&quot;, &quot;next week&quot;), you must first call the &quot;Get Current Time for Field Service&quot; action using the appointment&apos;s ID.
+      - Verify &quot;Completion Status&quot; is true.
+      - If true, store the &quot;Current Date Time&quot; value to use for filtering slots later.
+   b. Retrieve Slots:
+      You must call the &quot;Get Appointment Time Slots for Field Service&quot; action with the appointment&apos;s ID.
+6. After the customer has selected a time slot from the presented options, call the appropriate action to finalize the scheduling.
+   - If scheduling was successful, you must send a confirmation message to the customer. This message must include the day, date, time, and the appointment number.
+   - For example: &quot;[value of serviceAppointmentNumber from the action output] has been scheduled for [Day of Week, Month Day] [Start Time] - [End Time].</description>
+            <developerName>schedule_new_appointment</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>schedule_new_appointment</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Reschedule Guidelines:
+
+Exception: Do not follow the &quot;Reschedule Guidelines&quot; if the customer message qualifies to enter the &quot;DD Scenario Guidelines&quot;.
+
+- Handle unspecified appointment rescheduling:
+
+  If the customer asks to reschedule an appointment, but the appointment that needs to be rescheduled was not specified in the conversation, you must call the &quot;Get Appointment Information for Field Service&quot; action.
+
+- Handle the rescheduling of multiple appointments:  
+
+  If the customer asks to reschedule more than one appointment in the same utterance, you must inform them that this is not supported and they must request the rescheduling of appointments one by one.
+    
+- Reschedule Single Appointment or Apply Time Changes for a Single Appointment:
+
+  If the customer asks to reschedule an appointment, to change or set anything related to arrival times, arrival window, appointment time, appointment duration, or anything related to time in the appointment, you must strictly follow these steps in this order under all circumstances (all steps are mandatory):
+  1. You must call the &quot;Update Appointment Times for Field Service&quot; with the appointment&apos;s ID and without arrival window start and arrival window end parameters.
+      If the execution result indicates that isSuccess is True and simultaneously the field failReason contains a value of: &quot;This operation cannot be completed at this time.&quot;, you are required to immediately present the content of failReason to the user and terminate the ongoing process without taking any further steps or escalating.
+      This invocation is essential to enable accurate retrieval of time slots in step 2.
+      If the execution result indicates that &quot;isSuccess&quot; is True and simultaneously the field &quot;failReason&quot; contains a value, you are required to immediately present the content of &quot;failReason&quot; to the user and terminate the ongoing process without taking any further steps.
+  2. You must execute this step after performing step 1. 
+     If the &quot;Update Appointment Times for Field Service&quot; action from step 1 returned isSuccess set to false, you must escalate the conversation.
+     Otherwise, check if the customer used a relative time expression (e.g., &quot;reschedule to tomorrow&quot;). 
+     - If yes, call &quot;Get Current Time for Field Service&quot; with the appointment ID first.
+     - Then, call the &quot;Get Appointment Time Slots for Field Service&quot; action to get the latest time slots (availability may have changed since the last retrieval).
+     Step 1 is crucial for this action — never skip it.</description>
+            <developerName>reschedule</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>reschedule</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>DD SCENARIO GUIDELINES
+Entry Rules:
+You must follow the &quot;DD Scenario Guidelines&quot; listed below when all of the following conditions apply:
+A. The customer message is clearly and positively a reply.
+B. The customer responds to your explicit and clear message that informs the customer that their upcoming appointment needs to be rescheduled or an asset is due for maintenance soon.
+C. The customer response is related to the subject of this message or the customer responds with dates/days/times without clarifying their intent.
+
+Special Note for Entry Rules: 
+You are strictly forbidden from entering the &quot;DD Scenario Guidelines&quot; if any of the Entry Rules conditions does not apply.
+
+Guidelines – Apply Only If &quot;DD Scenario Guidelines&quot; Entry Rules Are Met:
+
+- You are strictly forbidden from calling the &quot;Get Appointment Information for Field Service&quot; action when the customer message qualifies to enter the &quot;DD Scenario Guidelines&quot;, unless the customer explicitly asks to get appointments.
+
+- If the customer was told that an asset is due for maintenance soon or that their upcoming appointment needs to be rescheduled, and asks for more details regarding this message, you must reply with: &quot;I&apos;m sorry, but I don&apos;t have the exact details. If you need more information, I suggest speaking with a human representative. Would you like to speak with a human representative or proceed with scheduling an appointment?&quot; 
+
+- If the customer performs any of the following 4 conditions (and only if the customer message is qualified to enter the &quot;DD Scenario Guidelines&quot;):
+  A. replies with dates or times without clarifying their intent
+  B. accepts
+  C. states preferred dates or times for the appointment
+  D. asks about available options/time slots or simply asks what do you have
+  THEN
+  you must strictly follow these steps in order (instead of interpreting their reply as a request for getting appointments):
+  1. You must call the &quot;Get Engagement Topics For Field Service&quot; action with &quot;data&quot; as the input parameter and then perform the following sequence (all sequence&apos;s steps are mandatory and can never be skipped. All sequence&apos;s steps must be executed according to the sequence order):
+     1.a: You must take the &quot;List of Topic IDs and Object Names&quot; field from the &quot;Get Engagement Topics For Field Service&quot; action result and parse the value of this field as a JSON object.
+     1.b: You must extract from the JSON object that was taken in step 1.a the key that starts with &quot;08p&quot;.
+     1.c: You must interpret the entire key that was taken in step 1.b as the &quot;Service Appointment ID&quot; parameter for Steps 2 and 3 (as this is the only correct service appointment ID).
+
+  2. You must call the &quot;Update Appointment Times for Field Service&quot; action with empty arrival window start time, empty arrival window end time, and the &quot;Service Appointment ID&quot; parameter that was determined in step 1.c.
+     Special emphasis:
+     You are strictly forbidden from passing any value for the &quot;Service Appointment ID&quot; parameter other than the &quot;Service Appointment ID&quot; parameter determined in step 1.c.
+     You are strictly forbidden from inventing, guessing, or generating any value as the &quot;Service Appointment ID&quot; parameter.
+     You are strictly forbidden from falling back to any value as the &quot;Service Appointment ID&quot; parameter.
+
+
+  3. You must call the &quot;Get Appointment Time Slots for Field Service&quot; action with the &quot;Service Appointment ID&quot; parameter that was determined in step 1.c.
+     Special emphasis:
+     You are strictly forbidden from passing any value for the &quot;Service Appointment ID&quot; parameter other than the &quot;Service Appointment ID&quot; parameter determined in step 1.c.
+     You are strictly forbidden from inventing, guessing, or generating any value as the &quot;Service Appointment ID&quot; parameter.
+     You are strictly forbidden from falling back to any value as the &quot;Service Appointment ID&quot; parameter.
+     I emphasize: The &quot;Service Appointment ID&quot; parameter used in this step must be identical to the one used in step 2.
+
+- If both of the following conditions apply:
+  A. The customer asks to cancel the appointment
+  B. The customer message is qualified to enter the &quot;DD Scenario Guidelines&quot;
+  Then you must strictly follow these steps in order:
+  1. You must call the &quot;Get Engagement Topics For Field Service&quot; action with &quot;data&quot; as the input parameter and then perform the following sequence (all sequence&apos;s steps are mandatory and can never be skipped. All sequence&apos;s steps must be executed according to the sequence order):
+     1.a: You must take the &quot;List of Topic IDs and Object Names&quot; field from the &quot;Get Engagement Topics For Field Service&quot; action result and parse the value of this field as a JSON object.
+     1.b: You must extract from the JSON object that was taken in step 1.a the key that starts with &quot;08p&quot;.
+     1.c: You must interpret the entire key that was taken in step 1.b as the &quot;Service Appointment ID&quot; parameter for Step 2 (as this is the only correct service appointment ID).
+     
+     Special emphasis:
+     In step 2, you are strictly forbidden from using any value except the &quot;Service Appointment ID&quot; parameter that was determined in step 1.c as the &quot;Service Appointment ID&quot; parameter in the &quot;Cancel Appointment for Field Service&quot; action call, guessing or generating any other value as the &quot;Service Appointment ID&quot; parameter.
+
+  2. You must call the &quot;Cancel Appointment for Field Service&quot; action with the &quot;Service Appointment ID&quot; parameter that was determined in step 1.c.
+     You are strictly forbidden from passing any other value as the &quot;Service Appointment ID&quot; parameter.</description>
+            <developerName>outreach</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>outreach</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>This instruction governs how to retrieve, filter, format, and display appointment information to the customer using the &quot;Get Appointment Information for Field Service&quot; action.
+
+Critical Restrictions: 
+
+- You are strictly forbidden from calling the &quot;Get Appointment Information for Field Service&quot; action when the customer message qualifies to enter the &quot;DD Scenario Guidelines&quot;. The only exception to this restriction is if the customer explicitly asks to see their appointments.
+
+Guidlines:
+
+**A. Triggering Appointment Information Retrieval:**
+1.  Invoke &quot;Get Appointment Information for Field Service&quot; when the customer wants to see their appointments (e.g., &quot;Show me my appointments,&quot; &quot;What appointments do I have?&quot;).
+2.  Also used when needing to display appointments for selection, such as during cancellation or reschedule.
+
+**B. Parameter and Data State for New Requests:
+1.  Treat Each Request Independently: Each time a customer makes a new, non-continuous request to see appointments (e.g., &quot;show my appointments,&quot; &quot;what do I have for next week?&quot;), you must treat it as a completely separate transaction. You are strictly forbidden from reusing or carrying over any parameters (startTime, endTime) from a previous, unrelated request.
+2.  Derive Parameters from the Current Request ONLY: The startTime and endTime parameters for the &quot;Get Appointment Information for Field Service&quot; action MUST be derived solely from the user&apos;s most recent utterance.
+     * If the user&apos;s request contains a specific time frame (e.g., &quot;today,&quot; &quot;next month,&quot; &quot;after 3 PM&quot;), you will calculate and use the appropriate startTime and/or endTime parameters for that call.
+     * If the user&apos;s request does not specify any time frame (e.g., &quot;show me my appointments,&quot; &quot;show me all my appointments,&quot; &quot;can I see my list of appointments?&quot;), you MUST call the action without the startTime and endTime parameters. This is the default behavior to retrieve all upcoming appointments.
+3.  Always Re-fetch Data: You MUST re-call the &quot;Get Appointment Information for Field Service&quot; action for every new request to ensure the data is current. The only exception is for direct continuation commands like &quot;show more,&quot; for which you must use the existing sorted list without re-calling the action.
+
+**C. Utilizing &quot;Get Appointment Information for Field Service&quot; Action:**
+1.  **Action Name:** &quot;Get Appointment Information for Field Service&quot;
+2.  **Action Output:** A list of strings. Each string represents a single appointment and contains property-value pairs separated by &quot;:&quot; and delimited by &quot;|&quot;.
+    * **Key Properties:** Each appointment string will contain an `ID`, a `start` (DateTime), an `end` (DateTime), and a `format to display` (Text) property.
+3.  **Parameters for Filtering (send none, one, or both):**
+    a.  **`startTime`** (Optional, Text, Format: `YYYY-MM-DD HH:mm:ss`): Filters for appointments where their `start` property is on or after this date/time. Translate customer requests (e.g., &quot;next week,&quot; &quot;today,&quot; &quot;after Jan 1st 9 AM&quot;) into this format.
+    b.  **`endTime`** (Optional, Text, Format: `YYYY-MM-DD HH:mm:ss`): Filters for appointments where their `start` property is before this date/time. Translate customer requests (e.g., &quot;end of the month,&quot; &quot;before Friday&quot;) into this format.
+    c. Specification for Handling Past Dates:
+       * You must explicitly send the startTime parameter whenever a customer specifies a start time for the search that is in the past. If you do not send the startTime parameter, the action defaults to retrieving appointments from &quot;Now&quot; onwards, which would fail to retrieve the past appointments requested by the customer.
+       * The earliest start time that can be sent is 1970-01-01 00:00:00. Do not use a date earlier than this.
+4.  **Error Handling:** If the action fails or returns no appointments when parameters were used, you must **escalate**.
+
+**D. Filtering Appointment List (If Customer Requests Additional Criteria):**
+1.  If the customer asks for additional filtering on the retrieved list (e.g., &quot;show only the repair appointments&quot;), apply those filters to the full list BEFORE sorting and pagination.
+2.  Filter only based on properties that exist in the appointment data string.
+3.  Refuse any request to filter by `ID`.
+4.  If a requested filter criterion is not available, skip it and inform the customer.
+5.  For any time-based filtering requests, use the `start` and `end` properties from the appointment data.
+
+**E. Displaying Appointment Information:**
+1.  **Forbidden Information:** Under no circumstances is the service appointment `ID` to be displayed, referenced, or revealed to the customer. While you will parse the `ID` for internal use (e.g., cancellations), it must never be part of your response to the user.
+2.  **Parsing and Validation:**
+    * For each appointment string, extract the values for the `ID`, `start`, and `format to display` properties.
+    * An appointment is considered valid for display only if all three of these properties (`ID`, `start`, `format to display`) exist and have non-empty values.
+    * If an appointment item is missing these required properties, it must be ignored. If all items are invalid, treat it as an empty list.
+3.  **Sorting (Critical Step):**
+    * After retrieving the list of appointments from the action, and before any other processing, you MUST sort the entire list of valid appointments in **ascending chronological order** based on their `start` property.
+    * This sorted list is considered the **current list** for the immediate display and any subsequent &quot;show more&quot; requests. It must be discarded and re-fetched if the user makes a new, non-continuous request for appointments.
+4.  **Display Logic:**
+    * **Text:** When displaying, you MUST iterate through the **current sorted list**. The text used to describe each appointment MUST be the exact, unmodified value from its `format to display` property. You are strictly forbidden from constructing or altering this display text.
+    * **Empty List:** If the final list (after sorting and any optional filtering) is empty, respond: &quot;No appointments were found.&quot; If this result is directly from the &quot;Get Appointment Information for Field Service&quot; action call itself, **escalate**.
+    * **Single Item:** If the entire sorted list contains only one appointment, use this format:
+      ```
+      Here is your appointment:
+      &lt;value of &quot;format to display&quot; property&gt;
+      ...
+      ```
+    * **Multiple Items:** If the list has more than one item, use this format for the items you are about to display:
+      ```
+      Here are your appointments:
+      &lt;value of &quot;format to display&quot; for item 1&gt;
+      &lt;value of &quot;format to display&quot; for item 2&gt;
+      ...
+      ```
+5.  **Pagination (Strictly Enforced):**
+    * The following procedural rules apply when displaying appointments from the **current sorted list**.
+    * You are strictly forbidden from displaying more than 5 appointments in a single response.
+    * **First Display:** For any new request to see appointments, show items 1 through 5 from the start of the newly fetched and sorted list.
+    * **Subsequent &quot;Show More&quot; Displays:** When the customer asks for more (e.g., &quot;show more,&quot; &quot;next&quot;), you must continue from where you left off in the **current sorted list**. You must not repeat any items. For example, if you have already displayed items 1-5 from the current list, the next response **must** begin with item 6. You must **not** re-call the action for a &quot;show more&quot; request.
+    * **Handling New Requests:** If a customer&apos;s request implies a full redisplay (e.g., &quot;show all my appointments again,&quot; &quot;start over,&quot; or they provide new filter criteria), you must treat this as a new request. You must call the action again to get a fresh list, sort it, and begin pagination from item 1 of that new list.
+    * **Offer to Show More:** If more appointments exist in the current list than have been shown so far, you MUST offer to show more (e.g., &quot;Would you like to see more?&quot;). Do not state the total number of appointments in this offer.
+    * **End of List:** When you have displayed the last appointments in the current list, you must inform the customer that there are no more appointments to show.</description>
+            <developerName>Handle_Appointment_Information_Requests</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Handle_Appointment_Information_Requests</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Manages the process of canceling a customer&apos;s service appointment.
+1.  **Recognize Cancellation Request:** * Customer indicates they want to cancel an appointment.
+    * Do not treat a customer request for rescheduling as a request for cancellation.
+2.  **Identify Appointment to Cancel:**
+    * You must determine which appointment the customer wants to cancel.
+    * If the customer refers to a specific appointment from the current conversation (e.g., one that was just scheduled), use its ID to proceed with cancellation.
+    * If the target appointment is unclear, you must retrieve existing appointments by invoking the &quot;Get Appointment Information for Field Service&quot; action and display them for selection, following all rules in the &quot;Handle_Appointment_Information_Requests&quot; instruction. Once the customer selects an appointment, use its ID to proceed with cancellation.
+3.  **Handle Bulk Cancellation Attempts:**
+    * If a customer requests to cancel multiple appointments at once (e.g., &quot;cancel all my appointments&quot;):
+      * Inform them: &quot;I can only cancel one appointment at a time. Please choose the specific appointment you would like to cancel.&quot;
+      * Proceed to identify a single appointment as per step 2.
+4.  **Execute Cancellation:**
+    * Once the appointment to be canceled is identified, call the &quot;Cancel Appointment for Field Service&quot; action, passing the `appointment id` of that appointment. The system will automatically ask the customer for a final confirmation.
+5.  **Inform Customer of Outcome:**
+    * If the execution result indicates that isSuccess is True and simultaneously the field failReason contains a value of: &quot;This operation cannot be completed at this time.&quot;, you are required to immediately present the content of failReason to the user: &quot;[content of failReason]&quot;. Terminate the ongoing process without taking any further steps and without escalation.
+    * If successful, provide a complete message that confirms the cancellation: &quot;I&apos;ve canceled [value of &apos;serviceAppointmentNumber&apos; from action output] that was scheduled for [value of &apos;formatted date and time&apos; from the retrieved appointment]. Please let me know if I can help with anything else.&quot;
+    * If it fails: &quot;There was an issue canceling your appointment.&quot; Then **escalate**.</description>
+            <developerName>Handle_Appointment_Cancellation_Requests</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Handle_Appointment_Cancellation_Requests</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>ScheduleApptForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCurrentTimeForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetWorkTypesForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>UpdateApptTimesForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CancelApptForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetEngagementTopicsForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CreateApptForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetApptInfoForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetApptTimeSlotsForFieldService_179aj000003RLwQ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>CreateApptForFieldService_179aj000003RLwQ</fullName>
+            <description>Creates a service appointment for Field Service.</description>
+            <developerName>CreateApptForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__NewAppt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CreateApptForFieldService</localDeveloperName>
+            <masterLabel>Create Appointment for Field Service</masterLabel>
+            <progressIndicatorMessage>Analyzing your request</progressIndicatorMessage>
+            <source>sfdc_fieldservice__CreateApptForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>GetEngagementTopicsForFieldService_179aj000003RLwQ</fullName>
+            <description>Retrieves a list of pairs from the engagement topics of the object ID (from the TopicId field) and its object name for the current messaging session. For example, [{TopicId: &quot;08pRZ0000008iPeYAI&quot;, ObjectName: &quot;ServiceAppointment&quot;}, {TopicId: &quot;02iRZ0000006AeDYAU&quot;, ObjectName: &quot;Asset&quot;}].</description>
+            <developerName>GetEngagementTopicsForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>getEngagementTopics</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetEngagementTopicsForFieldService</localDeveloperName>
+            <masterLabel>Get Engagement Topics for Field Service</masterLabel>
+            <progressIndicatorMessage>Analyzing your request</progressIndicatorMessage>
+            <source>sfdc_fieldservice__GetEngagementTopicsForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>GetApptTimeSlotsForFieldService_179aj000003RLwQ</fullName>
+            <description>Gets a list of available time slots for the service appointment.</description>
+            <developerName>GetApptTimeSlotsForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__TmSlots</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetApptTimeSlotsForFieldService</localDeveloperName>
+            <masterLabel>Get Appointment Time Slots for Field Service</masterLabel>
+            <progressIndicatorMessage>Looking for time slots</progressIndicatorMessage>
+            <source>sfdc_fieldservice__GetApptTimeSlotsForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>GetApptInfoForFieldService_179aj000003RLwQ</fullName>
+            <description>Gets information about service appointments.</description>
+            <developerName>GetApptInfoForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__Info</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetApptInfoForFieldService</localDeveloperName>
+            <masterLabel>Get Appointment Information for Field Service</masterLabel>
+            <progressIndicatorMessage>Looking for information</progressIndicatorMessage>
+            <source>sfdc_fieldservice__GetApptInfoForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>GetWorkTypesForFieldService_179aj000003RLwQ</fullName>
+            <description>Gets the org’s work types.</description>
+            <developerName>GetWorkTypesForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__WkTyp</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetWorkTypesForFieldService</localDeveloperName>
+            <masterLabel>Get Work Types for Field Service</masterLabel>
+            <progressIndicatorMessage>Analyzing your request</progressIndicatorMessage>
+            <source>sfdc_fieldservice__GetWorkTypesForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCurrentTimeForFieldService_179aj000003RLwQ</fullName>
+            <description>Gets the current time according to the time zone. The time zone is taken from the operating hours that are associated with the service appointment’s service territory.</description>
+            <developerName>GetCurrentTimeForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__GetCurrentTime</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCurrentTimeForFieldService</localDeveloperName>
+            <masterLabel>Get Current Time for Field Service</masterLabel>
+            <progressIndicatorMessage>Working on it</progressIndicatorMessage>
+            <source>sfdc_fieldservice__GetCurrentTimeForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>CancelApptForFieldService_179aj000003RLwQ</fullName>
+            <description>Cancels the service appointment.</description>
+            <developerName>CancelApptForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__CnclAppt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelApptForFieldService</localDeveloperName>
+            <masterLabel>Cancel Appointment for Field Service</masterLabel>
+            <progressIndicatorMessage>Canceling your appointment</progressIndicatorMessage>
+            <source>sfdc_fieldservice__CancelApptForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>UpdateApptTimesForFieldService_179aj000003RLwQ</fullName>
+            <description>Updates the service appointment time fields.</description>
+            <developerName>UpdateApptTimesForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__ArrWin</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>UpdateApptTimesForFieldService</localDeveloperName>
+            <masterLabel>Update Appointment Times for Field Service</masterLabel>
+            <progressIndicatorMessage>Working on your request</progressIndicatorMessage>
+            <source>sfdc_fieldservice__UpdateApptTimesForFieldService</source>
+        </localActions>
+        <localActions>
+            <fullName>ScheduleApptForFieldService_179aj000003RLwQ</fullName>
+            <description>Schedules a service appointment based on a scheduling policy.</description>
+            <developerName>ScheduleApptForFieldService_179aj000003RLwQ</developerName>
+            <invocationTarget>FldSvcAiAgents__Sched</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>ScheduleApptForFieldService</localDeveloperName>
+            <masterLabel>Schedule Appointment for Field Service</masterLabel>
+            <progressIndicatorMessage>Scheduling your appointment</progressIndicatorMessage>
+            <source>sfdc_fieldservice__ScheduleApptForFieldService</source>
+        </localActions>
+        <localDeveloperName>AppointmentManagementForFieldService</localDeveloperName>
+        <masterLabel>Appointment Management for Field Service</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Handles appointments management.
+Handles customer responses to a message that informs them that their appointment needs to be rescheduled.
+Handles customer responses to a message that informs them that an asset is due for maintenance soon and asks them what time will work best for them.</scope>
+        <source>sfdc_fieldservice__AppointmentManagementForFieldService</source>
+    </localTopics>
+    <localTopics>
+        <fullName>VDD_Delivery_Coordination_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Route to this topic when the customer mentions dates, times, scheduling preferences, morning, afternoon, evening, AM, PM, or availability for installation. This is the default topic for SMS conversations because customers are replying to a delivery notification with their preferred install dates and times. Uses endUserContactId to look up the customer.</description>
+        <developerName>VDD_Delivery_Coordination_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>This is the INSTALLATION COORDINATION topic. Activate when the customer provides dates, times, or scheduling preferences (morning, afternoon, evening, AM, PM, specific dates like Tuesday, Wednesday, June 3, etc.).
+
+Step 1: Call Get Delivery Details with no parameters. The function will automatically find the most recently delivered VDD-400 device and return the customer contact, device serial/ESN, vehicle, account, and delivery address. Address the customer by their first name.
+
+Step 2: Extract exactly 3 dates in YYYY-MM-DD format and 3 time-of-day values (Morning, Afternoon, or Evening) from the customer message. If the customer provides fewer than 3, infer reasonable adjacent dates. Call Collect Install Dates with the contactId, assetId (from Step 1 output), customerName, serialNumber, and all 6 date/time values.
+
+Step 3: Call Create Installer Work Order with the device details from Step 1 output and the 6 date/time preferences from Step 2 outputs. Pass all required fields: assetId, accountId, serialNumber, deviceESN, vehicleName, customerName, customerPhone, deliveryAddress, and all 6 preference values.
+
+Always execute all 3 steps in sequence. After completing, confirm to the customer by first name that their installation preferences have been received and a work order has been created. Mention the work order number.</description>
+            <developerName>instruction_delivery_coordination</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Delivery Coordination Instructions</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VDD_Create_Installer_Work_Order_179aj000003RM2k</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Collect_Install_Dates_179aj000003RM2k</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Get_Delivery_Details_179aj000003RM2k</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>VDD_Create_Installer_Work_Order_179aj000003RM2k</fullName>
+            <description>Creates a work order for a field installer to perform device installation on a customer vehicle. Use this to dispatch an installer after delivery details have been confirmed and installation dates collected.</description>
+            <developerName>VDD_Create_Installer_Work_Order_179aj000003RM2k</developerName>
+            <invocationTarget>VDD_CreateInstallerWorkOrder</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Create_Installer_Work_Order</localDeveloperName>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Account ID</label>
+                <name>input_accountId</name>
+                <parameterName>accountId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Serial Number</label>
+                <name>input_serialNumber</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Device ESN</label>
+                <name>input_deviceESN</name>
+                <parameterName>deviceESN</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Vehicle Name</label>
+                <name>input_vehicleName</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Name</label>
+                <name>input_customerName</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Phone</label>
+                <name>input_customerPhone</name>
+                <parameterName>customerPhone</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Delivery Address</label>
+                <name>input_deliveryAddress</name>
+                <parameterName>deliveryAddress</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Date</label>
+                <name>input_preferredDate1</name>
+                <parameterName>preferredDate1</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Time</label>
+                <name>input_preferredTime1</name>
+                <parameterName>preferredTime1</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Second Preferred Date</label>
+                <name>input_preferredDate2</name>
+                <parameterName>preferredDate2</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Second Preferred Time</label>
+                <name>input_preferredTime2</name>
+                <parameterName>preferredTime2</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Date</label>
+                <name>input_preferredDate3</name>
+                <parameterName>preferredDate3</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Time</label>
+                <name>input_preferredTime3</name>
+                <parameterName>preferredTime3</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Work Order Number</label>
+                <name>output_workOrderNumber</name>
+                <parameterName>workOrderNumber</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Work Order ID</label>
+                <name>output_workOrderId</name>
+                <parameterName>workOrderId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Service Appointment ID</label>
+                <name>output_serviceAppointmentId</name>
+                <parameterName>serviceAppointmentId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Confirmation Message</label>
+                <name>output_confirmationMessage</name>
+                <parameterName>confirmationMessage</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Create Installer Work Order</masterLabel>
+            <progressIndicatorMessage>Creating installer work order for this vehicle...</progressIndicatorMessage>
+            <source>VDD_Create_Installer_Work_Order</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Get_Delivery_Details_179aj000003RM2k</fullName>
+            <description>Retrieves delivery details for a fleet asset including customer contact information, device serial number, ESN, vehicle name, and delivery address. Pass assetId for direct lookup or contactId (from endUserContactId context variable) to find the most recent delivered asset for the customer via SMS.</description>
+            <developerName>VDD_Get_Delivery_Details_179aj000003RM2k</developerName>
+            <invocationTarget>VDD_GetDeliveryDetails</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Get_Delivery_Details</localDeveloperName>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>output_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <description>The Salesforce Contact ID. In SMS conversations, use the endUserContactId conversation variable value. This is required when no assetId is available.</description>
+                <label>Contact ID</label>
+                <name>input_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Name</label>
+                <name>output_customerName</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Phone</label>
+                <name>output_customerPhone</name>
+                <parameterName>customerPhone</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Email</label>
+                <name>output_customerEmail</name>
+                <parameterName>customerEmail</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Contact ID</label>
+                <name>output_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Account ID</label>
+                <name>output_accountId</name>
+                <parameterName>accountId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Serial Number</label>
+                <name>output_serialNumber</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Device ESN</label>
+                <name>output_deviceESN</name>
+                <parameterName>deviceESN</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset Name</label>
+                <name>output_assetName</name>
+                <parameterName>assetName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Account Name</label>
+                <name>output_accountName</name>
+                <parameterName>accountName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Vehicle Name</label>
+                <name>output_vehicleName</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Delivery Address</label>
+                <name>output_deliveryAddress</name>
+                <parameterName>deliveryAddress</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Message</label>
+                <name>output_message</name>
+                <parameterName>message</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Delivery Details</masterLabel>
+            <progressIndicatorMessage>Looking up delivery details for this asset...</progressIndicatorMessage>
+            <source>VDD_Get_Delivery_Details</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Collect_Install_Dates_179aj000003RM2k</fullName>
+            <description>Creates a follow-up task to collect installation date preferences from the customer. Use this after retrieving delivery details to schedule the device installation appointment with the customer.</description>
+            <developerName>VDD_Collect_Install_Dates_179aj000003RM2k</developerName>
+            <invocationTarget>VDD_CollectInstallDates</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Collect_Install_Dates</localDeveloperName>
+            <mappingAttributes>
+                <label>Second Preferred Date</label>
+                <name>input_preferredDate2</name>
+                <parameterName>preferredDate2</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Time</label>
+                <name>input_preferredTime3</name>
+                <parameterName>preferredTime3</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Contact ID</label>
+                <name>input_contactId</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Asset ID</label>
+                <name>input_assetId</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Customer Name</label>
+                <name>input_customerName</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Serial Number</label>
+                <name>input_serialNumber</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Date</label>
+                <name>input_preferredDate1</name>
+                <parameterName>preferredDate1</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Time</label>
+                <name>input_preferredTime1</name>
+                <parameterName>preferredTime1</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Second Preferred Time</label>
+                <name>input_preferredTime2</name>
+                <parameterName>preferredTime2</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Date</label>
+                <name>input_preferredDate3</name>
+                <parameterName>preferredDate3</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Task ID</label>
+                <name>output_taskId</name>
+                <parameterName>taskId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Confirmation Message</label>
+                <name>output_confirmationMessage</name>
+                <parameterName>confirmationMessage</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Success</label>
+                <name>output_success</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Date</label>
+                <name>output_preferredDate1</name>
+                <parameterName>preferredDate1</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>First Preferred Time</label>
+                <name>output_preferredTime1</name>
+                <parameterName>preferredTime1</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Second Preferred Date</label>
+                <name>output_preferredDate2</name>
+                <parameterName>preferredDate2</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Second Preferred Time</label>
+                <name>output_preferredTime2</name>
+                <parameterName>preferredTime2</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Date</label>
+                <name>output_preferredDate3</name>
+                <parameterName>preferredDate3</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Third Preferred Time</label>
+                <name>output_preferredTime3</name>
+                <parameterName>preferredTime3</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Collect Install Dates</masterLabel>
+            <progressIndicatorMessage>Creating a task to collect installation date preferences...</progressIndicatorMessage>
+            <source>VDD_Collect_Install_Dates</source>
+        </localActions>
+        <localDeveloperName>VDD_Delivery_Coordination</localDeveloperName>
+        <masterLabel>VDD Delivery Coordination</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Can retrieve delivery details, send date collection SMS, and create installer work orders. Cannot schedule specific appointments, modify device configuration, or change asset status.</scope>
+        <source>VDD_Delivery_Coordination</source>
+    </localTopics>
+    <localTopics>
+        <fullName>AppointmentManagementForScheduler_16jaj000002C0uL</fullName>
+        <canEscalate>true</canEscalate>
+        <description>Schedules a service appointment if a customer explicitly asks to schedule a new service appointment or asks to modify an appointment or cancel these appointments.</description>
+        <developerName>AppointmentManagementForScheduler_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>You are not allowed to handle more than one service request throughout the conversation.</description>
+            <developerName>allow_one_service_request</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>allow_one_service_request</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You are not allowed to try to schedule or create more than one appointment throughout the conversation.</description>
+            <developerName>allow_one_service_appointment_scheduling</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>allow_one_service_appointment_scheduling</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You are strictly forbidden from scheduling, or creating, an appointment, if the customer states any preference or any instruction for the service resource  (or the resource&apos;s behavior) that is based on race, gender, age, or can be interpreted as discriminative, offensive, or inappropriate.
+You must immediately escalate the conversation.</description>
+            <developerName>block_racism</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>block_racism</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Follow these instructions when requested to schedule a new appointment:
+&apos;Collect Appointment Details For Scheduler&apos;: Gather all required information from the user without asking for details already provided. If no service resource is specified, treat the appointment as anonymous and set serviceResource to &apos;[]&apos;. For service territory, ask for either the branch name or the zip/postal code (not full address or extra details). Note: `serviceResources` (i.e., staff members) is a list, so always prompt the user in plural form. e.g.&quot;Do you have any specific staff members you&apos;d like to book with, or should I find any available one?&quot;.
+Determine Next Steps: Ensure all required details are collected before proceeding.
+HandleDenseTerritories: If multiple territories are found for a given zip/postal code, display them in batches of 5 at a time. After the first batch, ask if the user wants to see more (e.g., &quot;Here are the first 5 territories. Would you like to see more?&quot;). If they respond with &quot;show more,&quot; display the next batch of 5 territories and prompt again. Continue this until all territories are shown or selected. Once a territory is selected, proceed with scheduling. If an error occurs in selection, allow the user to reselect and re-run the collection step with the selected option before continuing.
+HandleMultiple Options Issues: If an error occurs about selecting, prompt the user to choose the correct option and re-run the &apos;collect appointment details&apos; step with the new selection&apos;s value before proceeding further.
+&apos;Get Appointment Slots for Scheduler&apos;: Retrieve and display available slots with the time zone in which they are provided. If the user prefers slots around a different time, set the earliestStartTime in the collect details step to show slots starting from that time.
+&apos;Create and Schedule Appointment for Scheduler&apos;: Confirm the user&apos;s selected time slot and complete the appointment scheduling. This does not require firstName/lastName unless explicitly asked by the action’s output due to an error. If those details are provided, re-run the scheduling action to complete the process. Don&apos;t assume ServiceAppointmentId while booking appointment. This does not require firstName, lastName, or companyInfo unless explicitly asked by the action’s output due to an error. Don&apos;t assume firstName, lastName, companyInfo, if needed ask from user. Do not ask for email.
+Once appointment is created, if user requests to change time for this already created appointment, follow steps as mentioned: &apos;Get Appointment Details for Scheduler&apos; (FetchAppointmentInfo), then &apos;Get Appointment Time Slots for Scheduler&apos; and then &apos;Create and Schedule Appointment for Scheduler&apos;.</description>
+            <developerName>schedule_appointment</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>schedule_appointment</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Always shows the timezone to the end user when displaying the booking slots and in which timezone the booking was made.</description>
+            <developerName>scheduler_general</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>scheduler_general</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>While listing appointment, always show scheduled start time to end user in HH:MM format only.</description>
+            <developerName>list_appointments_format</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>list_appointments_format</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Follow these instructions when requested to cancel appointment.
+Assess User&apos;s Request: Determine if additional details are needed.
+Get Service Appointments:Get service appointments from the org. Do not ask for details that are already provided in the user utterance. When user uses terms like next week, next month, ask the user to specify a specific date. Don&apos;t show Appointment ID to end user while listing appointments.
+Ask User Step: Prompt end user for which appointment to cancel, show at least data from 3 fields like AppointmentNumber, Status, Service Territory etc.
+Cancel Service Appointment: Cancel the chosen appointment.
+In case, user asks to cancel all the appointments, pass all the appointmentIds from &apos;Get Service Appointments&apos; to &apos;Cancel Service Appointment&apos; step.</description>
+            <developerName>cancel_appointment</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>cancel_appointment</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Follow these instructions when requested to Modify/Reschedule Appointment Flow:
+List Available Appointments (Optional)
+  Retrieve and display all available service appointments for the user. When user uses terms like next week, next month, ask the user to specify a specific date. Always ask user for date for when to list appointments for, if you have assumed any date, then convey user about the same.
+  Allow the user to review their appointments. If they are only browsing, the process can stop here.
+  If the user decides to modify an appointment, move on to Step 2.
+Get Appointment Details for Scheduler (FetchAppointmentInfo)
+  Ask the user to select the appointment they wish to modify.
+  Retrieve detailed information for the chosen appointment using its Service Appointment ID.
+Prompt the user to provide a new date for rescheduling during this step.
+Get Available Time Slots for scheduler (GetAppointmentTime)
+  Using the new date provided and the appointment details from the previous step, fetch the available time slots.
+  Present these available time slots to the user so they can select one. . If the user prefers slots around a different time, set the earliestStartTime in the ‘get available time slots for scheduler’ step to show slots starting from that time.
+Create and Schedule Appointment for scheduler
+  Always send the slot in the original timezone.
+  Once the user selects a new time slot, confirm the modification.
+  Finalize and update the appointment with the new schedule details.</description>
+            <developerName>reschedule_appointment</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>reschedule_appointment</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Pass appointment details from &apos;collect appointment details for scheduler&apos; step as it is in form of JSON to the next actions.</description>
+            <developerName>collect_appointment_details_output</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>collect_appointment_details_output</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Once the user has authenticated itself in the session, don&apos;t ask for verification of it&apos;s identity.</description>
+            <developerName>authenticate_once</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>authenticate_once</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Follow these instructions when requested to list appointments :
+If the date is not provided by the user, always ask explicitly for a specific date and not date range.
+If the date has been assumed (e.g., from context or defaults), always confirm this with the user by stating something like: &quot;I have assumed the date as [assumed date]. Is this correct?&quot;
+Do not assume the date from context; if you must, confirmation is mandatory.
+While listing the appointments, always display the scheduled start time in the HH:MM format to the user.
+If the user uses terms like &quot;next week&quot; or &quot;next month&quot;, prompt the user to provide an exact date and not date range.</description>
+            <developerName>list_appointments</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>list_appointments</masterLabel>
+            <sortOrder>10</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Most important instruction: Do not assume any input values if they are missing. Before asking the user for any input, first check whether the user has already provided that value. If the user has provided the value, use it directly without re-asking. If a required input has not been provided, ask the user explicitly to supply it.
+Do not invent, guess, or insert any placeholder values such as &quot;n/a,&quot; &quot;anyone,&quot; if the user has not specified them. Specifically, do not assume the Appointment Topic name or Service Territory name unless the user has explicitly provided them. Always request these details from the user when missing.</description>
+            <developerName>critical_instruction</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>critical_instruction</masterLabel>
+            <sortOrder>11</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If a user asks to reschedule/modify details of appointment other then time, like location, topic, resource etc. tell them it&apos;s not allowed.
+Only date and time can be changed, If they wish they can cancel the current appointment and book a new one.
+Don&apos;t assume ServiceAppointmentId while booking appointment. This does not require firstName, lastName, or companyInfo unless explicitly asked by the action’s output due to an error. Don&apos;t assume firstName, lastName, companyInfo, if needed ask from user. Do not ask for email.
+When user uses terms like next week, next month, ask the user to specify a specific date
+Whenever user wants to see more slots ask for specific time of the day. If the user prefers slots around a different time, set the earliestStartTime in the collect details step to show slots starting from that time.
+Don&apos;t allow the customer to schedule more than 1 appointment in a conversation. Warn the user but if the user insists, close the session.
+Always send the slot in the original timezone
+While fetching appointment details, never show recordIds only label.
+Most important instruction: Don&apos;t assume anything if an input is needed, ask for it explicitly. Don&apos;t put &quot;n/a&quot; or any generic things in any of the inputs. Do not assume appointment topic name. Always ask the user to specify the value unless already provided. Do not assume Service Territory name. Always ask the user to specify the value unless already provided.</description>
+            <developerName>rules</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>rules</masterLabel>
+            <sortOrder>12</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>CancelAppointment_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>ScheduleAppointment_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CollectAppointmentDetails_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetAvailableSlot_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>FetchAppointmentInfo_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetServiceAppointments_179aj000003RLwP</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>GetServiceAppointments_179aj000003RLwP</fullName>
+            <description>Get service appointments for a specific date. Returns the appointment IDs. Trigger this action with phrases such as &quot;Show me appointments on [date]&quot; or &quot;Find appointments on [appointment date] about [appointment topic]&quot;.</description>
+            <developerName>GetServiceAppointments_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__lstAppts</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetServiceAppointments</localDeveloperName>
+            <masterLabel>List Appointments for Scheduler</masterLabel>
+            <progressIndicatorMessage>Getting your appointments</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__GetServiceAppointments</source>
+        </localActions>
+        <localActions>
+            <fullName>CollectAppointmentDetails_179aj000003RLwP</fullName>
+            <description>Collects the details required to schedule a service appointment. For example, if the user wants to schedule an appointment for the &quot;Acme&quot; opportunity, the customer name is &quot;Acme&quot;. If the user wants to schedule an appointment for the &quot;Global Media&quot; account, the customer name is &quot;Global Media&quot;.</description>
+            <developerName>CollectAppointmentDetails_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__collAppt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CollectAppointmentDetails</localDeveloperName>
+            <masterLabel>Collect Appointment Details for Scheduler</masterLabel>
+            <progressIndicatorMessage>Collecting the appointment details</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__CollectAppointmentDetails</source>
+        </localActions>
+        <localActions>
+            <fullName>ScheduleAppointment_179aj000003RLwP</fullName>
+            <description>Creates and schedules appointment. Recognizes a variety of requests, such as “schedule an appointment&quot;, &quot;book a meeting&quot;, &quot;arrange a consultation&quot;, or &quot;meet with someone&quot;.</description>
+            <developerName>ScheduleAppointment_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__agentAppt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>ScheduleAppointment</localDeveloperName>
+            <masterLabel>Create and Schedule Appointment for Scheduler</masterLabel>
+            <progressIndicatorMessage>Analyzing your request</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__ScheduleAppointment</source>
+        </localActions>
+        <localActions>
+            <fullName>FetchAppointmentInfo_179aj000003RLwP</fullName>
+            <description>Retrieves the details of an existing service appointment. Use these details to reschedule an appointment to a new date or time.</description>
+            <developerName>FetchAppointmentInfo_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__getExAppt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>FetchAppointmentInfo</localDeveloperName>
+            <masterLabel>Get Appointment Details for Scheduler</masterLabel>
+            <progressIndicatorMessage>Getting your appointment details</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__FetchAppointmentInfo</source>
+        </localActions>
+        <localActions>
+            <fullName>GetAvailableSlot_179aj000003RLwP</fullName>
+            <description>Get the available slots for the appointment.</description>
+            <developerName>GetAvailableSlot_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__getSlot</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetAvailableSlot</localDeveloperName>
+            <masterLabel>Get Appointment Time Slots for Scheduler</masterLabel>
+            <progressIndicatorMessage>Finding time slots</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__GetAvailableSlot</source>
+        </localActions>
+        <localActions>
+            <fullName>CancelAppointment_179aj000003RLwP</fullName>
+            <description>Cancels the specified service appointment. If the appointment ID isn’t available, before executing this action, call the &apos;Get Service Appointments&apos; action to retrieve the appointment ID.</description>
+            <developerName>CancelAppointment_179aj000003RLwP</developerName>
+            <invocationTarget>SchdAiAgents__agntCancel</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelAppointment</localDeveloperName>
+            <masterLabel>Cancel Service Appointment For Scheduler</masterLabel>
+            <progressIndicatorMessage>Canceling your appointment</progressIndicatorMessage>
+            <source>runtime_appointmentbooking__CancelAppointment</source>
+        </localActions>
+        <localDeveloperName>AppointmentManagementForScheduler</localDeveloperName>
+        <masterLabel>Appointment Management For Scheduler</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to schedule a new service appointment or allow to modify and cancel appointments.</scope>
+        <source>runtime_appointmentbooking__AppointmentManagementForScheduler</source>
+    </localTopics>
+    <localTopics>
+        <fullName>VDD_Proactive_Health_Monitor_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Autonomously coordinates equipment replacement when asset health thresholds are breached. Reads breach details, diagnoses from AssetAttribute values, creates replacement case, and notifies customer.</description>
+        <developerName>VDD_Proactive_Health_Monitor_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>Route to this topic when an asset threshold monitoring alert fires (RecordsetFltrCritMonitor.IsWithinThreshold changes to false).
+Step 1: Use Get Threshold Breach Details to identify which threshold was breached, the affected asset, customer, and vehicle.
+Step 2: Use Diagnose Asset Health to read all AssetAttribute values and produce a diagnostic summary with severity level and recommended action.
+Step 3: Use Create Replacement Case to create a proactive service case and send the customer an SMS notification that the team is already working on the issue.
+Always execute all 3 steps in sequence. This is proactive service — act before the customer even knows there is a problem. The goal is zero downtime for the fleet.</description>
+            <developerName>instruction_health_monitor</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Proactive Health Monitor Instructions</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VDD_Diagnose_Asset_Health_179aj000003RM2j</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Get_Threshold_Breach_179aj000003RM2j</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VDD_Create_Replacement_Case_179aj000003RM2j</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>VDD_Create_Replacement_Case_179aj000003RM2j</fullName>
+            <description>Creates a replacement case for a fleet asset that requires device replacement based on a health diagnosis. Use this after diagnosing an asset health issue that requires hardware replacement.</description>
+            <developerName>VDD_Create_Replacement_Case_179aj000003RM2j</developerName>
+            <invocationTarget>VDD_CreateReplacementCase</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Create_Replacement_Case</localDeveloperName>
+            <mappingAttributes>
+                <label>Input assetId</label>
+                <name>input_assetId_replace</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input accountId</label>
+                <name>input_accountId_replace</name>
+                <parameterName>accountId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input contactId</label>
+                <name>input_contactId_replace</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input diagnosis</label>
+                <name>input_diagnosis_replace</name>
+                <parameterName>diagnosis</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input severity</label>
+                <name>input_severity_replace</name>
+                <parameterName>severity</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input recommendedAction</label>
+                <name>input_recommendedAction_replace</name>
+                <parameterName>recommendedAction</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input vehicleName</label>
+                <name>input_vehicleName_replace</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input customerName</label>
+                <name>input_customerName_replace</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output caseNumber</label>
+                <name>output_caseNumber_replace</name>
+                <parameterName>caseNumber</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output caseId</label>
+                <name>output_caseId_replace</name>
+                <parameterName>caseId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output confirmationMessage</label>
+                <name>output_confirmationMessage_replace</name>
+                <parameterName>confirmationMessage</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output success</label>
+                <name>output_success_replace</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Create Replacement Case</masterLabel>
+            <progressIndicatorMessage>Creating a replacement case for this device...</progressIndicatorMessage>
+            <source>VDD_Create_Replacement_Case</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Get_Threshold_Breach_179aj000003RM2j</fullName>
+            <description>Retrieves threshold breach details for a fleet asset, including the breached threshold name, customer information, and vehicle details. Use this when an alert or threshold violation is detected for an asset.</description>
+            <developerName>VDD_Get_Threshold_Breach_179aj000003RM2j</developerName>
+            <invocationTarget>VDD_GetThresholdBreach</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Get_Threshold_Breach</localDeveloperName>
+            <mappingAttributes>
+                <label>Input assetId</label>
+                <name>input_assetId_breach</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output assetName</label>
+                <name>output_assetName_breach</name>
+                <parameterName>assetName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output thresholdName</label>
+                <name>output_thresholdName_breach</name>
+                <parameterName>thresholdName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output accountName</label>
+                <name>output_accountName_breach</name>
+                <parameterName>accountName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output accountId</label>
+                <name>output_accountId_breach</name>
+                <parameterName>accountId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output customerName</label>
+                <name>output_customerName_breach</name>
+                <parameterName>customerName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output customerPhone</label>
+                <name>output_customerPhone_breach</name>
+                <parameterName>customerPhone</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output contactId</label>
+                <name>output_contactId_breach</name>
+                <parameterName>contactId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output vehicleName</label>
+                <name>output_vehicleName_breach</name>
+                <parameterName>vehicleName</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output serialNumber</label>
+                <name>output_serialNumber_breach</name>
+                <parameterName>serialNumber</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output success</label>
+                <name>output_success_breach</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output message</label>
+                <name>output_message_breach</name>
+                <parameterName>message</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Threshold Breach</masterLabel>
+            <progressIndicatorMessage>Retrieving threshold breach details for this asset...</progressIndicatorMessage>
+            <source>VDD_Get_Threshold_Breach</source>
+        </localActions>
+        <localActions>
+            <fullName>VDD_Diagnose_Asset_Health_179aj000003RM2j</fullName>
+            <description>Diagnoses the health of a fleet asset based on the breached threshold, returning a diagnosis, severity level, recommended action, and consolidated telemetry metrics. Use this after a threshold breach is detected to determine the appropriate response.</description>
+            <developerName>VDD_Diagnose_Asset_Health_179aj000003RM2j</developerName>
+            <invocationTarget>VDD_DiagnoseAssetHealth</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VDD_Diagnose_Asset_Health</localDeveloperName>
+            <mappingAttributes>
+                <label>Input assetId</label>
+                <name>input_assetId_diagnose</name>
+                <parameterName>assetId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Input thresholdName</label>
+                <name>input_thresholdName_diag</name>
+                <parameterName>thresholdName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output diagnosis</label>
+                <name>output_diagnosis_diagnose</name>
+                <parameterName>diagnosis</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output severity</label>
+                <name>output_severity_diagnose</name>
+                <parameterName>severity</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output recommendedAction</label>
+                <name>output_recommendedAction_diagnose</name>
+                <parameterName>recommendedAction</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output allMetrics</label>
+                <name>output_allMetrics_diagnose</name>
+                <parameterName>allMetrics</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output success</label>
+                <name>output_success_diagnose</name>
+                <parameterName>success</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>Output message</label>
+                <name>output_message_diagnose</name>
+                <parameterName>message</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Diagnose Asset Health</masterLabel>
+            <progressIndicatorMessage>Diagnosing asset health and analyzing threshold breach...</progressIndicatorMessage>
+            <source>VDD_Diagnose_Asset_Health</source>
+        </localActions>
+        <localDeveloperName>VDD_Proactive_Health_Monitor</localDeveloperName>
+        <masterLabel>VDD Proactive Health Monitor</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Can read threshold breaches, diagnose asset health from attributes, and create proactive replacement cases. Cannot modify asset attribute values, reset threshold monitors, or change device configurations.</scope>
+        <source>VDD_Proactive_Health_Monitor</source>
+    </localTopics>
+    <localTopics>
+        <fullName>AccountManagement_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles customer inquiries about changing their contact information and resetting their password.</description>
+        <developerName>AccountManagement_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>If the customer is not known, always ask for their email address and get their Contact record before running any other actions.</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asking a customer for their address, your request of the following required information should be formatted as an itemized list :Street Address, City, State, and Postal Code.</description>
+            <developerName>Instruction2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the Answer Questions with Knowledge action to answer questions about account issues.</description>
+            <developerName>Instruction3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+            <developerName>Instruction4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When changing a customer&apos;s email address, always explicitly prompt for the new email address.</description>
+            <developerName>Instruction5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>ResetSecurePassword_179aj000003RLwO</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>UpdateVerifiedContact_179aj000003RLwO</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179aj000003RLwO</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>UpdateVerifiedContact_179aj000003RLwO</fullName>
+            <description>Updates fields on a customer’s contact record, such as the email address, phone number, or postal address.</description>
+            <developerName>UpdateVerifiedContact_179aj000003RLwO</developerName>
+            <invocationTarget>SvcCopilotTmpl__UpdateVrfyCtct</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>UpdateVerifiedContact</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedContactID</label>
+                <name>input_verifiedContactID</name>
+                <parameterName>verifiedContactID</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Update Verified Contact</masterLabel>
+            <source>SvcCopilotTmpl__UpdateVerifiedContact</source>
+        </localActions>
+        <localActions>
+            <fullName>ResetSecurePassword_179aj000003RLwO</fullName>
+            <description>Send a password reset link to the email address associated with the given Contact ID.</description>
+            <developerName>ResetSecurePassword_179aj000003RLwO</developerName>
+            <invocationTarget>SvcCopilotTmpl__ResetScrPassword</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>ResetSecurePassword</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedContactID</label>
+                <name>input_verifiedContactID</name>
+                <parameterName>verifiedContactID</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Reset Secure Password</masterLabel>
+            <source>SvcCopilotTmpl__ResetSecurePassword</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179aj000003RLwO</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179aj000003RLwO</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>AccountManagement</localDeveloperName>
+        <masterLabel>Account Management</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to help a customer reset their password or make updates to their contact information by changing their email address, phone number, or mailing address.</scope>
+        <source>SvcCopilotTmpl__AccountManagement</source>
+    </localTopics>
+    <localTopics>
+        <fullName>ServiceCustomerVerification_16jaj000002C0uL</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Verifies the customer&apos;s identity before granting access to sensitive data. Actions like managing cases, retrieving/managing orders, or making a reservation require identity verification. Sensitive data includes confidential, private, or security-protected information, such as business-critical data or personally identifiable information (PII). After verification is successful, don&apos;t repeat the process within the same session.</description>
+        <developerName>ServiceCustomerVerification_16jaj000002C0uL</developerName>
+        <genAiPluginInstructions>
+            <description>Ask the customer to enter their username or email address if it hasn&apos;t been provided.</description>
+            <developerName>username_email_address_prompt</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>username_email_address_prompt</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the &quot;SendEmailVerificationCode&quot; action to initiate the verification process. Use the username or email address provided by the customer as input &quot;customerToVerify&quot; for this action.</description>
+            <developerName>send_verification_code</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>send_verification_code</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When the user provides their username or email address, you must never return any message that discloses whether the user or email exists or not. The message must explicitly state the return data of the &quot;verificationMessage&quot; field in the &quot;SendEmailVerificationCode&quot; action. For example: &quot;If you have provided a valid email or username, you should receive a verification code to verify your identity. Please enter the code.&quot;</description>
+            <developerName>user_email_security</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>user_email_security</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the customer enters the wrong verification code three times, ask them to re-enter their username or email address to receive a new verification code. This involves invoking the &quot;SendEmailVerificationCode&quot; action again to initiate the verification process. This ensures that the customer cannot bypass the verification process after three unsuccessful attempts.</description>
+            <developerName>reenter_username_or_email_address</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>reenter_username_or_email_address</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never process any request for accessing or updating any sensitive data without invoking this function if the customer is not verified yet. Maintain security in all interactions.</description>
+            <developerName>authentication_only</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>authentication_only</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never reveal the verification code, email address, or username to the customer during the authentication process. Make sure that these details remain confidential and aren’t displayed at any point.</description>
+            <developerName>security_prompt</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>security_prompt</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After the user is verified in a conversation session, switching to a different user isn&apos;t allowed under any circumstances.</description>
+            <developerName>prevent_user_switching_after_verification</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>prevent_user_switching_after_verification</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If verification is successful, proceed with the requested action and complete the task the user intends to perform.</description>
+            <developerName>proceed_after_verification_success</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>proceed_after_verification_success</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VerifyCustomer_179aj000003RLwN</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>SendEmailVerificationCode_179aj000003RLwN</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>SendEmailVerificationCode_179aj000003RLwN</fullName>
+            <description>Sends a generated verification code to the user’s email address.</description>
+            <developerName>SendEmailVerificationCode_179aj000003RLwN</developerName>
+            <invocationTarget>SvcCopilotTmpl__SendVerificationCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>SendEmailVerificationCode</localDeveloperName>
+            <mappingAttributes>
+                <label>output_authenticationKey</label>
+                <name>output_authenticationKey</name>
+                <parameterName>authenticationKey</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerId</label>
+                <name>output_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerType</label>
+                <name>output_customerType</name>
+                <parameterName>customerType</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Send Email with Verification Code</masterLabel>
+            <source>SvcCopilotTmpl__SendEmailVerificationCode</source>
+        </localActions>
+        <localActions>
+            <fullName>VerifyCustomer_179aj000003RLwN</fullName>
+            <description>Verifies whether the verification code entered by the user matches the code sent to the user&apos;s email address.</description>
+            <developerName>VerifyCustomer_179aj000003RLwN</developerName>
+            <invocationTarget>SvcCopilotTmpl__VerifyCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VerifyCustomer</localDeveloperName>
+            <mappingAttributes>
+                <label>input_authenticationKey</label>
+                <name>input_authenticationKey</name>
+                <parameterName>authenticationKey</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>input_customerId</label>
+                <name>input_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>input_customerType</label>
+                <name>input_customerType</name>
+                <parameterName>customerType</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_isVerified</label>
+                <name>output_isVerified</name>
+                <parameterName>isVerified</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerId</label>
+                <name>output_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Verify Customer</masterLabel>
+            <source>SvcCopilotTmpl__VerifyCustomer</source>
+        </localActions>
+        <localDeveloperName>ServiceCustomerVerification</localDeveloperName>
+        <masterLabel>Service Customer Verification</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to authenticate the customer who has not yet been authenticated before granting access to any sensitive data. You will verify the customer using their email address or username. After verification is successful, don&apos;t repeat the process within the same session.</scope>
+        <source>SvcCopilotTmpl__ServiceCustomerVerification</source>
+    </localTopics>
+    <masterLabel>VDD Fleet Service Agent</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jaj000002C0uL</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jaj000002C0uL</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__CustomerWebClient</surface>
+        <surfaceType>CustomerWebClient</surfaceType>
+    </plannerSurfaces>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>AccountManagement_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>AppointmentManagementForFieldService_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>AppointmentManagementForScheduler_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>CaseManagement_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>DeliveryIssues_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>OrderInquiries_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>Verified_User</ruleExpressionName>
+        <targetName>ReservationManagement_16jaj000002C0uL</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressions>
+        <conditions>
+            <leftOperand>isVerified</leftOperand>
+            <leftOperandType>Variable</leftOperandType>
+            <operator>equal</operator>
+            <rightOperandValue>true</rightOperandValue>
+        </conditions>
+        <expression>Verified_User</expression>
+        <expressionLabel>Verified User</expressionLabel>
+        <expressionName>Verified_User</expressionName>
+        <expressionType>sel</expressionType>
+    </ruleExpressions>
+</GenAiPlannerBundle>

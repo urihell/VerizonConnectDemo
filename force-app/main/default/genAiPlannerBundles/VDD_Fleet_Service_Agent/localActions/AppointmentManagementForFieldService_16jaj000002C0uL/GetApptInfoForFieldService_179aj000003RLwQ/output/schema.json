@@ -1,0 +1,29 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "serviceAppointmentInformation" : {
+      "title" : "Service Appointment Information",
+      "description" : "Stores information about each service appointment, in list format.",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "einstein:description" : "Stores information about each service appointment, in list format.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "isSuccess" : {
+      "title" : "Completion Status",
+      "description" : "Stores the completion status returned from the flow.",
+      "lightning:type" : "lightning__booleanType",
+      "einstein:description" : "Stores the completion status returned from the flow.",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

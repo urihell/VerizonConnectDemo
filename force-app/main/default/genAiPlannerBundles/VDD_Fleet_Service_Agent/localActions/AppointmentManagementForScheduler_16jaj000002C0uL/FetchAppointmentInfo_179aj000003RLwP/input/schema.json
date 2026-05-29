@@ -1,0 +1,22 @@
+{
+  "required" : [ "serviceAppointmentId", "newAppointmentDate" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "serviceAppointmentId" : {
+      "title" : "Service Appointment ID",
+      "description" : "The ID of the service appointment to get details for.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "newAppointmentDate" : {
+      "title" : "Appointment Date",
+      "description" : "The new date to which to reschedule the service appointment.",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}
