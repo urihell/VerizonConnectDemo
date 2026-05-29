@@ -1,10 +1,24 @@
 # VDD Fleet Service — 10-Minute Demo Talk Track
 
-> **Audience:** Verizon Connect (fleet telematics prospect evaluating Salesforce Field Service + Agentforce)
+> **Audience:** Verizon Connect — fleet operations & service leadership
 > **Slot:** ~10 minutes, immediately following the Revenue Cloud segment
 > **Persona on screen:** Black Rock Paving — a VC fleet customer (Jim Stone, owner, Old Bridge NJ) with **33 VDD-400 GPS units** going into heavy equipment
 > **Org:** `verizon-connect-bj550e` · **SMS channel:** 974 (+1-201-908-6974)
-> **Source of truth:** `VerizonConnectDemo/VDD_DEMO_HANDOFF.md` (master branch)
+> **Source of truth:** `VDD_DEMO_HANDOFF.md`
+
+---
+
+## The story this demo tells
+
+Three value pillars, each landed by a live action — and each one quantifiable:
+
+| Pillar | The moment | The value |
+|--------|-----------|-----------|
+| **Zero-touch dispatch** | Delivery → scheduled install with no dispatcher | Capacity redeployed; humans handle exceptions, not routine |
+| **Scheduling on the customer's terms** | Customer books over SMS, in plain words | Faster time-to-live = faster time-to-revenue on the subscription |
+| **Service that moves first** | A failing device opens its own case | Uptime protected = truck rolls avoided, churn avoided |
+
+Underneath all three: **one platform, one customer record** — the same record you just saw in Revenue Cloud, carried from order to end-of-life. That continuity is the implicit win; the three pillars are the explicit ones.
 
 ---
 
@@ -29,63 +43,63 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 ## Beat 0 — Frame & Revenue Cloud Handoff · `0:00 – 1:00`
 
 **🗣 SAY:**
-> "So we just watched the *commercial* side — Black Rock Paving signed for 33 VDD-400 units and the subscriptions that ride on them, all quoted and closed in Revenue Cloud. But for Verizon Connect, the deal isn't won when the order closes — it's won when all 33 devices are **installed, live, and reporting**, and it stays won as long as they keep reporting.
+> "We just watched the *commercial* side — Black Rock Paving signed for 33 VDD-400 units and the subscriptions riding on them, all quoted and closed in Revenue Cloud. But for a fleet business, the deal isn't really won when the order closes. It's won when all 33 devices are **installed, live, and reporting** — and it stays won every month they keep reporting.
 >
-> That gap — from *order* to *healthy installed asset* to *the day a device starts to fail* — is exactly where the RFP was thin: no real work-order layer, a light scheduling story, and nothing on proactive device health. So that's what I want to show you. One platform, one agent, carrying those same 33 devices the rest of the way. Let me start on Black Rock Paving's account."
+> Everything in between — getting devices in the ground and keeping them healthy — is where service either protects that revenue or quietly erodes it. So let me show you that stretch, on one platform, on the *same* customer record you just saw. Three moments do the heavy lifting: getting devices installed **without a dispatcher in the middle**, scheduling **on the customer's terms**, and catching a failing device **before the customer ever feels it**."
 
-**🖱 DO:** Land on the **Black Rock Paving** Account record (or the VDD-400 Shipment list — your call).
+**🖱 DO:** Land on the **Black Rock Paving** Account record (or the VDD-400 Shipment list).
 
-**👀 SHOW:** The account/relationship — devices, the open shipment. Sets "this is a real customer with real hardware in motion."
+**👀 SHOW:** The account — devices, the open shipment. "Real customer, real hardware in motion, one record."
 
-> *Presenter note: This explicitly picks up the baton from Revenue Cloud and names the RFP gaps you're about to close. Don't linger — momentum into Phase 1.*
+> *Presenter note: This picks up the baton from Revenue Cloud and plants the three value pillars as outcomes, not problems. Don't linger — momentum into Phase 1.*
 
 ---
 
-## Beat 1 — Delivery Coordination · `1:00 – 4:00`
+## Beat 1 — Delivery Coordination · `1:00 – 4:00`  ·  Pillar: **Zero-touch dispatch**
 
-**The point:** The hardware physically arrives, and an **Agentforce agent** — not a CSR, not a queue — coordinates the install over SMS and stands up the work order. This is the work-order + scheduling layer the RFP was missing.
+**The point:** Hardware physically arrives, and an **Agentforce agent** — not a CSR, not a dispatch queue — coordinates the install and stands up the work order itself. The work-order-and-scheduling layer most telematics shops bolt on by hand is simply *built in here*.
 
 **🗣 SAY:**
-> "The shipment of 33 units just landed at Black Rock's yard. Watch what one click sets in motion."
+> "The shipment of units just landed at Black Rock's yard. Watch what one click sets in motion."
 
 **🖱 DO:** Open **Shipments → SP-0002** → click **"Confirm Shipment Delivery"** → click through the screen flow.
 
 **🗣 SAY (while it runs):**
-> "Behind that button, Field Service just did the unglamorous-but-critical work: five product transfers received, the device assets cascaded from *Shipped* to *Delivered*, the shipment closed out, and the product request marked received. No spreadsheet, no swivel-chair between systems."
+> "Behind that button, Field Service just did the unglamorous-but-critical work: five product transfers received, the device assets cascaded from *Shipped* to *Delivered*, the shipment closed out, the product request marked received. No spreadsheet, no swivel-chair between systems — the inventory and asset records reconcile themselves."
 
 **👀 SHOW:** The success toast: *"5 product transfers received, 5 assets updated to Delivered."*
 
 **🗣 SAY:**
-> "And the moment that shipment flipped to *Delivered*, a flow fired an SMS straight to Jim, the fleet owner."
+> "And the moment that shipment flipped to *Delivered*, the platform reached out to the customer on its own."
 
 **🖱 DO:** Navigate to **Messaging Sessions** (or Jim Stone's activity) to show the outbound SMS record.
 
 **👀 SHOW:** The outbound message:
 > *"Hi Jim, your VDD-400 GPS Tracking Unit + 4 accessories have been delivered to Black Rock Paving. Reply with 3 preferred install dates/times…"*
 
-> *Presenter note: Acknowledge it out loud — "in production this lands on Jim's phone; here I'll show you the Salesforce side."*
+> *Presenter note: Acknowledge it — "in production this lands on Jim's phone; here I'll show you the Salesforce side."*
 
 **🗣 SAY:**
-> "Now Jim replies the way a busy contractor actually texts —" *(read it as you trigger it)* — **"June 2 morning, June 4 afternoon, June 5 morning."** "No portal, no app download. And here's the part that matters for you:"
+> "Now Jim replies the way a busy contractor actually communicates —" *(read it as you trigger it)* — **"June 2 morning, June 4 afternoon, June 5 morning."** "No portal, no app to download, no callback queue. Text, in his own words. And here's the part that matters for your operation:"
 
 **🖱 DO:** Trigger / show Jim's inbound reply → the **VDD Fleet Service Agent** picks it up on the 974 channel.
 
 **🗣 SAY:**
-> "The agent doesn't just log a note. It reads those three windows, and because no work order exists yet, it **creates one** — with a work order line for each vehicle pulled from the shipment's asset hierarchy — records all three preferences, schedules a service appointment to the first slot, and texts Jim back a confirmation with his WO number. The agent owns the work-order lifecycle end to end."
+> "The agent doesn't just log a note. It reads those three windows, and because no work order exists yet, it **creates one** — with a line for each vehicle pulled from the shipment's asset hierarchy — records all three preferences, schedules a service appointment to the first slot for the installer, and texts Jim back his work-order number. The agent owns that whole lifecycle."
 
 **🖱 DO / 👀 SHOW (rapid, ~30s):**
-- **Work Order** → the WOLIs (one per vehicle) + the three preferred dates
-- **Service Appointment** → scheduled to the first window
+- **Work Order** → the lines (one per vehicle) + the three preferred dates
+- **Service Appointment** → scheduled to the first window, routed to the field installer
 - **Chatter / Task** → the logged activity trail
 
-**🗣 SAY (transition):**
-> "Order to scheduled install — no human dispatcher touched it. That's gap one closed. Now let's get a device live."
+**🗣 SAY (transition — land the value):**
+> "Order to a scheduled install — and not one dispatcher, queue, or spreadsheet touched it. That's headcount you redeploy onto the jobs that actually need a human. Now let's get a device live."
 
 ---
 
-## Beat 2 — Post-Install Onboarding · `4:00 – 6:00`
+## Beat 2 — Post-Install Onboarding · `4:00 – 6:00`  ·  Pillar: **Asset health, proven not assumed**
 
-**The point:** The install is done; the agent **verifies the device is actually healthy** and onboards the customer. Telemetry, not assumptions.
+**The point:** Install done; the platform **verifies the device is actually healthy from live telemetry** and onboards the customer. The asset's condition is data, not a closed task.
 
 **🗣 SAY:**
 > "The installer's on site, device wired into the truck. They mark it complete —"
@@ -98,26 +112,26 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 **👀 SHOW:** Refresh the Asset → status **Installed** → the **Asset Attributes** related list (GPS 2.5m, signal -68 dBm, battery 12.6V).
 
 **🗣 SAY:**
-> "Now the onboarding agent takes over automatically. It confirms the install, reads every telemetry attribute, and checks each one against threshold — GPS under 5 meters, signal above -85, battery above 11.8 volts. All green. It returns **'All Systems Go'** and sends Jim a welcome with his fleet dashboard link."
+> "Now the onboarding agent takes over automatically. It confirms the install, reads every telemetry attribute, and checks each against threshold — GPS under 5 meters, signal above -85, battery above 11.8 volts. All green. It returns **'All Systems Go'** and sends Jim a welcome with his fleet dashboard link."
 
 **🖱 DO / 👀 SHOW:** The **Activity timeline** → onboarding task with the telemetry summary.
 
 **🗣 SAY (transition):**
-> "So you've confirmed — with data, not a checkbox — that this device is earning its subscription on day one. But the real test of a fleet platform isn't day one. It's day ninety, when a battery starts to go."
+> "So you've confirmed — with live data, not a checkbox — that this device is earning its subscription from day one. But the real test of a fleet platform isn't day one. It's day ninety, when a battery starts to go."
 
 ---
 
-## Beat 3 — Proactive Health Monitoring · `6:00 – 9:00` · 🎯 HERO BEAT
+## Beat 3 — Proactive Health Monitoring · `6:00 – 9:00` · 🎯 HERO BEAT  ·  Pillar: **Service that moves first**
 
-**The point:** The differentiated moment. The device starts failing, and the agent **opens a case and notifies the customer before the customer notices** — protecting uptime, the subscription, and the relationship. This is the proactive-maintenance story the RFP had *nothing* on.
+**The point:** The differentiated moment. A device starts failing, and the platform **opens a case and notifies the customer before the customer notices** — protecting uptime, the subscription, and the relationship. This is the leap from *selling a device* to *guaranteeing the outcome the device promises*.
 
 **🗣 SAY:**
-> "Fast-forward a few weeks. That battery starts to drift. In most telematics shops, here's what happens: nothing — until Jim calls in angry because a truck went dark on a job site. Watch what happens here instead."
+> "Fast-forward a few weeks. That battery starts to drift. In most telematics operations, here's what happens next: nothing — until Jim calls in angry because a truck went dark on a job site. Watch what happens here instead."
 
 **🖱 DO:** On the same **VDD-400** asset → click **"Simulate Battery Failure."**
 
 **🗣 SAY (while it runs):**
-> "I'm simulating the battery dropping to 11.4 volts — just under threshold. That trips the monitor we created at install. No human is watching this dashboard. The agent is."
+> "I'm simulating the battery dropping to 11.4 volts — just under threshold. That trips the monitor we created at install. No human is watching this dashboard. The platform is."
 
 **👀 SHOW:** Pause for a beat — let the breach fire and the agent run.
 
@@ -136,12 +150,12 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 ## Beat 4 — Recap & Tie-Off · `9:00 – 10:00`
 
 **🗣 SAY:**
-> "So in ten minutes we carried those 33 devices the whole way — and we closed the three gaps your RFP flagged:
-> - **The work-order layer** — the agent created and scheduled the install, no dispatcher required.
-> - **The scheduling story** — over SMS, in the customer's own words.
-> - **Proactive device health** — a failing battery became a case before it became a complaint.
+> "So in ten minutes we carried those 33 devices the whole way — and three things happened that a tracking platform alone can't do:
+> - Devices went from *delivered* to a *scheduled install* with **no dispatcher in the loop** — capacity you redeploy.
+> - The customer booked **in his own words, over text** — no portal, no friction, faster time-to-live, which means faster time-to-revenue on every subscription.
+> - A failing device became a **case before it became a complaint** — a truck that didn't go dark, a call that didn't come in hot, and a subscription that didn't churn.
 >
-> One platform — Field Service for the assets and the work, Agentforce for the intelligence, all on the customer record you already saw in Revenue Cloud. Same data, order through end-of-life. That's the device lifecycle Verizon Connect runs on Salesforce. Where would you want to go deeper — the scheduling and dispatch side, or the proactive health engine?"
+> One platform — Field Service for the assets and the work, Agentforce for the intelligence — all hanging off the same customer record you saw in Revenue Cloud. Order through end-of-life, one source of truth. Where do you want to go deeper — the dispatch-and-scheduling engine, or the proactive health side?"
 
 **👀 SHOW:** Back on the **Black Rock Paving Account** — devices, the work order, the case all hanging off one record.
 
@@ -154,10 +168,10 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 | Time | Beat | Click | Land the line |
 |------|------|-------|---------------|
 | 0:00 | Frame | Account / Shipment list | "Deal's won when 33 devices report — and stay reporting." |
-| 1:00 | Delivery | SP-0002 → **Confirm Shipment Delivery** | Agent creates the WO + schedules install over SMS |
-| 4:00 | Onboarding | VDD-400 → **Complete Installation** | Telemetry verified — "All Systems Go," not a checkbox |
-| 6:00 | **Health** 🎯 | VDD-400 → **Simulate Battery Failure** | "We knew before Jim did." Case opened proactively |
-| 9:00 | Recap | Black Rock Paving Account | Closed all 3 RFP gaps on one platform |
+| 1:00 | Delivery | SP-0002 → **Confirm Shipment Delivery** | Scheduled install, zero dispatchers — capacity back |
+| 4:00 | Onboarding | VDD-400 → **Complete Installation** | Health proven by live telemetry, not a checkbox |
+| 6:00 | **Health** 🎯 | VDD-400 → **Simulate Battery Failure** | "We knew before Jim did." Uptime + subscription protected |
+| 9:00 | Recap | Black Rock Paving Account | Three outcomes, one record, order → end-of-life |
 
 ## If you're running long (cut order)
 1. Trim Beat 2 detail — show telemetry attributes, skip the threshold-by-threshold read.
