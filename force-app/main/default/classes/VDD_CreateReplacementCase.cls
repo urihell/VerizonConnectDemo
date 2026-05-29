@@ -73,8 +73,11 @@ public with sharing class VDD_CreateReplacementCase {
                         req.vehicleName + '.\n\n' +
                         'Severity: ' + req.severity + '\n' +
                         'Case #: ' + c.CaseNumber + '\n\n' +
-                        'Our team is already working on it — no action needed from you.\n' +
-                        'We\'ll keep you updated on the resolution.\n\n' +
+                        'Good news — our team is already on it. We\'ve opened this case and a replacement is ready to go.\n\n' +
+                        'To keep things moving, just reply to this message:\n' +
+                        '  • Reply YES to confirm the replacement and we\'ll ship it out today\n' +
+                        '  • Reply CALL to have a specialist walk you through it\n' +
+                        '  • Or ask us anything about this device right here\n\n' +
                         '— Verizon Connect Fleet Support'
                 );
                 insert notification;

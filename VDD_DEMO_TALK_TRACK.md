@@ -112,12 +112,15 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 **👀 SHOW:** Refresh the Asset → status **Installed** → the **Asset Attributes** related list (GPS 2.5m, signal -68 dBm, battery 12.6V).
 
 **🗣 SAY:**
-> "Now the onboarding agent takes over automatically. It confirms the install, reads every telemetry attribute, and checks each against threshold — GPS under 5 meters, signal above -85, battery above 11.8 volts. All green. It returns **'All Systems Go'** and sends Jim a welcome with his fleet dashboard link."
+> "Now the onboarding agent takes over automatically. It confirms the install, reads every telemetry attribute, checks each against threshold — all green, **'All Systems Go.'** Then it texts Jim that **his fleet devices are installed and reporting in** — and hands him the next step: **book a training session** so his crew is actually using what they're paying for. That's adoption, and adoption is what makes the subscription stick."
 
-**🖱 DO / 👀 SHOW:** The **Activity timeline** → onboarding task with the telemetry summary.
+**🖱 DO / 👀 SHOW:** The **Activity timeline** → onboarding task with the telemetry summary + the training call-to-action.
 
-**🗣 SAY (transition):**
-> "So you've confirmed — with live data, not a checkbox — that this device is earning its subscription from day one. But the real test of a fleet platform isn't day one. It's day ninety, when a battery starts to go."
+> *Presenter note (multi-device): the message reads "your devices," plural — I click into ONE device as the example, but narrate it across the whole order. Never let it look like a 1:1 "installed 50, showing 1" screen.*
+> *Presenter note (VIN rollup): on the asset page, call out that each asset → vehicle → **VIN rolls up to Revenue Cloud** — the linking key they care about, captured once, not re-keyed.*
+
+**🗣 SAY (transition — land the revenue value):**
+> "And notice *when* this happened: the moment install is confirmed, **you can start billing.** Today that revenue leaks — devices ship, sit half-installed in a yard, and the meter never starts. Here, install-confirmed *is* revenue-on. These devices are earning their subscription from day one. But the real test of a fleet platform isn't day one — it's day ninety, when a device starts to fail in the field."
 
 ---
 
@@ -130,17 +133,21 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 
 **🖱 DO:** On the same **VDD-400** asset → click **"Simulate Battery Failure."**
 
+> *⚠️ Presenter note (realism — pending Steven/Kurt): the real Reveal/BT-400 runs on **vehicle power via OBD-II**, not its own battery. Half the audience knows the hardware. Reframe the trip as a **power-feed fault / signal loss / no-ping**, not a "device battery." Keep it consistent with Kurt's RMA troubleshooting. Update once the failure mode is confirmed.*
+
 **🗣 SAY (while it runs):**
-> "I'm simulating the battery dropping to 11.4 volts — just under threshold. That trips the monitor we created at install. No human is watching this dashboard. The platform is."
+> "I'm simulating the device dropping below its health threshold — it stops reporting the way it should. That trips the monitor we created at install. No human is watching this dashboard. The platform is."
 
 **👀 SHOW:** Pause for a beat — let the breach fire and the agent run.
 
 **🗣 SAY:**
-> "The health-monitor agent wakes up on the breach. Step one: it identifies *what* tripped and *whose* device — Jim Stone, the semi truck. Step two: it pulls the full telemetry picture and diagnoses it — 0.4 volts under threshold, severity **Warning**, recommendation: preventive battery replacement within two weeks. Step three —" *(let this land)* — "it opens a service case and texts Jim that you're **already on it**."
+> "The health-monitor agent wakes up on the breach. Step one: it identifies *what* tripped and *whose* device — Jim Stone, the semi truck. Step two: it pulls the full telemetry picture, diagnoses it, sets a severity, and recommends an action. Step three —" *(let this land)* — "it opens a service case and texts Jim that the **team's already on it** — *and* it hands him a next move right there in the thread: **reply YES to confirm the replacement, reply CALL for a specialist, or just ask a question.** The customer isn't a spectator to a notification — he's one tap from resolution, and the agent takes it from there."
 
 **🖱 DO / 👀 SHOW:**
 - The newly created **Case** → diagnosis, severity, recommended action
-- The **Chatter feed / customer notification** → the proactive outreach
+- The **customer notification** → "team's on it" + the reply options (confirm / call / ask)
+
+> *Presenter note (identity): which identifier you use depends on the audience — **vehicle name** ("semi truck #7") when you talk to the customer, **device serial** for a Reveal diagnostician, **VIN** as the key that links them. Call it out; the screen already carries all three.*
 
 **🗣 SAY (the money line — slow down):**
 > "Verizon Connect detected the failure, diagnosed it, and reached out to the customer — **before Jim ever knew there was a problem.** No truck went dark. No angry call. No churned subscription. That's the difference between selling a tracking device and being the partner that keeps a fleet running. And every step you just watched was the agent — your team's capacity goes to the exceptions, not the routine."
@@ -149,8 +156,10 @@ Timing markers are cumulative. Total budget: **10:00**. Phase 3 is the hero — 
 
 ## Beat 4 — Recap & Tie-Off · `9:00 – 10:00`
 
+> *⚠️ Presenter note (device count): the exact fleet size is being reconciled with Chris's Revenue Cloud org (~7 vehicles / 9 assets vs. the current 33). Say "the whole fleet" until the number is locked — don't quote a count that contradicts the quoting demo.*
+
 **🗣 SAY:**
-> "So in ten minutes we carried those 33 devices the whole way — and three things happened that a tracking platform alone can't do:
+> "So in ten minutes we carried that whole fleet the whole way — and three things happened that a tracking platform alone can't do:
 > - Devices went from *delivered* to a *scheduled install* with **no dispatcher in the loop** — capacity you redeploy.
 > - The customer booked **in his own words, over text** — no portal, no friction, faster time-to-live, which means faster time-to-revenue on every subscription.
 > - A failing device became a **case before it became a complaint** — a truck that didn't go dark, a call that didn't come in hot, and a subscription that didn't churn.

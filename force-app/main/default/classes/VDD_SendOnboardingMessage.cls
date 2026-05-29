@@ -41,10 +41,11 @@ public with sharing class VDD_SendOnboardingMessage {
                     Status = 'Completed',
                     Priority = 'Normal',
                     Description = 'Hi ' + req.customerName + ',\n\n' +
-                        'Great news! Your VDD-400 GPS Tracking Unit (SN: ' + req.serialNumber + ') ' +
-                        'is installed and reporting on ' + req.vehicleName + '!\n\n' +
+                        'Great news — your Verizon Connect fleet devices have been installed and are reporting in!\n\n' +
+                        'For example, the unit on ' + req.vehicleName + ' (SN: ' + req.serialNumber + ') is live:\n' +
                         'Telemetry Status: ' + req.telemetryStatus + '\n' +
                         req.allMetrics + '\n\n' +
+                        'Next step — let\'s get your team up and running: book a training session or visit your training page at connect.verizon.com/fleet/training\n\n' +
                         'Access your fleet dashboard at connect.verizon.com/fleet\n' +
                         'Your dedicated support line: 1-800-VZW-FLEET\n\n' +
                         'Welcome to Verizon Connect!\n' +
